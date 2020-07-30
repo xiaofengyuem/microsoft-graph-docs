@@ -72,8 +72,9 @@ by providing a [delta](../api/event-delta.md) function.
 |iCalUId|String|A unique identifier that is shared by all instances of an event across different calendars. Read-only.|
 |id|String| Read-only.|
 |importance|importance|The importance of the event. The possible values are: `low`, `normal`, `high`.|
-|isAllDay|Boolean|Set to true if the event lasts all day.|
+|isAllDay|Boolean|Set to true if the event lasts all day. If true, regardless of whether it's a single-day or multi-day event, start and end time must be set to midnight and be in the same time zone.|
 |isCancelled|Boolean|Set to true if the event has been canceled.|
+|isDraft|Boolean|Set to true if the event is in draft state.|
 |isOnlineMeeting|Boolean| `True` if this event has online meeting information, `false` otherwise. Default is false. Optional.|
 |isOrganizer|Boolean|Set to true if the calendar owner (specified by the **owner** property of the [calendar](calendar.md)) is the organizer of the event (specified by the **organizer** property of the **event**). This also applies if a delegate organized the event on behalf of the owner.|
 |isReminderOn|Boolean|Set to true if an alert is set to remind the user of the event.|
@@ -207,6 +208,7 @@ Here is a JSON representation of the resource
   "isOnlineMeeting": true,
   "isOrganizer": true,
   "isReminderOn": true,
+  "isDraft": false,
   "lastModifiedDateTime": "String (timestamp)",
   "location": {"@odata.type": "microsoft.graph.location"},
   "locations": [{"@odata.type": "microsoft.graph.location"}],

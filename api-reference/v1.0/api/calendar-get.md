@@ -110,6 +110,7 @@ Content-type: application/json
     "name": "Calendar",
     "color": "auto",
     "changeKey": "nfZyf7VcrEKLNoU37KWlkQAAA0x0+w==",
+    "calendarGroupId":"AQMkQAAAA==",
     "canShare":true,
     "canViewPrivateItems":true,
     "canEdit":true,

@@ -94,6 +94,7 @@ Content-type: application/json
     "name":"Volunteer",
     "color":"auto",
     "changeKey":"DxYSthXJXEWwAQSYQnXvIgAAIxGttg==",
+    "calendarGroupId":"AQMkQAAAA==",
     "canShare":true,
     "canViewPrivateItems":true,
     "canEdit":true,
