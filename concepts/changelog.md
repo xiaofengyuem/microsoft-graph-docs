@@ -17,6 +17,10 @@ For a summary of the value of these API changes, as well as recent tools, compon
 
 | **Change type** | **Version**   | **Description**                          |
 | :-------------- | :------------ | :--------------------------------------- |
+| Addition | v1.0 | Added the **calendarGroupId** property to the [calendar](/graph/api/resources/calendar?view=graph-rest-1.0) entity. |
+| Addition | v1.0 | Added the **hexColor** property to the [calendar](/graph/api/resources/calendar?view=graph-rest-1.0) entity. |
+| Addition | v1.0 | Added the **isDraft** property to the [event](/graph/api/resources/event?view=graph-rest-1.0) entity. |
+| Addition | v1.0 | Added the **transactionId** property to the [event](/graph/api/resources/event?view=graph-rest-1.0) entity. |
 | Addition | v1.0 | Added the **allowNewTimeProposals** property to the [event](/graph/api/resources/event?view=graph-rest-1.0) and [eventMessageRequest](/graph/api/resources/eventmessagerequest?view=graph-rest-1.0) entities. |
 | Addition | v1.0 | Added the **proposedNewTime** optional parameter to the [tentativelyAccept](/graph/api/event-tentativelyaccept?view=graph-rest-1.0) and [decline](/graph/api/event-decline?view=graph-rest-1.0) methods of **event**. |
 | Addition | v1.0 | Added the [eventMessageResponse](/graph/api/resources/eventmessageresponse?view=graph-rest-1.0) entity that is based on [eventMessage](/graph/api/resources/eventmessage?view=graph-rest-1.0), and in addition, includes the **proposedNewTime** and **responseType** properties. |

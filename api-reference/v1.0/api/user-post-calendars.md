@@ -94,9 +94,10 @@ Content-type: application/json
     "name":"Volunteer",
     "color":"auto",
     "changeKey":"DxYSthXJXEWwAQSYQnXvIgAAIxGttg==",
-    "calendarGroupId":"AQMkQAAAA==",
+    "calendarGroupId":"null",
     "canShare":true,
     "canViewPrivateItems":true,
+    "hexColor": "",
     "canEdit":true,
     "allowedOnlineMeetingProviders": [
                 "teamsForBusiness"

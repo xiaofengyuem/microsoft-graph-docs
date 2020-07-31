@@ -124,7 +124,8 @@ Content-type: application/json
       "type": "required"
     }
   ],
-  "allowNewTimeProposals": true
+  "allowNewTimeProposals": true,
+  "transactionId":"7E163156-7762-4BEB-A1C6-729EA81755A7"
 }
 ```
 # [C#](#tab/csharp)
@@ -186,6 +187,7 @@ Content-length: 2197
     "isOrganizer":true,
     "responseRequested":true,
     "seriesMasterId":null,
+    "transactionId":"7E163156-7762-4BEB-A1C6-729EA81755A7",
     "showAs":"busy",
     "type":"singleInstance",
     "webLink":"https://outlook.office365.com/owa/?itemid=AAMkAGI1AAAt9AHjAAA%3D&exvsurl=1&path=/calendar/item",

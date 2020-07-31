@@ -116,6 +116,7 @@ Content-length: 147
       "name": "name-value",
       "color": {
       },
+      "calendarGroupId":"calendarGroupId-value",
       "changeKey": "changeKey-value",
       "id": "id-value"
     }

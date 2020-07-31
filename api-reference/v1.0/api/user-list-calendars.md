@@ -107,8 +107,10 @@ Content-type: application/json
             "name": "Calendar",
             "color": "auto",
             "changeKey": "nfZyf7VcrEKLNoU37KWlkQAAA0x0+w==",
+            "calendarGroupId":null,
             "canShare":true,
             "canViewPrivateItems":true,
+            "hexColor": "",
             "canEdit":true,
             "allowedOnlineMeetingProviders": [
                 "teamsForBusiness"
