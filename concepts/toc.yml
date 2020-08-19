@@ -527,6 +527,8 @@ items:
             href: toolkit/templates.md
           - name: Scoped components
             href: toolkit/scoped.md
+          - name: Caching
+            href: toolkit/cache.md
       - name: Resources
         expanded: true
         items:
