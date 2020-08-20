@@ -113,8 +113,10 @@ Content-type: application/json
     "name":"Social events",
     "color":"auto",
     "changeKey":"DxYSthXJXEWwAQSYQnXvIgAAIxGttg==",
+    "calendarGroupId":"null",
     "canShare":true,
     "canViewPrivateItems":true,
+    "hexColor": "",
     "canEdit":true,
     "allowedOnlineMeetingProviders": [
                 "teamsForBusiness"

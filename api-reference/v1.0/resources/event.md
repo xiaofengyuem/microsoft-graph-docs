@@ -229,6 +229,7 @@ Here is a JSON representation of the resource
   "showAs": "String",
   "start": {"@odata.type": "microsoft.graph.dateTimeTimeZone"},
   "subject": "string",
+  "transactionId": "string",
   "type": "String",
   "webLink": "string",
 
