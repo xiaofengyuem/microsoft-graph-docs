@@ -41,14 +41,14 @@ A calendar which is a container for events. It can be a calendar for a [user](us
 ## Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|allowedOnlineMeetingProviders|string collection| Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: `unknown`, `skypeForBusiness`, `skypeForConsumer`, `teamsForBusiness`.|
+|allowedOnlineMeetingProviders|string collection| Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: `unknown`, `skypeForBusiness`, `skypeForConsumer`, `teamsForBusiness`. Read-only.|
 |calendarGroupId|String|The [calendarGroup](calendargroup.md) in which to create the calendar. If the user has never explicitly set a group for the calendar, this property is  null. Read-only.|
-|canEdit |Boolean |True if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access. |
-|canShare |Boolean |True if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it. |
-|canViewPrivateItems |Boolean |True if the user can read calendar items that have been marked private, false otherwise. |
+|canEdit |Boolean |True if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access. Read-only.|
+|canShare |Boolean |True if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it. Read-only.|
+|canViewPrivateItems |Boolean |True if the user can read calendar items that have been marked private, false otherwise. Read-only.|
 |changeKey|String|Identifies the version of the calendar object. Every time the calendar is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.|
 |color|calendarColor|Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: LightBlue=0, LightGreen=1, LightOrange=2, LightGray=3, LightYellow=4, LightTeal=5, LightPink=6, LightBrown=7, LightRed=8, MaxColor=9, Auto=-1|
-|defaultOnlineMeetingProvider|onlineMeetingProviderType|The default online meeting provider for meetings sent from this calendar. Possible values are: `unknown`, `skypeForBusiness`, `skypeForConsumer`, `teamsForBusiness`.|
+|defaultOnlineMeetingProvider|onlineMeetingProviderType|The default online meeting provider for meetings sent from this calendar. Possible values are: `unknown`, `skypeForBusiness`, `skypeForConsumer`, `teamsForBusiness`. Read-only.|
 |hexColor |String |The calendar color, expressed in a hex color code of three hexidecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is empty. Read-only.|
 |id|String|The calendar's unique identifier. Read-only.|
 |isRemovable|Boolean| Indicates whether this user calendar can be deleted from the user mailbox.|
