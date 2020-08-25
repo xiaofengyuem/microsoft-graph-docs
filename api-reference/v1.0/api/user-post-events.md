@@ -82,10 +82,10 @@ If successful, this method returns `201 Created` response code and [event](../re
 
 ## Examples
 
-### Example 1: Create an event in the specified time zone, and assign the event an optional **transactionId** value.
+### Example 1: Create an event in the specified time zone, and assign the event an optional transactionId value.
 
 #### Request
-Here is an example of the request. It uses the `Prefer: outlook.timezone` request header to specify the time zone for the start and end times in the response. It also sets the transactionId property to reduce unnecessary retries on the server.
+Here is an example of the request. It uses the `Prefer: outlook.timezone` request header to specify the time zone for the start and end times in the response. It also sets the **transactionId** property to reduce unnecessary retries on the server.
 
 # [HTTP](#tab/http)
 <!-- {
