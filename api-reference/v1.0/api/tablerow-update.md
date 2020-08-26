@@ -24,9 +24,10 @@ One of the following permissions is required to call this API. To learn more, in
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-PATCH /workbook/tables/{id|name}/rows/{index}
-PATCH /workbook/worksheets/{id|name}/tables/{id|name}/rows/{index}
+PATCH /workbook/tables/{id|name}/rows/itemAt(index=N)
+PATCH /workbook/worksheets/{id|name}/tables/{id|name}/rows/itemAt(index=N)
 ```
+
 ## Optional request headers
 | Name       | Description|
 |:-----------|:-----------|
@@ -53,13 +54,12 @@ Here is an example of the request.
   "name": "update_tablerow"
 }-->
 ```http
-PATCH https://graph.microsoft.com/v1.0/me/drive/items/{id}/workbook/tables/{id|name}/rows/{index}
+PATCH https://graph.microsoft.com/v1.0/me/drive/items/{drive-item-id}/workbook/tables('1')/rows/itemAt(index=0)
 Content-type: application/json
 Content-length: 45
 
 {
-  "index": 99,
-  "values": "values-value"
+  "values": "values"
 }
 ```
 # [C#](#tab/csharp)
@@ -93,8 +93,7 @@ Content-type: application/json
 Content-length: 45
 
 {
-  "index": 99,
-  "values": "values-value"
+  "values": "values"
 }
 ```
 
