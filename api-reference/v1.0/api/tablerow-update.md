@@ -1,6 +1,6 @@
 ---
 title: "Update tablerow"
-description: "Update the properties of tablerow object."
+description: "Update the row of the table."
 author: "lumine2008"
 localization_priority: Normal
 ms.prod: "excel"
