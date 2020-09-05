@@ -25,6 +25,11 @@ A chat is a collection of [chatMessages](chatmessage.md) between one or more par
 |[Get chat member](../api/conversationmember-get.md) | [conversationmember](conversationmember.md) | Get a single user in the chat.| Delegated and application* |
 |[List messages in a chat](../api/chat-list-message.md)  | [chatMessage](../resources/chatmessage.md) | Get messages in a 1:1 or group chat. | Delegated and application* |
 |[Get message in chat](../api/chat-get-message.md)  | [chatMessage](../resources/chatmessage.md) | Get a single message in a chat. | Delegated and application* |
+|Add tab to chat|[teamsTab](teamstab.md)|Add (pin) a tab to a chat.|Delegated and application*|
+|List tabs in chat|[teamsTab](teamstab.md)|List tabs pinned to a chat.|Delegated and application*|
+|Get tab|[teamsTab](teamstab.md)|Read a tab pinned to a chat.|Delegated and application*|
+|Update tab|[teamsTab](teamstab.md)|Update the tab properties|Delegated and application*|
+|Delete tab|None|Remove (unpin) a tab from a chat|Delegated and application*|
 
 \*> **Note:** When using application permissions, be sure you know how you're going to get the chat ID. Because listing chats with application permissions is not supported, 
 not all scenarios are possible. It is possible to get chat IDs with delegated permissions, and from [change notifications for /chats/allMessages](../api/subscription-post-subscriptions.md) with application permissions.
