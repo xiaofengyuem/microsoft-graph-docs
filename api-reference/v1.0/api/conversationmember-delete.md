@@ -11,7 +11,6 @@ ms.prod: "microsoft-teams"
 
 Namespace: microsoft.graph
 
-[!INCLUDE [V1.0-disclaimer](../../includes/V1.0-disclaimer.md)]
 
 Delete a [conversationMember](../resources/conversationmember.md) from a [channel](../resources/channel.md).
 
