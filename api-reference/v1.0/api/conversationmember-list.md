@@ -1,6 +1,6 @@
 ---
 title: "List conversationMembers"
-description: "Retrieve a member of a chat or channel."
+description: "Retrieve a list of conversation members in a chat or channel."
 author: "clearab"
 localization_priority: Priority
 ms.prod: "microsoft-teams"
@@ -11,7 +11,7 @@ doc_type: apiPageType
 
 Namespace: microsoft.graph
 
-List all [conversation members](../resources/conversationmember.md) in a [chat](../resources/chat.md) or [channel](../resources/channel.md).
+Retrieve a list of all [conversation members](../resources/conversationmember.md) in a [chat](../resources/chat.md) or [channel](../resources/channel.md).
 
 ## Permissions
 
@@ -53,7 +53,7 @@ If successful, this method returns a `200 OK` response code and a list of [conve
 
 ## Example
 
-##### Request
+### Request
 
 Here is an example of the request.
 
@@ -80,11 +80,11 @@ GET https://graph.microsoft.com/v1.0/me/chats/{id}/members
 ---
 
 
-##### Response
+### Response
 
 Here is an example of the response.
 
->**Note:** The response object shown here might be shortened for readability. All the properties will be returned from an actual call.
+>**Note:** The response object shown here might be shortened for readability. 
 <!-- {
   "blockType": "response",
   "truncated": true,
