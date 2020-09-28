@@ -8,7 +8,7 @@ doc_type: apiPageType
 ---
 
 # List linkedResources
-Namespace: microsoft.graph
+Namespace: microsoft.graph.todo
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Get the linkedResources from the linkedResources navigation property.

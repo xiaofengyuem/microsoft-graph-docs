@@ -9,7 +9,7 @@ doc_type: resourcePageType
 
 # todo resource type
 
-Namespace: microsoft.graph
+Namespace: microsoft.graph.todo
 
 Represents the To Do services available to a user.
 

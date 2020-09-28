@@ -8,7 +8,7 @@ doc_type: apiPageType
 ---
 
 # Update todoTaskList
-Namespace: microsoft.graph
+Namespace: microsoft.graph.todo
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Update the properties of a [todoTaskList](../resources/todotasklist.md) object.

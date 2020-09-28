@@ -8,7 +8,7 @@ doc_type: apiPageType
 ---
 
 # Update linkedResource
-Namespace: microsoft.graph
+Namespace: microsoft.graph.todo
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Update the properties of a [linkedResource](../resources/linkedresource.md) object.

@@ -8,7 +8,7 @@ doc_type: apiPageType
 ---
 
 # Create linkedResources
-Namespace: microsoft.graph
+Namespace: microsoft.graph.todo
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Create a new linkedResources object.

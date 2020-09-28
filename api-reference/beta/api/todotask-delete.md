@@ -8,7 +8,7 @@ doc_type: apiPageType
 ---
 
 # Delete todoTask
-Namespace: microsoft.graph
+Namespace: microsoft.graph.todo
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Deletes a [todoTask](../resources/todotask.md) object.

@@ -8,7 +8,7 @@ doc_type: apiPageType
 ---
 
 # Delete linkedResource
-Namespace: microsoft.graph
+Namespace: microsoft.graph.todo
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Deletes a [linkedResource](../resources/linkedresource.md) object.

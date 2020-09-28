@@ -9,7 +9,7 @@ doc_type: resourcePageType
 
 # todoTask resource type
 
-Namespace: microsoft.graph
+Namespace: microsoft.graph.todo
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 

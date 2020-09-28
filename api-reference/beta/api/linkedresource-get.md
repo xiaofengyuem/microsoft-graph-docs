@@ -8,7 +8,7 @@ doc_type: apiPageType
 ---
 
 # Get linkedResource
-Namespace: microsoft.graph
+Namespace: microsoft.graph.todo
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Read the properties and relationships of a [linkedResource](../resources/linkedresource.md) object.

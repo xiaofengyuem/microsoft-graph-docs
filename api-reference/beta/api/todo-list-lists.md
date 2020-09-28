@@ -8,7 +8,7 @@ doc_type: apiPageType
 ---
 
 # List lists
-Namespace: microsoft.graph
+Namespace: microsoft.graph.todo
 
 Get a list of the [todoTaskList](../resources/todotasklist.md) objects and their properties.
 

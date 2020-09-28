@@ -8,7 +8,7 @@ doc_type: apiPageType
 ---
 
 # Create todoTask
-Namespace: microsoft.graph
+Namespace: microsoft.graph.todo
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Create a new task object in a specified [todoTaskList](../resources/todotasklist.md).

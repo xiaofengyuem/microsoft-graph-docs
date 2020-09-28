@@ -9,7 +9,7 @@ doc_type: apiPageType
 
 # todoTask: delta
 
-Namespace: microsoft.graph
+Namespace: microsoft.graph.todo
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
