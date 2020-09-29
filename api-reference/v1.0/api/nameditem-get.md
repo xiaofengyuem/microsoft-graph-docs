@@ -2,7 +2,7 @@
 title: "Get NamedItem"
 description: "Retrieve the properties and relationships of nameditem object."
 localization_priority: Normal
-author: ""
+author: "ruoyingl"
 ms.prod: ""
 doc_type: apiPageType
 ---
@@ -103,3 +103,4 @@ Content-length: 87
   "suppressions": [
   ]
 }-->
+

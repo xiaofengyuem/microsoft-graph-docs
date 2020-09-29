@@ -3,7 +3,7 @@ title: "List deviceCompliancePolicyAssignments"
 description: "List properties and relationships of the deviceCompliancePolicyAssignment objects."
 author: "dougeby"
 localization_priority: Normal
-ms.prod: "Intune"
+ms.prod: "intune"
 doc_type: apiPageType
 ---
 
@@ -60,7 +60,7 @@ Here is an example of the response. Note: The response object shown here may be 
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json
-Content-Length: 331
+Content-Length: 506
 
 {
   "value": [
@@ -68,7 +68,9 @@ Content-Length: 331
       "@odata.type": "#microsoft.graph.deviceCompliancePolicyAssignment",
       "id": "92dc3fef-3fef-92dc-ef3f-dc92ef3fdc92",
       "target": {
-        "@odata.type": "microsoft.graph.allDevicesAssignmentTarget"
+        "@odata.type": "microsoft.graph.allDevicesAssignmentTarget",
+        "deviceAndAppManagementAssignmentFilterId": "Device And App Management Assignment Filter Id value",
+        "deviceAndAppManagementAssignmentFilterType": "include"
       },
       "source": "policySets",
       "sourceId": "Source Id value"
@@ -76,6 +78,9 @@ Content-Length: 331
   ]
 }
 ```
+
+
+
 
 
 

@@ -3,7 +3,7 @@ title: "Create termsAndConditionsAssignment"
 description: "Create a new termsAndConditionsAssignment object."
 author: "dougeby"
 localization_priority: Normal
-ms.prod: "Intune"
+ms.prod: "intune"
 doc_type: apiPageType
 ---
 
@@ -63,12 +63,14 @@ Here is an example of the request.
 ``` http
 POST https://graph.microsoft.com/beta/deviceManagement/termsAndConditions/{termsAndConditionsId}/assignments
 Content-type: application/json
-Content-length: 156
+Content-length: 323
 
 {
   "@odata.type": "#microsoft.graph.termsAndConditionsAssignment",
   "target": {
-    "@odata.type": "microsoft.graph.allDevicesAssignmentTarget"
+    "@odata.type": "microsoft.graph.allDevicesAssignmentTarget",
+    "deviceAndAppManagementAssignmentFilterId": "Device And App Management Assignment Filter Id value",
+    "deviceAndAppManagementAssignmentFilterType": "include"
   }
 }
 ```
@@ -78,16 +80,21 @@ Here is an example of the response. Note: The response object shown here may be 
 ``` http
 HTTP/1.1 201 Created
 Content-Type: application/json
-Content-Length: 205
+Content-Length: 372
 
 {
   "@odata.type": "#microsoft.graph.termsAndConditionsAssignment",
   "id": "64c1a196-a196-64c1-96a1-c16496a1c164",
   "target": {
-    "@odata.type": "microsoft.graph.allDevicesAssignmentTarget"
+    "@odata.type": "microsoft.graph.allDevicesAssignmentTarget",
+    "deviceAndAppManagementAssignmentFilterId": "Device And App Management Assignment Filter Id value",
+    "deviceAndAppManagementAssignmentFilterType": "include"
   }
 }
 ```
+
+
+
 
 
 

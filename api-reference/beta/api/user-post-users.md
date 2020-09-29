@@ -182,7 +182,8 @@ Content-type: application/json
     }
   ],
   "passwordProfile" : {
-    "password": "password-value"
+    "password": "password-value",
+    "forceChangePasswordNextSignIn": false
   },
   "passwordPolicies": "DisablePasswordExpiration"
 }
@@ -261,3 +262,5 @@ Content-type: application/json
   ]
 }
 -->
+
+

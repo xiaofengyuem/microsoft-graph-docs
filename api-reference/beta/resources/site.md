@@ -30,7 +30,7 @@ The **site** resource provides metadata and relationships for a SharePoint site.
 | [Search for sites][]           | GET /sites?search={query}
 | [Follow site][]                | POST /users/{user-id}/followedSites/add
 | [Unfollow site][]              | POST /users/{user-id}/followedSites/remove
-| [List followed sites][]        | POST /me/followedSites
+| [List followed sites][]        | GET /me/followedSites
 
 [Get site]: ../api/site-get.md
 [Get root site]: ../api/site-get.md
@@ -162,3 +162,5 @@ The **site** resource is derived from [**baseItem**](baseitem.md) and inherits p
   "suppressions": []
 }
 -->
+
+

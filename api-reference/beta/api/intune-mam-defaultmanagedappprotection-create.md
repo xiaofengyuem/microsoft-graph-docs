@@ -3,7 +3,7 @@ title: "Create defaultManagedAppProtection"
 description: "Create a new defaultManagedAppProtection object."
 author: "dougeby"
 localization_priority: Normal
-ms.prod: "Intune"
+ms.prod: "intune"
 doc_type: apiPageType
 ---
 
@@ -95,6 +95,7 @@ The following table shows the properties that are required when you create the d
 |blockDataIngestionIntoOrganizationDocuments|Boolean|Indicates whether a user can bring data into org documents. Inherited from [managedAppProtection](../resources/intune-mam-managedappprotection.md)|
 |allowedDataIngestionLocations|[managedAppDataIngestionLocation](../resources/intune-mam-managedappdataingestionlocation.md) collection|Data storage locations where a user may store managed data. Inherited from [managedAppProtection](../resources/intune-mam-managedappprotection.md). Possible values are: `oneDriveForBusiness`, `sharePoint`, `camera`.|
 |appActionIfUnableToAuthenticateUser|[managedAppRemediationAction](../resources/intune-mam-managedappremediationaction.md)|If set, it will specify what action to take in the case where the user is unable to checkin because their authentication token is invalid. This happens when the user is deleted or disabled in AAD. Inherited from [managedAppProtection](../resources/intune-mam-managedappprotection.md). Possible values are: `block`, `wipe`, `warn`.|
+|dialerRestrictionLevel|[managedAppPhoneNumberRedirectLevel](../resources/intune-mam-managedappphonenumberredirectlevel.md)|The classes of dialer apps that are allowed to click-to-open a phone number. Inherited from [managedAppProtection](../resources/intune-mam-managedappprotection.md). Possible values are: `allApps`, `managedApps`, `customApp`, `blocked`.|
 |appDataEncryptionType|[managedAppDataEncryptionType](../resources/intune-mam-managedappdataencryptiontype.md)|Type of encryption which should be used for data in a managed app. (iOS Only). Possible values are: `useDeviceSettings`, `afterDeviceRestart`, `whenDeviceLockedExceptOpenFiles`, `whenDeviceLocked`.|
 |screenCaptureBlocked|Boolean|Indicates whether screen capture is blocked. (Android only)|
 |encryptAppData|Boolean|Indicates whether managed-app data should be encrypted. (Android only)|
@@ -129,6 +130,11 @@ The following table shows the properties that are required when you create the d
 |minimumWipeCompanyPortalVersion|String|Minimum version of the Company portal that must be installed on the device or the company data on the app will be wiped|
 |allowedAndroidDeviceModels|String collection|List of device models allowed, as a string, for the managed app to work. (Android Only)|
 |appActionIfAndroidDeviceModelNotAllowed|[managedAppRemediationAction](../resources/intune-mam-managedappremediationaction.md)|Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. (Android Only). Possible values are: `block`, `wipe`, `warn`.|
+|customDialerAppProtocol|String|Protocol of a custom dialer app to click-to-open a phone number on iOS, for example, skype:.|
+|customDialerAppPackageId|String|PackageId of a custom dialer app to click-to-open a phone number on Android.|
+|customDialerAppDisplayName|String|Friendly name of a custom dialer app to click-to-open a phone number on Android.|
+|biometricAuthenticationBlocked|Boolean|Indicates whether use of the biometric authentication is allowed in place of a pin if PinRequired is set to True. (Android Only)|
+|requiredAndroidSafetyNetEvaluationType|[androidManagedAppSafetyNetEvaluationType](../resources/intune-mam-androidmanagedappsafetynetevaluationtype.md)|Defines the Android SafetyNet evaluation type requirement for a managed app to work. (Android Only). Possible values are: `basic`, `hardwareBacked`.|
 
 
 
@@ -142,7 +148,7 @@ Here is an example of the request.
 ``` http
 POST https://graph.microsoft.com/beta/deviceAppManagement/defaultManagedAppProtections
 Content-type: application/json
-Content-length: 4523
+Content-length: 4881
 
 {
   "@odata.type": "#microsoft.graph.defaultManagedAppProtection",
@@ -196,6 +202,7 @@ Content-length: 4523
     "sharePoint"
   ],
   "appActionIfUnableToAuthenticateUser": "wipe",
+  "dialerRestrictionLevel": "managedApps",
   "appDataEncryptionType": "afterDeviceRestart",
   "screenCaptureBlocked": true,
   "encryptAppData": true,
@@ -249,7 +256,12 @@ Content-length: 4523
   "allowedAndroidDeviceModels": [
     "Allowed Android Device Models value"
   ],
-  "appActionIfAndroidDeviceModelNotAllowed": "wipe"
+  "appActionIfAndroidDeviceModelNotAllowed": "wipe",
+  "customDialerAppProtocol": "Custom Dialer App Protocol value",
+  "customDialerAppPackageId": "Custom Dialer App Package Id value",
+  "customDialerAppDisplayName": "Custom Dialer App Display Name value",
+  "biometricAuthenticationBlocked": true,
+  "requiredAndroidSafetyNetEvaluationType": "hardwareBacked"
 }
 ```
 
@@ -258,7 +270,7 @@ Here is an example of the response. Note: The response object shown here may be 
 ``` http
 HTTP/1.1 201 Created
 Content-Type: application/json
-Content-Length: 4695
+Content-Length: 5053
 
 {
   "@odata.type": "#microsoft.graph.defaultManagedAppProtection",
@@ -315,6 +327,7 @@ Content-Length: 4695
     "sharePoint"
   ],
   "appActionIfUnableToAuthenticateUser": "wipe",
+  "dialerRestrictionLevel": "managedApps",
   "appDataEncryptionType": "afterDeviceRestart",
   "screenCaptureBlocked": true,
   "encryptAppData": true,
@@ -368,9 +381,17 @@ Content-Length: 4695
   "allowedAndroidDeviceModels": [
     "Allowed Android Device Models value"
   ],
-  "appActionIfAndroidDeviceModelNotAllowed": "wipe"
+  "appActionIfAndroidDeviceModelNotAllowed": "wipe",
+  "customDialerAppProtocol": "Custom Dialer App Protocol value",
+  "customDialerAppPackageId": "Custom Dialer App Package Id value",
+  "customDialerAppDisplayName": "Custom Dialer App Display Name value",
+  "biometricAuthenticationBlocked": true,
+  "requiredAndroidSafetyNetEvaluationType": "hardwareBacked"
 }
 ```
+
+
+
 
 
 

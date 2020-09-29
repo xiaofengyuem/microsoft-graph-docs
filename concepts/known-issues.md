@@ -31,7 +31,7 @@ Getting the list of `bookingBusinesses` fails with the following error code when
 
 As a workaround, you can limit the set of businesses returned by the request by including a `query` parameter, for example:
 
-```
+```http
 GET https://graph.microsoft.com/beta/bookingBusinesses?query=Fabrikam
 ```
 ## Calendars
@@ -229,16 +229,17 @@ Examples of group features that support delegated and app-only permissions:
 * Getting and updating group properties pertaining to group administration or management
 * Group [directory settings](/graph/api/resources/directoryobject?view=graph-rest-1.0), type, and synchronization
 * Group owners and membership
+* Getting group conversations and threads
 
 Examples of group features that support only delegated permissions:
 
-* Group conversations, events, photo
+* Group events, photo
 * External senders, accepted or rejected senders, group subscription
 * User favorites and unseen count
 
 ### Policy
 
-Using Microsoft Graph to create and name an Office 365 group bypasses any Office 365 group policies that are configured through Outlook Web App.
+Using Microsoft Graph to create and name a Microsoft 365 group bypasses any Microsoft 365 group policies that are configured through Outlook Web App.
 
 ### Setting the allowExternalSenders property
 
@@ -347,11 +348,11 @@ In the future, we will set **resourceProvisioningOptions** on existing teams tha
 
 ### No instant access after creation
 
-Users can be created immediately through a POST on the user entity. An Office 365 license must first be assigned to a user, in order to get access to Office 365 services. Even then, due to the distributed nature of the service, it might take 15 minutes before files, messages and events entities are available for use for this user, through the Microsoft Graph API. During this time, apps will receive a 404 HTTP error response.
+Users can be created immediately through a POST on the user entity. A Microsoft 365 license must first be assigned to a user, in order to get access to Microsoft 365 services. Even then, due to the distributed nature of the service, it might take 15 minutes before files, messages and events entities are available for use for this user, through the Microsoft Graph API. During this time, apps will receive a 404 HTTP error response.
 
 ### Photo restrictions
 
-Reading and updating a user's profile photo is only possible if the user has a mailbox. Additionally, any photos that *may* have been previously stored using the **thumbnailPhoto** property (using the Office 365 unified API preview, or the Azure AD Graph, or through AD Connect synchronization) are no longer accessible through the Microsoft Graph **photo** property of the [user](/graph/api/resources/user?view=graph-rest-1.0) resource.
+Reading and updating a user's profile photo is only possible if the user has a mailbox. Additionally, any photos that *may* have been previously stored using the **thumbnailPhoto** property (using the Azure AD Graph or through AD Connect synchronization) are no longer accessible through the Microsoft Graph **photo** property of the [user](/graph/api/resources/user?view=graph-rest-1.0) resource.
 Failure to read or update a photo, in this case, would result in the following error:
 
 ```javascript
@@ -395,4 +396,4 @@ Requesting objects using [Get directory objects from a list of IDs](/graph/api/d
 
 ## Functionality available only in Office 365 REST or Azure AD Graph APIs
 
-Some functionality is not yet available in Microsoft Graph. If you don't see the functionality you're looking for, you can use the endpoint-specific [Office 365 REST APIs](https://docs.microsoft.com/previous-versions/office/office-365-api/). For Azure Active Directory, see [Migrate Azure AD Graph apps to Microsoft Graph](https://docs.microsoft.com/graph/migrate-azure-ad-graph-overview). 
+Some functionality is not yet available in Microsoft Graph. If you don't see the functionality you're looking for, you can use the endpoint-specific [Office 365 REST APIs](/previous-versions/office/office-365-api/). For Azure Active Directory, see [Migrate Azure AD Graph apps to Microsoft Graph](./migrate-azure-ad-graph-planning-checklist.md).

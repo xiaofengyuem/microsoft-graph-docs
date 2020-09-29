@@ -3,7 +3,7 @@ title: "deviceManagementReports resource type"
 description: "Singleton entity that acts as a container for all reports functionality."
 author: "dougeby"
 localization_priority: Normal
-ms.prod: "Intune"
+ms.prod: "intune"
 doc_type: resourcePageType
 ---
 
@@ -27,6 +27,7 @@ Singleton entity that acts as a container for all reports functionality.
 |[getPolicyNonComplianceMetadata action](../api/intune-reporting-devicemanagementreports-getpolicynoncompliancemetadata.md)|Stream|Not yet documented|
 |[getPolicyNonComplianceSummaryReport action](../api/intune-reporting-devicemanagementreports-getpolicynoncompliancesummaryreport.md)|Stream|Not yet documented|
 |[getSettingNonComplianceReport action](../api/intune-reporting-devicemanagementreports-getsettingnoncompliancereport.md)|Stream|Not yet documented|
+|[getReportFilters action](../api/intune-reporting-devicemanagementreports-getreportfilters.md)|Stream|Not yet documented|
 |[getHistoricalReport action](../api/intune-reporting-devicemanagementreports-gethistoricalreport.md)|Stream|Not yet documented|
 |[getCachedReport action](../api/intune-reporting-devicemanagementreports-getcachedreport.md)|Stream|Not yet documented|
 
@@ -56,6 +57,9 @@ Here is a JSON representation of the resource.
   "id": "String (identifier)"
 }
 ```
+
+
+
 
 
 

@@ -4,7 +4,7 @@ description: "A risk event detected by Azure Active Directory Identity Protectio
 localization_priority: Normal
 doc_type: resourcePageType
 ms.prod: ""
-author: ""
+author: "cloudhandler"
 ---
 
 # locatedRiskEvent resource type
@@ -95,3 +95,5 @@ Here is a JSON representation of the resource.
   "suppressions": []
 }
 -->
+
+

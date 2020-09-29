@@ -41,8 +41,8 @@ The following is a JSON representation of the resource.
 
 ```json
 {
-  "KerberosServicePrincipalName": "String",
-  "KerberosSignOnMappingAttributeType": "String"
+  "kerberosServicePrincipalName": "String",
+  "kerberosSignOnMappingAttributeType": "String"
 }
 ```
 
@@ -55,3 +55,4 @@ The following is a JSON representation of the resource.
   "section": "documentation",
   "tocPath": ""
 }-->
+

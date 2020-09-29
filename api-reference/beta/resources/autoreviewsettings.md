@@ -4,7 +4,7 @@ description: ""
 localization_priority: Normal
 doc_type: resourcePageType
 ms.prod: ""
-author: ""
+author: "markwahl-msft"
 ---
 
 # autoReviewSettings resource type
@@ -33,6 +33,8 @@ Here is a JSON representation of the resource.
     "notReviewedResult":"string"
 }
 ```
+
+
 
 
 

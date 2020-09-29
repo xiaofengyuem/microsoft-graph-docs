@@ -3,7 +3,7 @@ title: "List deviceConfigurationAssignments"
 description: "List properties and relationships of the deviceConfigurationAssignment objects."
 author: "dougeby"
 localization_priority: Normal
-ms.prod: "Intune"
+ms.prod: "intune"
 doc_type: apiPageType
 ---
 
@@ -69,7 +69,7 @@ Here is an example of the response. Note: The response object shown here may be 
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json
-Content-Length: 328
+Content-Length: 503
 
 {
   "value": [
@@ -77,7 +77,9 @@ Content-Length: 328
       "@odata.type": "#microsoft.graph.deviceConfigurationAssignment",
       "id": "d59b6342-6342-d59b-4263-9bd542639bd5",
       "target": {
-        "@odata.type": "microsoft.graph.allDevicesAssignmentTarget"
+        "@odata.type": "microsoft.graph.allDevicesAssignmentTarget",
+        "deviceAndAppManagementAssignmentFilterId": "Device And App Management Assignment Filter Id value",
+        "deviceAndAppManagementAssignmentFilterType": "include"
       },
       "source": "policySets",
       "sourceId": "Source Id value"
@@ -85,6 +87,9 @@ Content-Length: 328
   ]
 }
 ```
+
+
+
 
 
 

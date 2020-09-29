@@ -4,7 +4,7 @@ description: "Update an editable secureScoreControlProfiles property within any 
 localization_priority: Normal
 doc_type: apiPageType
 ms.prod: ""
-author: ""
+author: "preetikr"
 ---
 
 # Update secureScoreControlProfiles
@@ -119,3 +119,5 @@ HTTP/1.1 204 No Content
   ]
 }
 -->
+
+

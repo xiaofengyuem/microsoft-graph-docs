@@ -29,6 +29,7 @@ By default, the `mgt-people-picker` component fetches people from the `/me/peopl
 | group-type     | groupType      | The group type to search for. Available options are: `unified`, `security`, `mailenabledsecurity`, `distribution`, `any`. Default value is `any`. This attribute has no effect if the `type` property is set to `person`.                                                                           |
 |  selected-people  | selectedPeople     | An array of selected people. Set this value to select people programmatically.|
 | people   | people    | An array of people found and rendered in the search result |
+| default-selected-user-ids | defaultSelectedUserIds | When provided a string of comma-separated Microsoft Graph user IDs, the component renders the respective users as selected upon initialization.
 
 The following is a `show-max` example.
 
@@ -51,7 +52,7 @@ You can populate selected people data by doing one of the following:
     document.querySelector('mgt-people-picker').selectedPeople.push(personObject);
     ```
 
-- Using the `selectUsersById()` method, which accepts an array of Microsoft graph [user ids](https://docs.microsoft.com/graph/api/resources/users?view=graph-rest-1.0) to find associated user details for selection.
+- Using the `selectUsersById()` method, which accepts an array of Microsoft graph [user ids](/graph/api/resources/users?view=graph-rest-1.0) to find associated user details for selection.
 
      >**Note:** If no user is found for an `id`, no data will be rendered for that `id`.
 
@@ -88,7 +89,9 @@ mgt-people-picker {
 
     --dropdown-background-color: #1f1f1f; /* selection area background color */
     --dropdown-item-hover-background: #333d47; /* person background color on hover */
-
+    
+    --selected-person-background-color: #f1f1f1; /* person item background color */
+    
     --font-color: white; /* input area border focus color */
     --placeholder-default-color: #f1f1f1; /* placeholder text color default*/
     --placeholder-focus-color: rgba(255, 255, 255, 0.8); /* placeholder text focus color */

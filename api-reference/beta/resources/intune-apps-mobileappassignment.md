@@ -3,7 +3,7 @@ title: "mobileAppAssignment resource type"
 description: "A class containing the properties used for Group Assignment of a Mobile App."
 author: "dougeby"
 localization_priority: Normal
-ms.prod: "Intune"
+ms.prod: "intune"
 doc_type: resourcePageType
 ---
 
@@ -53,7 +53,9 @@ Here is a JSON representation of the resource.
   "id": "String (identifier)",
   "intent": "String",
   "target": {
-    "@odata.type": "microsoft.graph.allLicensedUsersAssignmentTarget"
+    "@odata.type": "microsoft.graph.allLicensedUsersAssignmentTarget",
+    "deviceAndAppManagementAssignmentFilterId": "String",
+    "deviceAndAppManagementAssignmentFilterType": "String"
   },
   "settings": {
     "@odata.type": "microsoft.graph.iosLobAppAssignmentSettings",
@@ -64,6 +66,9 @@ Here is a JSON representation of the resource.
   "sourceId": "String"
 }
 ```
+
+
+
 
 
 

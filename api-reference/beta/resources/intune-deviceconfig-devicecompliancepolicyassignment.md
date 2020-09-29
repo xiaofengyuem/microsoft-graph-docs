@@ -3,7 +3,7 @@ title: "deviceCompliancePolicyAssignment resource type"
 description: "Device compliance policy assignment."
 author: "dougeby"
 localization_priority: Normal
-ms.prod: "Intune"
+ms.prod: "intune"
 doc_type: resourcePageType
 ---
 
@@ -50,12 +50,17 @@ Here is a JSON representation of the resource.
   "@odata.type": "#microsoft.graph.deviceCompliancePolicyAssignment",
   "id": "String (identifier)",
   "target": {
-    "@odata.type": "microsoft.graph.allDevicesAssignmentTarget"
+    "@odata.type": "microsoft.graph.allDevicesAssignmentTarget",
+    "deviceAndAppManagementAssignmentFilterId": "String",
+    "deviceAndAppManagementAssignmentFilterType": "String"
   },
   "source": "String",
   "sourceId": "String"
 }
 ```
+
+
+
 
 
 
