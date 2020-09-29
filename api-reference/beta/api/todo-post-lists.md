@@ -1,5 +1,5 @@
 ---
-title: "Create todoTaskList"
+title: "Create taskList"
 description: "Create a new lists object."
 author: "avijityadav"
 localization_priority: Normal
@@ -7,8 +7,8 @@ ms.prod: "outlook"
 doc_type: apiPageType
 ---
 
-# Create todoTaskList
-Namespace: microsoft.graph
+# Create taskList
+Namespace: microsoft.graph.todo
 
 Create a new lists object.
 
@@ -39,9 +39,9 @@ POST /users/{id|userPrincipalName}/todo/lists
 |Content-Type|application/json. Required.|
 
 ## Request body
-In the request body, supply a JSON representation of the [todoTaskList](../resources/todotasklist.md) object.
+In the request body, supply a JSON representation of the [taskList](../resources/todotasklist.md) object.
 
-The following table shows the properties that are required when you create the [todoTaskList](../resources/todotasklist.md).
+The following table shows the properties that are required when you create the [taskList](../resources/todotasklist.md).
 
 |Property|Type|Description|
 |:---|:---|:---|
@@ -49,7 +49,7 @@ The following table shows the properties that are required when you create the [
 
 ## Response
 
-If successful, this method returns a `201 Created` response code and a [todoTaskList](../resources/todotasklist.md) object in the response body.
+If successful, this method returns a `201 Created` response code and a [taskList](../resources/todotasklist.md) object in the response body.
 
 ## Examples
 
@@ -58,7 +58,7 @@ If successful, this method returns a `201 Created` response code and a [todoTask
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "name": "create_todotasklist_from_lists"
+  "name": "create_taskList_from_lists"
 }
 -->
 ``` http
@@ -91,7 +91,7 @@ Content-length: 60
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.todoTaskList"
+  "@odata.type": "microsoft.graph.todo.taskList"
 }
 -->
 ``` http
@@ -99,7 +99,7 @@ HTTP/1.1 201 Created
 Content-Type: application/json
 
 {
-  "@odata.type": "#microsoft.graph.todoTaskList",
+  "@odata.type": "#microsoft.graph.todo.taskList",
   "id": "AAMkADIyAAAhrbPWAAA=",
   "displayName": "Travel items",
   "isOwner": true,

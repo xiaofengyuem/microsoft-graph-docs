@@ -75,7 +75,7 @@ Content-Type: application/json
 Content-length: 166
 
 {
-  "@odata.type": "#microsoft.graph.linkedResource",
+  "@odata.type": "#microsoft.graph.todo.linkedResource",
   "webUrl": "http:://microsoft.com",
   "applicationName": "Microsoft",
   "displayName": "Microsoft",
@@ -103,7 +103,7 @@ Content-length: 166
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.linkedResource"
+  "@odata.type": "microsoft.graph.todo.linkedResource"
 }
 -->
 ``` http
@@ -111,7 +111,7 @@ HTTP/1.1 201 Created
 Content-Type: application/json
 
 {
-  "@odata.type": "#microsoft.graph.linkedResource",
+  "@odata.type": "#microsoft.graph.todo.linkedResource",
   "id": "f9cddce2-dce2-f9cd-e2dc-cdf9e2dccdf9",
   "webUrl": "http:://microsoft.com",
   "applicationName": "Microsoft",

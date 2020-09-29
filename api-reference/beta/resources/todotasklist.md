@@ -1,19 +1,19 @@
 ---
-title: "todoTaskList resource type"
-description: "A list in Microsoft To Do that contains one or more todoTask resources."
+title: "taskList resource type"
+description: "A list in Microsoft To Do that contains one or more task resources."
 author: "avijityadav"
 localization_priority: Normal
 ms.prod: "outlook"
 doc_type: resourcePageType
 ---
 
-# todoTaskList resource type
+# taskList resource type
 
 Namespace: microsoft.graph.todo
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-A list in Microsoft To Do that contains one or more [todoTask](./todotask.md) resources. 
+A list in Microsoft To Do that contains one or more [task](./todotask.md) resources. 
 
 In To Do, there are built-in task lists such as **Flagged emails** and **Tasks** which cannot be renamed or deleted.  You can, however, create additional task lists.
 
@@ -24,13 +24,13 @@ This resource supports
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List lists](../api/todo-list-lists.md) | [todoTaskList](todotasklist.md) collection | Get all the [todoTaskList](todotasklist.md) in the user's mailbox. |
-|[Create todoTaskList](../api/todo-post-lists.md) | [todoTaskList](todotasklist.md) | Create a [todoTaskList](todotasklist.md) in the user's mailbox. |
-|[Get task list](../api/todotasklist-get.md)|[todoTaskList](todotasklist.md)|Read the properties and relationships of the specified [todoTaskList](todotasklist.md).|
-|[Update task list](../api/todotasklist-update.md)|[todoTaskList](todotasklist.md)| Update the writable properties of the specified [todoTaskList](todotasklist.md).|
-|[Delete task list](../api/todotasklist-delete.md)|None| Delete the specified [todoTaskList](todotasklist.md) .|
-|[List tasks](../api/todotasklist-list-tasks.md)|[todoTask](todotask.md) collection|Get all the [todoTask](todotask.md) resources in the specified list.|
-|[Create task](../api/todotasklist-post-tasks.md)|[todoTask](todotask.md)| Create a [todoTask](todotask.md) in the specified task list.|
+|[List lists](../api/todo-list-lists.md) | [taskList](todotasklist.md) collection | Get all the [taskList](todotasklist.md) in the user's mailbox. |
+|[Create taskList](../api/todo-post-lists.md) | [taskList](todotasklist.md) | Create a [taskList](todotasklist.md) in the user's mailbox. |
+|[Get task list](../api/todotasklist-get.md)|[taskList](todotasklist.md)|Read the properties and relationships of the specified [taskList](todotasklist.md).|
+|[Update task list](../api/todotasklist-update.md)|[taskList](todotasklist.md)| Update the writable properties of the specified [taskList](todotasklist.md).|
+|[Delete task list](../api/todotasklist-delete.md)|None| Delete the specified [taskList](todotasklist.md) .|
+|[List tasks](../api/todotasklist-list-tasks.md)|[task](todotask.md) collection|Get all the [task](todotask.md) resources in the specified list.|
+|[Create task](../api/todotasklist-post-tasks.md)|[task](todotask.md)| Create a [task](todotask.md) in the specified task list.|
 
 ## Properties
 |Property|Type|Description|
@@ -45,21 +45,21 @@ This resource supports
 |Relationship|Type|Description|
 |:---|:---|:---|
 |extensions|[extension](extension.md) collection| The collection of open extensions defined for the task list. Nullable.|
-|tasks|[todoTask](todotask.md) collection|The tasks in this task list. Read-only. Nullable.|
+|tasks|[task](todotask.md) collection|The tasks in this task list. Read-only. Nullable.|
 
 ## JSON representation
 The following is a JSON representation of the resource.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",
-  "@odata.type": "microsoft.graph.todoTaskList",
+  "@odata.type": "microsoft.graph.todo.taskList",
   "baseType": "microsoft.graph.entity",
   "openType": false
 }
 -->
 ``` json
 {
-  "@odata.type": "#microsoft.graph.todoTaskList",
+  "@odata.type": "#microsoft.graph.todo.taskList",
   "id": "String (identifier)",
   "displayName": "String",
   "isOwner": "Boolean",

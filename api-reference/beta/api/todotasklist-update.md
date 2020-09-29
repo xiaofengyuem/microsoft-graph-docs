@@ -1,17 +1,17 @@
 ---
-title: "Update todoTaskList"
-description: "Update the properties of a todoTaskList object."
+title: "Update taskList"
+description: "Update the properties of a taskList object."
 author: "avijityadav"
 localization_priority: Normal
 ms.prod: "outlook"
 doc_type: apiPageType
 ---
 
-# Update todoTaskList
+# Update taskList
 Namespace: microsoft.graph.todo
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Update the properties of a [todoTaskList](../resources/todotasklist.md) object.
+Update the properties of a [taskList](../resources/todotasklist.md) object.
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
@@ -29,8 +29,8 @@ One of the following permissions is required to call this API. To learn more, in
 }
 -->
 ``` http
-PATCH /me/todo/lists/{todoTaskListId}
-PATCH /users/{id|userPrincipalName}/todo/lists/{todoTaskListId}/tasks
+PATCH /me/todo/lists/{taskListId}
+PATCH /users/{id|userPrincipalName}/todo/lists/{taskListId}/tasks
 ```
 
 ## Request headers
@@ -40,9 +40,9 @@ PATCH /users/{id|userPrincipalName}/todo/lists/{todoTaskListId}/tasks
 |Content-Type|application/json. Required.|
 
 ## Request body
-In the request body, supply a JSON representation of the [todoTaskList](../resources/todotasklist.md) object.
+In the request body, supply a JSON representation of the [taskList](../resources/todotasklist.md) object.
 
-The following table shows the properties that are required when you create the [todoTaskList](../resources/todotasklist.md).
+The following table shows the properties that are required when you create the [taskList](../resources/todotasklist.md).
 
 |Property|Type|Description|
 |:---|:---|:---|
@@ -52,7 +52,7 @@ The following table shows the properties that are required when you create the [
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and an updated [todoTaskList](../resources/todotasklist.md) object in the response body.
+If successful, this method returns a `200 OK` response code and an updated [taskList](../resources/todotasklist.md) object in the response body.
 
 ## Examples
 
@@ -62,7 +62,7 @@ If successful, this method returns a `200 OK` response code and an updated [todo
 <!-- {
   "blockType": "request",
   "sampleKeys": ["AAMkADIyAAAhrbPWAAA="],
-  "name": "update_todotasklist"
+  "name": "update_taskList"
 }
 -->
 ``` http
@@ -95,7 +95,7 @@ Content-length: 167
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.todoTaskList"
+  "@odata.type": "microsoft.graph.todo.taskList"
 }
 -->
 ``` http
@@ -103,7 +103,7 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "@odata.type": "#microsoft.graph.todoTaskList",
+  "@odata.type": "#microsoft.graph.todo.taskList",
   "id": "AAMkADIyAAAhrbPWAAA=",
   "displayName": "Vacation Plan",
   "isOwner": true,

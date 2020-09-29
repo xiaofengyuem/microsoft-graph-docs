@@ -1,21 +1,21 @@
 ---
-title: "todoTask: delta"
-description: "Get a set of todoTask resources that have been added, deleted, or updated in a specified todoTaskList."
+title: "task: delta"
+description: "Get a set of task resources that have been added, deleted, or updated in a specified taskList."
 localization_priority: Normal
 author: "avijityadav"
 ms.prod: "outlook"
 doc_type: apiPageType
 ---
 
-# todoTask: delta
+# task: delta
 
-Namespace: microsoft.graph.todo
+Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a set of [todoTask](../resources/todotask.md) resources that have been added, deleted, or updated in a specified [todoTaskList](../resources/todotasklist.md).
+Get a set of [task](../resources/todotask.md) resources that have been added, deleted, or updated in a specified [taskList](../resources/todotasklist.md).
 
-A **delta** function call for **todoTask** resources in a **todoTaskList** is similar to a GET request, except that by appropriately applying [state tokens](/graph/delta-query-overview) in one or more of these calls, you can query for incremental changes in the **todoTask** in that **todoTaskList**. This allows you to maintain and synchronize a local store of a user's **todoTask** resources without having to fetch the entire set from the server every time.  
+A **delta** function call for **task** resources in a **taskList** is similar to a GET request, except that by appropriately applying [state tokens](/graph/delta-query-overview) in one or more of these calls, you can query for incremental changes in the **task** in that **taskList**. This allows you to maintain and synchronize a local store of a user's **task** resources without having to fetch the entire set from the server every time.  
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
@@ -30,12 +30,12 @@ One of the following permissions is required to call this API. To learn more, in
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /me/todo/lists/{id}/tasks/delta
-GET /users/{id|userPrincipalName}/todo/lists/{todoTaskListId}/tasks/delta
+GET /users/{id|userPrincipalName}/todo/lists/{taskListId}/tasks/delta
 ```
 
 ## Query parameters
 
-Tracking changes in a **todoTask** collection incurs a round of one or more **delta** function calls. If you use any query parameter 
+Tracking changes in a **task** collection incurs a round of one or more **delta** function calls. If you use any query parameter 
 (other than `$deltatoken` and `$skiptoken`), you must specify 
 it in the initial **delta** request. Microsoft Graph automatically encodes any specified parameters 
 into the token portion of the `nextLink` or `deltaLink` URL provided in the response. 
@@ -45,14 +45,14 @@ includes the encoded, desired parameters.
 
 | Query parameter	   | Type	|Description|
 |:---------------|:--------|:----------|
-| $deltatoken | string | A [state token](/graph/delta-query-overview) returned in the `deltaLink` URL of the previous **delta** function call for the same todoTask collection, indicating the completion of that round of change tracking. Save and apply the entire `deltaLink` URL including this token in the first request of the next round of change tracking for that collection.|
-| $skiptoken | string | A [state token](/graph/delta-query-overview) returned in the `nextLink` URL of the previous **delta** function call, indicating there are further changes to be tracked in the same todoTask collection. |
+| $deltatoken | string | A [state token](/graph/delta-query-overview) returned in the `deltaLink` URL of the previous **delta** function call for the same task collection, indicating the completion of that round of change tracking. Save and apply the entire `deltaLink` URL including this token in the first request of the next round of change tracking for that collection.|
+| $skiptoken | string | A [state token](/graph/delta-query-overview) returned in the `nextLink` URL of the previous **delta** function call, indicating there are further changes to be tracked in the same task collection. |
 
 ### OData query parameters
 
 - You can use a `$select` query parameter as in any GET request to specify only the properties your need for best performance. The 
 _id_ property is always returned. 
-- Delta query support `$select`, `$top`, and `$expand` for todoTask. 
+- Delta query support `$select`, `$top`, and `$expand` for task. 
 - There is limited support for `$filter` and `$orderby`:
   * The only supported `$filter` expressions are `$filter=receivedDateTime+ge+{value}` 
   or `$filter=receivedDateTime+gt+{value}`.
@@ -69,14 +69,14 @@ _id_ property is always returned.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and [todoTask](../resources/todotask.md) collection object in the response body.
+If successful, this method returns a `200 OK` response code and [task](../resources/todotask.md) collection object in the response body.
 
 ## Example
 ### Request
-The following example shows how to make a single **delta** function call, and limit the maximum number of **todoTask** 
+The following example shows how to make a single **delta** function call, and limit the maximum number of **task** 
 in the response body to 2.
 
-To track changes in the **todoTask** resources in a **todoTaskList**, you would make one or more **delta** function calls to get the set
+To track changes in the **task** resources in a **taskList**, you would make one or more **delta** function calls to get the set
 of incremental changes since the last delta query. 
  
 

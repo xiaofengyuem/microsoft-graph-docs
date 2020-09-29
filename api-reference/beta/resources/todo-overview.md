@@ -25,7 +25,7 @@ Before starting with the To Do API, take a look at the resources and how they re
 
 ## Task list
 
-A [todoTaskList](./todotasklist.md) represents a logical container of [todoTask](./todotask.md) resources. You can currently create tasks only in a task list. To [get all your task lists](../api/todotasklist-get.md), make the following HTTP request:
+A [taskList](./todotasklist.md) represents a logical container of [task](./todotask.md) resources. You can currently create tasks only in a task list. To [get all your task lists](../api/todotasklist-get.md), make the following HTTP request:
 
 ``` http
 GET /me/todo/lists
@@ -33,16 +33,16 @@ GET /me/todo/lists
 
 ## Task
 
-A [todoTask](./todotask.md) represents a task, i.e. a piece of work or personal item that can be tracked and completed. To get your tasks from a task list, make the following HTTP request:
+A [task](./todotask.md) represents a task, i.e. a piece of work or personal item that can be tracked and completed. To get your tasks from a task list, make the following HTTP request:
 ``` http
-GET /me/todo/lists/{todoTaskListId}/tasks
+GET /me/todo/lists/{taskListId}/tasks
 ```
 
 ## Linked resource
 
 A [linkedResource](linkedresource.md) represents any item from a partner application related to the task, e.g. an item like email from where a task was created. You can use it to store information and the link back to the related item in your app. To get a linked resource from a task, make the following HTTP request:
 ``` http
-GET /me/todo/lists/{todoTaskListId}/tasks/{todoTaskId}/linkedresources/{linkedResourceId}
+GET /me/todo/lists/{taskListId}/tasks/{taskId}/linkedresources/{linkedResourceId}
 ```
 
 ## Track changes using delta query
@@ -50,8 +50,8 @@ GET /me/todo/lists/{todoTaskListId}/tasks/{todoTaskId}/linkedresources/{linkedRe
 For performance reasons, you may want to maintain a local cache of objects, and periodically synchronize the local cache with the server, using [delta query](/graph/delta-query-overview). 
 
 The following To Do API resources support delta query:
-* [todoTask](./todotask.md) collection in a task list
-* [todoTaskList](./todotasklist.md)
+* [task](./todotask.md) collection in a task list
+* [taskList](./todotasklist.md)
 
 ## What's new
 Find out about the [latest new features and updates](/graph/whats-new-overview) for this API set.

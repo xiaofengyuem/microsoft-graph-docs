@@ -1,17 +1,17 @@
 ---
-title: "Get todoTaskList"
-description: "Read the properties and relationships of a todoTaskList object."
+title: "Get taskList"
+description: "Read the properties and relationships of a taskList object."
 author: "avijityadav"
 localization_priority: Normal
 ms.prod: "outlook"
 doc_type: apiPageType
 ---
 
-# Get todoTaskList
+# Get taskList
 Namespace: microsoft.graph.todo
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Read the properties and relationships of a [todoTaskList](../resources/todotasklist.md) object.
+Read the properties and relationships of a [taskList](../resources/todotasklist.md) object.
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
@@ -29,8 +29,8 @@ One of the following permissions is required to call this API. To learn more, in
 }
 -->
 ``` http
-GET /me/todo/lists/{todoTaskListId}
-GET /users/{id|userPrincipalName}/todo/lists/{todoTaskListId}
+GET /me/todo/lists/{taskListId}
+GET /users/{id|userPrincipalName}/todo/lists/{taskListId}
 ```
 
 ## Optional query parameters
@@ -46,7 +46,7 @@ Do not supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a [todoTaskList](../resources/todotasklist.md) object in the response body.
+If successful, this method returns a `200 OK` response code and a [taskList](../resources/todotasklist.md) object in the response body.
 
 ## Examples
 
@@ -56,7 +56,7 @@ If successful, this method returns a `200 OK` response code and a [todoTaskList]
 <!-- {
   "blockType": "request",
   "sampleKeys": ["AAMkADIyAAAAABrJAAA="],
-  "name": "get_todotasklist"
+  "name": "get_todo.tasklist"
 }
 -->
 ``` http
@@ -83,7 +83,7 @@ GET https://graph.microsoft.com/beta/me/todo/lists/AAMkADIyAAAAABrJAAA=
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.todoTaskList"
+  "@odata.type": "microsoft.graph.todo.taskList"
 }
 -->
 ``` http
@@ -92,7 +92,7 @@ Content-Type: application/json
 
 {
   "value": {
-    "@odata.type": "#microsoft.graph.todoTaskList",
+    "@odata.type": "#microsoft.graph.todo.taskList",
     "id": "5daae1ed-e1ed-5daa-ede1-aa5dede1aa5d",
     "displayName": "Monthly tasks",
     "isOwner": "true",

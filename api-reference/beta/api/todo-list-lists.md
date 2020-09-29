@@ -1,6 +1,6 @@
 ---
 title: "List lists"
-description: "Get a list of the todoTaskList objects and their properties."
+description: "Get a list of the taskList objects and their properties."
 author: "avijityadav"
 localization_priority: Normal
 ms.prod: "outlook"
@@ -10,7 +10,7 @@ doc_type: apiPageType
 # List lists
 Namespace: microsoft.graph.todo
 
-Get a list of the [todoTaskList](../resources/todotasklist.md) objects and their properties.
+Get a list of the [taskList](../resources/todotasklist.md) objects and their properties.
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
@@ -45,7 +45,7 @@ Do not supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a collection of [todoTaskList](../resources/todotasklist.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and a collection of [taskList](../resources/todotasklist.md) objects in the response body.
 
 ## Examples
 
@@ -54,7 +54,7 @@ If successful, this method returns a `200 OK` response code and a collection of 
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "name": "get_todotasklist"
+  "name": "get_taskList"
 }
 -->
 ``` http
@@ -81,7 +81,7 @@ GET https://graph.microsoft.com/beta/me/todo/lists
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "collection(microsoft.graph.todoTaskList)"
+  "@odata.type": "collection(microsoft.graph.todo.taskList)"
 }
 -->
 ``` http
@@ -91,7 +91,7 @@ Content-Type: application/json
 {
   "value": [
     {
-      "@odata.type": "#microsoft.graph.todoTaskList",
+      "@odata.type": "#microsoft.graph.todo.taskList",
       "id": "AAMkADIyAAAAABrJAAA=",
       "displayName": "Tasks",
       "isOwner": true,
@@ -99,7 +99,7 @@ Content-Type: application/json
       "wellknownListName": "defaultList"
     },
         {
-      "@odata.type": "#microsoft.graph.todoTaskList",
+      "@odata.type": "#microsoft.graph.todo.taskList",
       "id": "AAMkADIyAAAEFTTrJAAA=",
       "displayName": "Monthly Tasks",
       "isOwner":true,

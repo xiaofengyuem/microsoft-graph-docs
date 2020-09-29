@@ -1,17 +1,17 @@
 ---
-title: "Delete todoTask"
-description: "Deletes a todoTask object."
+title: "Delete task"
+description: "Deletes a task object."
 author: "avijityadav"
 localization_priority: Normal
 ms.prod: "outlook"
 doc_type: apiPageType
 ---
 
-# Delete todoTask
+# Delete task
 Namespace: microsoft.graph.todo
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Deletes a [todoTask](../resources/todotask.md) object.
+Deletes a [task](../resources/todotask.md) object.
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
@@ -29,8 +29,8 @@ One of the following permissions is required to call this API. To learn more, in
 }
 -->
 ``` http
-DELETE /me/todo/lists/{todoTaskListId}/tasks/{taskId}
-DELETE /users/{id|userPrincipalName}/todo/lists/{todoTaskListId}/tasks/{taskId}
+DELETE /me/todo/lists/{taskListId}/tasks/{taskId}
+DELETE /users/{id|userPrincipalName}/todo/lists/{taskListId}/tasks/{taskId}
 ```
 
 ## Request headers
@@ -53,7 +53,7 @@ If successful, this method returns a `204 No Content` response code.
 <!-- {
   "blockType": "request",
   "sampleKeys": ["AAMkADA1MTHgwAAA=", "721a35e2-35e2-721a-e235-1a72e2351a72"],
-  "name": "delete_todotask"
+  "name": "delete_task"
 }
 -->
 ``` http

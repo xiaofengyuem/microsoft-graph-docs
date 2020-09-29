@@ -1,22 +1,22 @@
 ---
-title: "todoTaskList: delta"
-description: "Get a set of todoTaskList resources that have been added, deleted, or removed in Microsoft To Do."
+title: "taskList: delta"
+description: "Get a set of taskList resources that have been added, deleted, or removed in Microsoft To Do."
 localization_priority: Normal
 author: "avijityadav"
 ms.prod: "outlook"
 doc_type: apiPageType
 ---
 
-# todoTaskList: delta
+# taskList: delta
 
-Namespace: microsoft.graph.todo
+Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a set of [todoTaskList](../resources/todotasklist.md) resources that have been added, deleted, or removed in Microsoft To Do.
+Get a set of [taskList](../resources/todotasklist.md) resources that have been added, deleted, or removed in Microsoft To Do.
 
-A **delta** function call for **todoTaskList** is similar to a GET request, except that by appropriately applying [state tokens](/graph/delta-query-overview) in one or more of these calls, 
-you can query for incremental changes in the **todoTaskList**. This allows you to maintain and synchronize a local store of a user's **todoTaskList** without having to fetch all the **todoTaskList** from the server every time.
+A **delta** function call for **taskList** is similar to a GET request, except that by appropriately applying [state tokens](/graph/delta-query-overview) in one or more of these calls, 
+you can query for incremental changes in the **taskList**. This allows you to maintain and synchronize a local store of a user's **taskList** without having to fetch all the **taskList** from the server every time.
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
@@ -37,7 +37,7 @@ GET /users/{id|userPrincipalName}/todo/lists/delta
 
 ## Query parameters
 
-Tracking changes in **todoTaskList** resources incurs a round of one or more **delta** function calls. If you use any query parameter 
+Tracking changes in **taskList** resources incurs a round of one or more **delta** function calls. If you use any query parameter 
 (other than `$deltatoken` and `$skiptoken`), you must specify 
 it in the initial **delta** request. Microsoft Graph automatically encodes any specified parameters 
 into the token portion of the `nextLink` or `deltaLink` URL provided in the response. 
@@ -47,8 +47,8 @@ includes the encoded, desired parameters.
 
 | Query parameter	   | Type	|Description|
 |:---------------|:--------|:----------|
-| $deltatoken | string | A [state token](/graph/delta-query-overview) returned in the `deltaLink` URL of the previous **delta** function call for the same **todoTaskList** collection, indicating the completion of that round of change tracking. Save and apply the entire `deltaLink` URL including this token in the first request of the next round of change tracking for that collection.|
-| $skiptoken | string | A [state token](/graph/delta-query-overview) returned in the `nextLink` URL of the previous **delta** function call, indicating there are further changes to be tracked in the same **todoTaskList** collection. |
+| $deltatoken | string | A [state token](/graph/delta-query-overview) returned in the `deltaLink` URL of the previous **delta** function call for the same **taskList** collection, indicating the completion of that round of change tracking. Save and apply the entire `deltaLink` URL including this token in the first request of the next round of change tracking for that collection.|
+| $skiptoken | string | A [state token](/graph/delta-query-overview) returned in the `nextLink` URL of the previous **delta** function call, indicating there are further changes to be tracked in the same **taskList** collection. |
 
 ### OData query parameters
 
@@ -64,15 +64,15 @@ _id_ property is always returned.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and [todoTaskList](../resources/todotasklist.md) collection object in the response body.
+If successful, this method returns a `200 OK` response code and [taskList](../resources/todotasklist.md) collection object in the response body.
 
 ## Example
 ### Request
-The following example shows how to make a single **delta** function call, and limit the maximum number of **todoTaskList** in the response body to 2.
+The following example shows how to make a single **delta** function call, and limit the maximum number of **taskList** in the response body to 2.
 
-To track changes in the **todoTaskList**, you would make one or more **delta** function calls, with appropriate state tokens, to get the set of incremental changes since the last delta query. 
+To track changes in the **taskList**, you would make one or more **delta** function calls, with appropriate state tokens, to get the set of incremental changes since the last delta query. 
 
-The main differences between tracking **todoTaskList** and tracking **todoTask** resources in a list are in the delta query request URLs, and the query responses returning **todoTaskList** rather than **todoTask** collections.
+The main differences between tracking **taskList** and tracking **taskList** resources in a list are in the delta query request URLs, and the query responses returning **taskList** rather than **task** collections.
 
 ### HTTP Request
 <!-- { "blockType": "ignored" } -->

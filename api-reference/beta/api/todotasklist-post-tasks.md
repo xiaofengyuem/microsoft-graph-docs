@@ -1,17 +1,17 @@
 ---
-title: "Create todoTask"
-description: "Create a new task object in a specified todoTaskList."
+title: "Create task"
+description: "Create a new task object in a specified taskList."
 author: "avijityadav"
 localization_priority: Normal
 ms.prod: "outlook"
 doc_type: apiPageType
 ---
 
-# Create todoTask
+# Create task
 Namespace: microsoft.graph.todo
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Create a new task object in a specified [todoTaskList](../resources/todotasklist.md).
+Create a new task object in a specified [taskList](../resources/todotasklist.md).
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
@@ -29,8 +29,8 @@ One of the following permissions is required to call this API. To learn more, in
 }
 -->
 ``` http
-POST /me/todo/lists/{todoTaskListId}/tasks
-POST /users/{id|userPrincipalName}/todo/lists/{todoTaskListId}/tasks
+POST /me/todo/lists/{taskListId}/tasks
+POST /users/{id|userPrincipalName}/todo/lists/{taskListId}/tasks
 ```
 
 ## Request headers
@@ -40,9 +40,9 @@ POST /users/{id|userPrincipalName}/todo/lists/{todoTaskListId}/tasks
 |Content-Type|application/json. Required.|
 
 ## Request body
-In the request body, supply a JSON representation of the [todoTask](../resources/todotask.md) object.
+In the request body, supply a JSON representation of the [task](../resources/todotask.md) object.
 
-The following table shows the properties that are required when you create the [todoTask](../resources/todotask.md).
+The following table shows the properties that are required when you create the [task](../resources/todotask.md).
 
 |Property|Type|Description|
 |:---|:---|:---|
@@ -64,7 +64,7 @@ The following table shows the properties that are required when you create the [
 
 ## Response
 
-If successful, this method returns a `201 Created` response code and a [todoTask](../resources/todotask.md) object in the response body.
+If successful, this method returns a `201 Created` response code and a [task](../resources/todotask.md) object in the response body.
 
 ## Examples
 
@@ -112,7 +112,7 @@ Content-length: 608
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.todoTask"
+  "@odata.type": "microsoft.graph.todo.task"
 }
 -->
 ``` http

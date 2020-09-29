@@ -1,6 +1,6 @@
 ---
 title: "linkedResource resource type"
-description: "Represents the source of the todoTask"
+description: "Represents the source of the task"
 author: "avijityadav"
 localization_priority: Normal
 ms.prod: "outlook"
@@ -13,7 +13,7 @@ Namespace: microsoft.graph.todo
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents an item in a partner application related to a [todoTask](./todotask.md). An example is an email that created the task. A **linkedResource** object stores information about that source application, and lets you link back to the related item.
+Represents an item in a partner application related to a [task](./todotask.md). An example is an email that created the task. A **linkedResource** object stores information about that source application, and lets you link back to the related item.
 
 ## Methods
 |Method|Return type|Description|
@@ -41,14 +41,14 @@ The following is a JSON representation of the resource.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",
-  "@odata.type": "microsoft.graph.linkedResource",
+  "@odata.type": "microsoft.graph.todo.linkedResource",
   "baseType": "microsoft.graph.entity",
   "openType": false
 }
 -->
 ``` json
 {
-  "@odata.type": "#microsoft.graph.linkedResource",
+  "@odata.type": "#microsoft.graph.todo.linkedResource",
   "id": "String (identifier)",
   "webUrl": "String",
   "applicationName": "String",

@@ -1,6 +1,6 @@
 ---
 title: "List Todo tasks"
-description: "Get the todoTask resources from the tasks navigation property of a specified todoTaskList."
+description: "Get the task resources from the tasks navigation property of a specified taskList."
 author: "avijityadav"
 localization_priority: Normal
 ms.prod: "outlook"
@@ -11,7 +11,7 @@ doc_type: apiPageType
 Namespace: microsoft.graph.todo
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get the **todoTask** resources from the **tasks** navigation property of a specified [todoTaskList](../resources/todotasklist.md).
+Get the **task** resources from the **tasks** navigation property of a specified [taskList](../resources/todotasklist.md).
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
@@ -29,8 +29,8 @@ One of the following permissions is required to call this API. To learn more, in
 }
 -->
 ``` http
-GET /me/todo/lists/{todoTaskListId}/tasks
-GET /users/{id|userPrincipalName}/todo/lists/{todoTaskListId}/tasks
+GET /me/todo/lists/{taskListId}/tasks
+GET /users/{id|userPrincipalName}/todo/lists/{taskListId}/tasks
 ```
 
 ## Optional query parameters
@@ -46,7 +46,7 @@ Do not supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a collection of [todoTask](../resources/todotask.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and a collection of [task](../resources/todotask.md) objects in the response body.
 
 ## Examples
 
@@ -56,7 +56,7 @@ If successful, this method returns a `200 OK` response code and a collection of 
 <!-- {
   "blockType": "request",
   "sampleKeys": ["35e2-35e2-721a-e235-1a72e2351a7"],
-  "name": "get_todotask"
+  "name": "get_todo.task"
 }
 -->
 ``` http
@@ -83,7 +83,7 @@ GET https://graph.microsoft.com/beta/me/todo/lists/35e2-35e2-721a-e235-1a72e2351
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "collection(microsoft.graph.todoTask)"
+  "@odata.type": "collection(microsoft.graph.todo.task)"
 }
 -->
 ``` http

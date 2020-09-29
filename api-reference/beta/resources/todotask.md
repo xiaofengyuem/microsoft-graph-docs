@@ -1,21 +1,21 @@
 ---
-title: "todoTask resource type"
-description: "A todoTask resource tracks a work item."
+title: "task resource type"
+description: "A task resource tracks a work item."
 author: "avijityadav"
 localization_priority: Normal
 ms.prod: "outlook"
 doc_type: resourcePageType
 ---
 
-# todoTask resource type
+# task resource type
 
 Namespace: microsoft.graph.todo
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-A **todoTask** represents a task, such as a piece of work or personal item, that can be tracked and completed. 
+A **task** represents a task, such as a piece of work or personal item, that can be tracked and completed. 
 
-A **todoTask** is always contained in a [todoTaskList](todotasklist.md). It includes a relationship to a collection of [linkedResource](./linkedResource.md) objects, tracking one or more sources of the task.
+A **task** is always contained in a [taskList](todotasklist.md). It includes a relationship to a collection of [linkedResource](./linkedResource.md) objects, tracking one or more sources of the task.
 
 This resource supports the following:
 * Adding your data as custom properties in [open extensions](/graph/extensibility-overview).
@@ -24,11 +24,11 @@ This resource supports the following:
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List tasks](../api/todotasklist-list-tasks.md)|[todoTask](todotask.md) collection|Get all the [todoTask](todotask.md) resources in the specified list.|
-|[Create task](../api/todotasklist-post-tasks.md)|[todoTask](todotask.md)| Create a [todoTask](todotask.md) in the specified task list|
-|[Get task](../api/todotask-get.md)|[todoTask](../resources/todotask.md)|Read the properties and relationships of a [todoTask](../resources/todotask.md) object.|
-|[Update task](../api/todotask-update.md)|[todoTask](../resources/todotask.md)|Update the properties of a [todoTask](../resources/todotask.md) object.|
-|[Delete task](../api/todotask-delete.md)|None|Deletes a [todoTask](../resources/todotask.md) object.|
+|[List tasks](../api/todotasklist-list-tasks.md)|[task](todotask.md) collection|Get all the [task](todotask.md) resources in the specified list.|
+|[Create task](../api/todotasklist-post-tasks.md)|[task](todotask.md)| Create a [task](todotask.md) in the specified task list|
+|[Get task](../api/todotask-get.md)|[task](../resources/todotask.md)|Read the properties and relationships of a [task](../resources/todotask.md) object.|
+|[Update task](../api/todotask-update.md)|[task](../resources/todotask.md)|Update the properties of a [task](../resources/todotask.md) object.|
+|[Delete task](../api/todotask-delete.md)|None|Deletes a [task](../resources/todotask.md) object.|
 |[List linkedResources](../api/todotask-list-linkedresources.md)|[linkedResource](../resources/linkedresource.md) collection|Get the linkedResources from the linkedResources navigation property.|
 |[Create linkedResources](../api/todotask-post-linkedresources.md)|[linkedResource](../resources/linkedresource.md)|Create a new linkedResources object.|
 
@@ -61,14 +61,14 @@ The following is a JSON representation of the resource.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",
-  "@odata.type": "microsoft.graph.todoTask",
+  "@odata.type": "microsoft.graph.todo.task",
   "baseType": "microsoft.graph.entity",
   "openType": false
 }
 -->
 ``` json
 {
-  "@odata.type": "#microsoft.graph.todoTask",
+  "@odata.type": "#microsoft.graph.todo.task",
   "id": "String (identifier)",
   "body": {
     "@odata.type": "microsoft.graph.itemBody"

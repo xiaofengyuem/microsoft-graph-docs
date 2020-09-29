@@ -29,8 +29,8 @@ One of the following permissions is required to call this API. To learn more, in
 }
 -->
 ``` http
-GET /me/todo/lists/{todoTaskListId}/tasks/{taskId}/linkedResources
-GET /users/{id|userPrincipalName}/todo/lists/{todoTaskListId}/tasks/{taskId}/linkedResources
+GET /me/todo/lists/{taskListId}/tasks/{taskId}/linkedResources
+GET /users/{id|userPrincipalName}/todo/lists/{taskListId}/tasks/{taskId}/linkedResources
 ```
 
 ## Optional query parameters
@@ -83,7 +83,7 @@ GET https://graph.microsoft.com/beta/me/todo/lists/dfsdc-f9dfdfs-dcsda9/tasks/e2
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "collection(microsoft.graph.linkedResource)"
+  "@odata.type": "collection(microsoft.graph.todo.linkedResource)"
 }
 -->
 ``` http
@@ -93,7 +93,7 @@ Content-Type: application/json
 {
   "value": [
     {
-      "@odata.type": "#microsoft.graph.linkedResource",
+      "@odata.type": "#microsoft.graph.todo.linkedResource",
       "id": "f9cddce2-dce2-f9cd-e2dc-cdf9e2dccdf9",
       "webUrl": "http:://microsoft.com",
       "applicationName": "Microsoft",
