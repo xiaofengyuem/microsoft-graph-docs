@@ -141,8 +141,8 @@ This resource supports:
 | [Get settings](../api/usersettings-get.md) | [userSettings](usersettings.md) | Read the user and organization settings object. |
 | [Update settings](../api/usersettings-update.md) | [userSettings](usersettings.md) | Update the properties of the settings object. |
 | **Todo tasklists** |||
-|[List lists](../api/todoapp-list-lists.md) | [taskList](todo-tasklist.md) collection | Get all the task lists in the user's mailbox. |
-|[Create tasklist](../api/todoapp-post-lists.md) | [taskList](todo-tasklist.md) | Create a To Do task list in the user's mailbox. |
+|[List lists](../api/todo-todoapp-list-lists.md) | [taskList](todo-tasklist.md) collection | Get all the task lists in the user's mailbox. |
+|[Create tasklist](../api/todo-todoapp-post-lists.md) | [taskList](todo-tasklist.md) | Create a To Do task list in the user's mailbox. |
 
 ## Properties
 

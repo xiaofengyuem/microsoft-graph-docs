@@ -10,7 +10,7 @@ doc_type: apiPageType
 # List lists
 Namespace: microsoft.graph.todo
 
-Get a list of the [taskList](../resources/tasklist.md) objects and their properties.
+Get a list of the [taskList](../resources/todo-tasklist.md) objects and their properties.
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
@@ -45,7 +45,7 @@ Do not supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a collection of [taskList](../resources/tasklist.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and a collection of [taskList](../resources/todo-tasklist.md) objects in the response body.
 
 ## Examples
 

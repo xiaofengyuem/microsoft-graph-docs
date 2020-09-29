@@ -39,9 +39,9 @@ POST /users/{id|userPrincipalName}/todo/lists
 |Content-Type|application/json. Required.|
 
 ## Request body
-In the request body, supply a JSON representation of the [taskList](../resources/tasklist.md) object.
+In the request body, supply a JSON representation of the [taskList](../resources/todo-tasklist.md) object.
 
-The following table shows the properties that are required when you create the [taskList](../resources/tasklist.md).
+The following table shows the properties that are required when you create the [taskList](../resources/todo-tasklist.md).
 
 |Property|Type|Description|
 |:---|:---|:---|
@@ -49,7 +49,7 @@ The following table shows the properties that are required when you create the [
 
 ## Response
 
-If successful, this method returns a `201 Created` response code and a [taskList](../resources/tasklist.md) object in the response body.
+If successful, this method returns a `201 Created` response code and a [taskList](../resources/todo-tasklist.md) object in the response body.
 
 ## Examples
 

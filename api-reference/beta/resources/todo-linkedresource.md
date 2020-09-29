@@ -18,11 +18,11 @@ Represents an item in a partner application related to a [task](./todo-task.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List linkedResources](../api/task-list-linkedresources.md)|[linkedResource](../resources/todo-linkedresource.md) collection|Get the linkedResources from the linkedResources navigation property.|
-|[Create linkedResource](../api/task-post-linkedresources.md)|[linkedResource](../resources/todo-linkedresource.md)|Create a new linkedResources object.|
-|[Get linkedResource](../api/linkedresource-get.md)|[linkedResource](../resources/todo-linkedresource.md)|Read the properties and relationships of a [linkedResource](../resources/todo-linkedresource.md) object.|
-|[Update linkedResource](../api/linkedresource-update.md)|[linkedResource](../resources/todo-linkedresource.md)|Update the properties of a [linkedResource](../resources/todo-linkedresource.md) object.|
-|[Delete linkedResource](../api/linkedresource-delete.md)|None|Deletes a [linkedResource](../resources/todo-linkedresource.md) object.|
+|[List linkedResources](../api/todo-task-list-linkedresources.md)|[linkedResource](../resources/todo-linkedresource.md) collection|Get the linkedResources from the linkedResources navigation property.|
+|[Create linkedResource](../api/todo-task-post-linkedresources.md)|[linkedResource](../resources/todo-linkedresource.md)|Create a new linkedResources object.|
+|[Get linkedResource](../api/todo-linkedresource-get.md)|[linkedResource](../resources/todo-linkedresource.md)|Read the properties and relationships of a [linkedResource](../resources/todo-linkedresource.md) object.|
+|[Update linkedResource](../api/todo-linkedresource-update.md)|[linkedResource](../resources/todo-linkedresource.md)|Update the properties of a [linkedResource](../resources/todo-linkedresource.md) object.|
+|[Delete linkedResource](../api/todo-linkedresource-delete.md)|None|Deletes a [linkedResource](../resources/todo-linkedresource.md) object.|
 
 ## Properties
 |Property|Type|Description|
