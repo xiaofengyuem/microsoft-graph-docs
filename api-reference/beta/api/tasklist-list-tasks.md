@@ -11,7 +11,7 @@ doc_type: apiPageType
 Namespace: microsoft.graph.todo
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get the **task** resources from the **tasks** navigation property of a specified [taskList](../resources/tasklist.md).
+Get the **task** resources from the **tasks** navigation property of a specified [taskList](../resources/todo-tasklist.md).
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
@@ -46,7 +46,7 @@ Do not supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a collection of [task](../resources/task.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and a collection of [task](../resources/todo-task.md) objects in the response body.
 
 ## Examples
 

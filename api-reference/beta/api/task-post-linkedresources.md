@@ -40,9 +40,9 @@ POST /users/{id|userPrincipalName}/todo/lists/{taskListId}/tasks/{taskId}/linked
 |Content-Type|application/json. Required.|
 
 ## Request body
-In the request body, supply a JSON representation of the [linkedResource](../resources/linkedresource.md) object.
+In the request body, supply a JSON representation of the [linkedResource](../resources/todo-linkedresource.md) object.
 
-The following table shows the properties that are required when you create the [linkedResource](../resources/linkedresource.md).
+The following table shows the properties that are required when you create the [linkedResource](../resources/todo-linkedresource.md).
 
 |Property|Type|Description|
 |:---|:---|:---|
@@ -56,7 +56,7 @@ The following table shows the properties that are required when you create the [
 
 ## Response
 
-If successful, this method returns a `201 Created` response code and a [linkedResource](../resources/linkedresource.md) object in the response body.
+If successful, this method returns a `201 Created` response code and a [linkedResource](../resources/todo-linkedresource.md) object in the response body.
 
 ## Examples
 

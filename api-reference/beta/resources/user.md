@@ -141,8 +141,8 @@ This resource supports:
 | [Get settings](../api/usersettings-get.md) | [userSettings](usersettings.md) | Read the user and organization settings object. |
 | [Update settings](../api/usersettings-update.md) | [userSettings](usersettings.md) | Update the properties of the settings object. |
 | **Todo tasklists** |||
-|[List lists](../api/todoapp-list-lists.md) | [taskList](tasklist.md) collection | Get all the task lists in the user's mailbox. |
-|[Create tasklist](../api/todoapp-post-lists.md) | [taskList](tasklist.md) | Create a To Do task list in the user's mailbox. |
+|[List lists](../api/todoapp-list-lists.md) | [taskList](todo-tasklist.md) collection | Get all the task lists in the user's mailbox. |
+|[Create tasklist](../api/todoapp-post-lists.md) | [taskList](todo-tasklist.md) | Create a To Do task list in the user's mailbox. |
 
 ## Properties
 
@@ -299,7 +299,7 @@ The age group and minor consent properties are optional properties used by Azure
 |scopedRoleMemberOf|[scopedRoleMembership](scopedrolemembership.md) collection| The scoped-role administrative unit memberships for this user. Read-only. Nullable.|
 |settings|[userSettings](usersettings.md) | Read-only. Nullable.|
 |teamwork|[userTeamwork](userteamwork.md)| A container for Microsoft Teams features available for the user. Read-only. Nullable.|
-|todo|[todo](todoapp.md)|Represents the To Do services available to a user. |
+|todo|[todo](todo-todoapp.md)|Represents the To Do services available to a user. |
 
 ### User preferences for languages and regional formats
 The **user** resource contains a [mailboxSettings](../resources/mailboxsettings.md) property which includes the user's preferred language, date and time formatting, default time zone, and other settings specifically for their primary Exchange mailbox. These preferences are targeted for mail clients and are only available if the user has a mailbox provisioned. You can choose to use **mailboxSettings** if your scenario focuses only on Outlook mail, calendar, contacts, or to-do tasks.

@@ -13,7 +13,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a set of [taskList](../resources/tasklist.md) resources that have been added, deleted, or removed in Microsoft To Do.
+Get a set of [taskList](../resources/todo-tasklist.md) resources that have been added, deleted, or removed in Microsoft To Do.
 
 A **delta** function call for **taskList** is similar to a GET request, except that by appropriately applying [state tokens](/graph/delta-query-overview) in one or more of these calls, 
 you can query for incremental changes in the **taskList**. This allows you to maintain and synchronize a local store of a user's **taskList** without having to fetch all the **taskList** from the server every time.
@@ -64,7 +64,7 @@ _id_ property is always returned.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and [taskList](../resources/tasklist.md) collection object in the response body.
+If successful, this method returns a `200 OK` response code and [taskList](../resources/todo-tasklist.md) collection object in the response body.
 
 ## Example
 ### Request

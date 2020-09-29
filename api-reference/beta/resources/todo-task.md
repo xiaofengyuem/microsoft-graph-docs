@@ -15,7 +15,7 @@ Namespace: microsoft.graph.todo
 
 A **task** represents a task, such as a piece of work or personal item, that can be tracked and completed. 
 
-A **task** is always contained in a [taskList](tasklist.md). It includes a relationship to a collection of [linkedResource](./linkedResource.md) objects, tracking one or more sources of the task.
+A **task** is always contained in a [taskList](todo-tasklist.md). It includes a relationship to a collection of [linkedResource](./todo-linkedResource.md) objects, tracking one or more sources of the task.
 
 This resource supports the following:
 * Adding your data as custom properties in [open extensions](/graph/extensibility-overview).
@@ -24,13 +24,13 @@ This resource supports the following:
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List tasks](../api/tasklist-list-tasks.md)|[task](task.md) collection|Get all the [task](task.md) resources in the specified list.|
-|[Create task](../api/tasklist-post-tasks.md)|[task](task.md)| Create a [task](task.md) in the specified task list|
-|[Get task](../api/task-get.md)|[task](../resources/task.md)|Read the properties and relationships of a [task](../resources/task.md) object.|
-|[Update task](../api/task-update.md)|[task](../resources/task.md)|Update the properties of a [task](../resources/task.md) object.|
-|[Delete task](../api/task-delete.md)|None|Deletes a [task](../resources/task.md) object.|
-|[List linkedResources](../api/task-list-linkedresources.md)|[linkedResource](../resources/linkedresource.md) collection|Get the linkedResources from the linkedResources navigation property.|
-|[Create linkedResources](../api/task-post-linkedresources.md)|[linkedResource](../resources/linkedresource.md)|Create a new linkedResources object.|
+|[List tasks](../api/tasklist-list-tasks.md)|[task](todo-task.md) collection|Get all the [task](todo-task.md) resources in the specified list.|
+|[Create task](../api/tasklist-post-tasks.md)|[task](todo-task.md)| Create a [task](todo-task.md) in the specified task list|
+|[Get task](../api/task-get.md)|[task](../resources/todo-task.md)|Read the properties and relationships of a [task](../resources/todo-task.md) object.|
+|[Update task](../api/task-update.md)|[task](../resources/todo-task.md)|Update the properties of a [task](../resources/todo-task.md) object.|
+|[Delete task](../api/task-delete.md)|None|Deletes a [task](../resources/todo-task.md) object.|
+|[List linkedResources](../api/task-list-linkedresources.md)|[linkedResource](../resources/todo-linkedresource.md) collection|Get the linkedResources from the linkedResources navigation property.|
+|[Create linkedResources](../api/task-post-linkedresources.md)|[linkedResource](../resources/todo-linkedresource.md)|Create a new linkedResources object.|
 
 ## Properties
 |Property|Type|Description|
@@ -53,7 +53,7 @@ This resource supports the following:
 |Relationship|Type|Description|
 |:---|:---|:---|
 |extensions|[extension](extension.md) collection| The collection of open extensions defined for the task. Nullable.|
-|linkedResources|[linkedResource](../resources/linkedresource.md) collection|A collection of resources linked to the task.|
+|linkedResources|[linkedResource](../resources/todo-linkedresource.md) collection|A collection of resources linked to the task.|
 
 
 ## JSON representation

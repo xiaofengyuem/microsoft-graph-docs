@@ -13,16 +13,16 @@ Namespace: microsoft.graph.todo
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents an item in a partner application related to a [task](./task.md). An example is an email that created the task. A **linkedResource** object stores information about that source application, and lets you link back to the related item.
+Represents an item in a partner application related to a [task](./todo-task.md). An example is an email that created the task. A **linkedResource** object stores information about that source application, and lets you link back to the related item.
 
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List linkedResources](../api/task-list-linkedresources.md)|[linkedResource](../resources/linkedresource.md) collection|Get the linkedResources from the linkedResources navigation property.|
-|[Create linkedResource](../api/task-post-linkedresources.md)|[linkedResource](../resources/linkedresource.md)|Create a new linkedResources object.|
-|[Get linkedResource](../api/linkedresource-get.md)|[linkedResource](../resources/linkedresource.md)|Read the properties and relationships of a [linkedResource](../resources/linkedresource.md) object.|
-|[Update linkedResource](../api/linkedresource-update.md)|[linkedResource](../resources/linkedresource.md)|Update the properties of a [linkedResource](../resources/linkedresource.md) object.|
-|[Delete linkedResource](../api/linkedresource-delete.md)|None|Deletes a [linkedResource](../resources/linkedresource.md) object.|
+|[List linkedResources](../api/task-list-linkedresources.md)|[linkedResource](../resources/todo-linkedresource.md) collection|Get the linkedResources from the linkedResources navigation property.|
+|[Create linkedResource](../api/task-post-linkedresources.md)|[linkedResource](../resources/todo-linkedresource.md)|Create a new linkedResources object.|
+|[Get linkedResource](../api/linkedresource-get.md)|[linkedResource](../resources/todo-linkedresource.md)|Read the properties and relationships of a [linkedResource](../resources/todo-linkedresource.md) object.|
+|[Update linkedResource](../api/linkedresource-update.md)|[linkedResource](../resources/todo-linkedresource.md)|Update the properties of a [linkedResource](../resources/todo-linkedresource.md) object.|
+|[Delete linkedResource](../api/linkedresource-delete.md)|None|Deletes a [linkedResource](../resources/todo-linkedresource.md) object.|
 
 ## Properties
 |Property|Type|Description|

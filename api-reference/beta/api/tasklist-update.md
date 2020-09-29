@@ -11,7 +11,7 @@ doc_type: apiPageType
 Namespace: microsoft.graph.todo
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Update the properties of a [taskList](../resources/tasklist.md) object.
+Update the properties of a [taskList](../resources/todo-tasklist.md) object.
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
@@ -40,9 +40,9 @@ PATCH /users/{id|userPrincipalName}/todo/lists/{taskListId}/tasks
 |Content-Type|application/json. Required.|
 
 ## Request body
-In the request body, supply a JSON representation of the [taskList](../resources/tasklist.md) object.
+In the request body, supply a JSON representation of the [taskList](../resources/todo-tasklist.md) object.
 
-The following table shows the properties that are required when you create the [taskList](../resources/tasklist.md).
+The following table shows the properties that are required when you create the [taskList](../resources/todo-tasklist.md).
 
 |Property|Type|Description|
 |:---|:---|:---|
@@ -52,7 +52,7 @@ The following table shows the properties that are required when you create the [
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and an updated [taskList](../resources/tasklist.md) object in the response body.
+If successful, this method returns a `200 OK` response code and an updated [taskList](../resources/todo-tasklist.md) object in the response body.
 
 ## Examples
 

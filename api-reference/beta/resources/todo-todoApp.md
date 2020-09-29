@@ -18,8 +18,8 @@ Inherits from [entity](../resources/entity.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List lists](../api/todoApp-list-lists.md) | [taskList](tasklist.md) collection | Get all the task lists in the user's mailbox. |
-|[Create taskList](../api/todoApp-post-lists.md) | [taskList](tasklist.md) | Create a To Do task list in the user's mailbox. |
+|[List lists](../api/todoApp-list-lists.md) | [taskList](todo-tasklist.md) collection | Get all the task lists in the user's mailbox. |
+|[Create taskList](../api/todoApp-post-lists.md) | [taskList](todo-tasklist.md) | Create a To Do task list in the user's mailbox. |
 
 ## Properties
 None
@@ -27,7 +27,7 @@ None
 ## Relationships
 |Relationship|Type|Description|
 |:---|:---|:---|
-|lists|[taskList](../resources/tasklist.md) collection| The task lists in the users mailbox. |
+|lists|[taskList](../resources/todo-tasklist.md) collection| The task lists in the users mailbox. |
 
 ## JSON representation
 The following is a JSON representation of the resource.

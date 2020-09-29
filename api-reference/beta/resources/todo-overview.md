@@ -13,7 +13,7 @@ doc_type: conceptualPageType
 
 Use the Microsoft Graph To Do API to create an app that connects with tasks across Microsoft To Do clients. Build a variety of experiences with tasks, such as the following:
 
-* Create tasks from your app’s workflow, for example, from email or notifications, and save them in To Do. Use the [linkedResource](linkedresource.md) entity to store the link back to your app.
+* Create tasks from your app’s workflow, for example, from email or notifications, and save them in To Do. Use the [linkedResource](todo-linkedresource.md) entity to store the link back to your app.
 * Sync your app’s existing tasks with To Do and create a single task view for better prioritization and manageability.
 * Manage To Do tasks in a custom business application.
 
@@ -25,7 +25,7 @@ Before starting with the To Do API, take a look at the resources and how they re
 
 ## Task list
 
-A [taskList](./tasklist.md) represents a logical container of [task](./task.md) resources. You can currently create tasks only in a task list. To [get all your task lists](../api/tasklist-get.md), make the following HTTP request:
+A [taskList](./todo-tasklist.md) represents a logical container of [task](./todo-task.md) resources. You can currently create tasks only in a task list. To [get all your task lists](../api/tasklist-get.md), make the following HTTP request:
 
 ``` http
 GET /me/todo/lists
@@ -33,14 +33,14 @@ GET /me/todo/lists
 
 ## Task
 
-A [task](./task.md) represents a task, i.e. a piece of work or personal item that can be tracked and completed. To get your tasks from a task list, make the following HTTP request:
+A [task](./todo-task.md) represents a task, i.e. a piece of work or personal item that can be tracked and completed. To get your tasks from a task list, make the following HTTP request:
 ``` http
 GET /me/todo/lists/{taskListId}/tasks
 ```
 
 ## Linked resource
 
-A [linkedResource](linkedresource.md) represents any item from a partner application related to the task, e.g. an item like email from where a task was created. You can use it to store information and the link back to the related item in your app. To get a linked resource from a task, make the following HTTP request:
+A [linkedResource](todo-linkedresource.md) represents any item from a partner application related to the task, e.g. an item like email from where a task was created. You can use it to store information and the link back to the related item in your app. To get a linked resource from a task, make the following HTTP request:
 ``` http
 GET /me/todo/lists/{taskListId}/tasks/{taskId}/linkedresources/{linkedResourceId}
 ```
@@ -50,8 +50,8 @@ GET /me/todo/lists/{taskListId}/tasks/{taskId}/linkedresources/{linkedResourceId
 For performance reasons, you may want to maintain a local cache of objects, and periodically synchronize the local cache with the server, using [delta query](/graph/delta-query-overview). 
 
 The following To Do API resources support delta query:
-* [task](./task.md) collection in a task list
-* [taskList](./tasklist.md)
+* [task](./todo-task.md) collection in a task list
+* [taskList](./todo-tasklist.md)
 
 ## What's new
 Find out about the [latest new features and updates](/graph/whats-new-overview) for this API set.

@@ -11,7 +11,7 @@ doc_type: apiPageType
 Namespace: microsoft.graph.todo
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Create a new task object in a specified [taskList](../resources/tasklist.md).
+Create a new task object in a specified [taskList](../resources/todo-tasklist.md).
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
@@ -40,9 +40,9 @@ POST /users/{id|userPrincipalName}/todo/lists/{taskListId}/tasks
 |Content-Type|application/json. Required.|
 
 ## Request body
-In the request body, supply a JSON representation of the [task](../resources/task.md) object.
+In the request body, supply a JSON representation of the [task](../resources/todo-task.md) object.
 
-The following table shows the properties that are required when you create the [task](../resources/task.md).
+The following table shows the properties that are required when you create the [task](../resources/todo-task.md).
 
 |Property|Type|Description|
 |:---|:---|:---|
@@ -64,7 +64,7 @@ The following table shows the properties that are required when you create the [
 
 ## Response
 
-If successful, this method returns a `201 Created` response code and a [task](../resources/task.md) object in the response body.
+If successful, this method returns a `201 Created` response code and a [task](../resources/todo-task.md) object in the response body.
 
 ## Examples
 
