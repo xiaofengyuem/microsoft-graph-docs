@@ -12436,56 +12436,56 @@ items:
       - name: Overview
         href: resources/todo-overview.md
       - name: Task list
-        href: resources/tasklist.md
+        href: resources/todo-tasklist.md
         items:
         - name: List task lists
-          href: api/todoapp-list-lists.md
+          href: api/todo-todoapp-list-lists.md
         - name: Create task list
-          href: api/todoapp-post-lists.md
+          href: api/todo-todoapp-post-lists.md
         - name: Get task list
-          href: api/tasklist-get.md
+          href: api/todo-tasklist-get.md
         - name: Update task list
-          href: api/tasklist-update.md
+          href: api/todo-tasklist-update.md
         - name: Delete task list
-          href: api/tasklist-delete.md
+          href: api/todo-tasklist-delete.md
         - name: Get task list delta
-          href: api/tasklist-delta.md
+          href: api/todo-tasklist-delta.md
         - name: Create open extension
           href: api/opentypeextension-post-opentypeextension.md
         - name: Get open extension
           href: api/opentypeextension-get.md
       - name: Task
-        href: resources/task.md
+        href: resources/todo-task.md
         items:
         - name: List tasks
-          href: api/tasklist-list-tasks.md
+          href: api/todo-tasklist-list-tasks.md
         - name: Create task
-          href: api/tasklist-post-tasks.md
+          href: api/todo-tasklist-post-tasks.md
         - name: Get task
-          href: api/task-get.md
+          href: api/todo-task-get.md
         - name: Update task
-          href: api/task-update.md
+          href: api/todo-task-update.md
         - name: Delete task
-          href: api/task-delete.md
+          href: api/todo-task-delete.md
         - name: Get task delta
-          href: api/task-delta.md
+          href: api/todo-task-delta.md
         - name: Create open extension
           href: api/opentypeextension-post-opentypeextension.md
         - name: Get open extension
           href: api/opentypeextension-get.md
       - name: Linked resource
-        href: resources/linkedresource.md
+        href: resources/todo-linkedresource.md
         items:
         - name: List
-          href: api/task-list-linkedresources.md
+          href: api/todo-task-list-linkedresources.md
         - name: Create
-          href: api/task-post-linkedresources.md
+          href: api/todo-task-post-linkedresources.md
         - name: Get
-          href: api/linkedresource-get.md
+          href: api/todo-linkedresource-get.md
         - name: Update
-          href: api/linkedresource-update.md
+          href: api/todo-linkedresource-update.md
         - name: Delete
-          href: api/linkedresource-delete.md
+          href: api/todo-linkedresource-delete.md
       - name: Outlook tasks (deprecated)
         items:
         - name: Outlook task (deprecated)

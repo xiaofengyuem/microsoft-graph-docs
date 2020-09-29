@@ -24,13 +24,13 @@ This resource supports the following:
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List tasks](../api/tasklist-list-tasks.md)|[task](todo-task.md) collection|Get all the [task](todo-task.md) resources in the specified list.|
-|[Create task](../api/tasklist-post-tasks.md)|[task](todo-task.md)| Create a [task](todo-task.md) in the specified task list|
-|[Get task](../api/task-get.md)|[task](../resources/todo-task.md)|Read the properties and relationships of a [task](../resources/todo-task.md) object.|
-|[Update task](../api/task-update.md)|[task](../resources/todo-task.md)|Update the properties of a [task](../resources/todo-task.md) object.|
-|[Delete task](../api/task-delete.md)|None|Deletes a [task](../resources/todo-task.md) object.|
-|[List linkedResources](../api/task-list-linkedresources.md)|[linkedResource](../resources/todo-linkedresource.md) collection|Get the linkedResources from the linkedResources navigation property.|
-|[Create linkedResources](../api/task-post-linkedresources.md)|[linkedResource](../resources/todo-linkedresource.md)|Create a new linkedResources object.|
+|[List tasks](../api/todo-tasklist-list-tasks.md)|[task](todo-task.md) collection|Get all the [task](todo-task.md) resources in the specified list.|
+|[Create task](../api/todo-tasklist-post-tasks.md)|[task](todo-task.md)| Create a [task](todo-task.md) in the specified task list|
+|[Get task](../api/todo-task-get.md)|[task](../resources/todo-task.md)|Read the properties and relationships of a [task](../resources/todo-task.md) object.|
+|[Update task](../api/todo-task-update.md)|[task](../resources/todo-task.md)|Update the properties of a [task](../resources/todo-task.md) object.|
+|[Delete task](../api/todo-task-delete.md)|None|Deletes a [task](../resources/todo-task.md) object.|
+|[List linkedResources](../api/todo-task-list-linkedresources.md)|[linkedResource](../resources/todo-linkedresource.md) collection|Get the linkedResources from the linkedResources navigation property.|
+|[Create linkedResources](../api/todo-task-post-linkedresources.md)|[linkedResource](../resources/todo-linkedresource.md)|Create a new linkedResources object.|
 
 ## Properties
 |Property|Type|Description|

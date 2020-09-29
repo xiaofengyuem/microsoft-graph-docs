@@ -21,11 +21,13 @@ Currently, the API supports only permissions delegated by the signed-in user.
  
 Before starting with the To Do API, take a look at the resources and how they relate to one another.
 
+The To Do API is defined in the OData sub-namespace, `microsoft.graph.todo`.
+
 ![To Do API entities](/graph/images/todo-api-entities.png)
 
 ## Task list
 
-A [taskList](./todo-tasklist.md) represents a logical container of [task](./todo-task.md) resources. You can currently create tasks only in a task list. To [get all your task lists](../api/tasklist-get.md), make the following HTTP request:
+A [taskList](./todo-tasklist.md) represents a logical container of [task](./todo-task.md) resources. You can currently create tasks only in a task list. To [get all your task lists](../api/todo-tasklist-get.md), make the following HTTP request:
 
 ``` http
 GET /me/todo/lists

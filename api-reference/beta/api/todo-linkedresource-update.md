@@ -11,7 +11,7 @@ doc_type: apiPageType
 Namespace: microsoft.graph.todo
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Update the properties of a [linkedResource](../resources/linkedresource.md) object.
+Update the properties of a [linkedResource](../resources/todo-linkedresource.md) object.
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
@@ -40,9 +40,9 @@ PATCH /users/{id|userPrincipalName}/todo/lists/{taskListId}/tasks/{taskId}/linke
 |Content-Type|application/json. Required.|
 
 ## Request body
-In the request body, supply a JSON representation of the [linkedResource](../resources/linkedresource.md) object.
+In the request body, supply a JSON representation of the [linkedResource](../resources/todo-linkedresource.md) object.
 
-The following table shows the properties that are required when you update the [linkedResource](../resources/linkedresource.md).
+The following table shows the properties that are required when you update the [linkedResource](../resources/todo-linkedresource.md).
 
 |Property|Type|Description|
 |:---|:---|:---|
@@ -50,7 +50,7 @@ The following table shows the properties that are required when you update the [
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and an updated [linkedResource](../resources/linkedresource.md) object in the response body.
+If successful, this method returns a `200 OK` response code and an updated [linkedResource](../resources/todo-linkedresource.md) object in the response body.
 
 ## Examples
 
@@ -69,7 +69,7 @@ Content-Type: application/json
 Content-length: 166
 
 {
-  "@odata.type": "#microsoft.graph.linkedResource",
+  "@odata.type": "#microsoft.graph.todo.linkedResource",
   "webUrl": "http://microsoft.com",
   "applicationName": "Microsoft",
   "displayName": "Microsoft",
@@ -95,7 +95,7 @@ Content-length: 166
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.linkedResource"
+  "@odata.type": "microsoft.graph.todo.linkedResource"
 }
 -->
 ``` http
