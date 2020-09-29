@@ -11,7 +11,7 @@ doc_type: apiPageType
 Namespace: microsoft.graph.todo
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Create a new task object in a specified [taskList](../resources/todotasklist.md).
+Create a new task object in a specified [taskList](../resources/tasklist.md).
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
@@ -40,9 +40,9 @@ POST /users/{id|userPrincipalName}/todo/lists/{taskListId}/tasks
 |Content-Type|application/json. Required.|
 
 ## Request body
-In the request body, supply a JSON representation of the [task](../resources/todotask.md) object.
+In the request body, supply a JSON representation of the [task](../resources/task.md) object.
 
-The following table shows the properties that are required when you create the [task](../resources/todotask.md).
+The following table shows the properties that are required when you create the [task](../resources/task.md).
 
 |Property|Type|Description|
 |:---|:---|:---|
@@ -64,7 +64,7 @@ The following table shows the properties that are required when you create the [
 
 ## Response
 
-If successful, this method returns a `201 Created` response code and a [task](../resources/todotask.md) object in the response body.
+If successful, this method returns a `201 Created` response code and a [task](../resources/task.md) object in the response body.
 
 ## Examples
 
@@ -74,7 +74,7 @@ If successful, this method returns a `201 Created` response code and a [task](..
 <!-- {
   "blockType": "request",
   "sampleKeys": ["AQMkADAwATM0MDAAMS0yMDkyLWVjMzYtM"],
-  "name": "create_todotask_from_tasks"
+  "name": "create_task_from_tasks"
 }
 -->
 ``` http
@@ -92,15 +92,15 @@ Content-length: 608
 }
 ```
 # [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/create-todotask-from-tasks-javascript-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/javascript/create-task-from-tasks-javascript-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [C#](#tab/csharp)
-[!INCLUDE [sample-code](../includes/snippets/csharp/create-todotask-from-tasks-csharp-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/csharp/create-task-from-tasks-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Objective-C](#tab/objc)
-[!INCLUDE [sample-code](../includes/snippets/objc/create-todotask-from-tasks-objc-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/objc/create-task-from-tasks-objc-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---

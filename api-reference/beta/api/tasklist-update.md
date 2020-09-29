@@ -1,16 +1,17 @@
 ---
-title: "Create taskList"
-description: "Create a new lists object."
+title: "Update taskList"
+description: "Update the properties of a taskList object."
 author: "avijityadav"
 localization_priority: Normal
 ms.prod: "outlook"
 doc_type: apiPageType
 ---
 
-# Create taskList
+# Update taskList
 Namespace: microsoft.graph.todo
+[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Create a new lists object.
+Update the properties of a [taskList](../resources/tasklist.md) object.
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
@@ -28,8 +29,8 @@ One of the following permissions is required to call this API. To learn more, in
 }
 -->
 ``` http
-POST /me/todo/lists
-POST /users/{id|userPrincipalName}/todo/lists
+PATCH /me/todo/lists/{taskListId}
+PATCH /users/{id|userPrincipalName}/todo/lists/{taskListId}/tasks
 ```
 
 ## Request headers
@@ -39,17 +40,19 @@ POST /users/{id|userPrincipalName}/todo/lists
 |Content-Type|application/json. Required.|
 
 ## Request body
-In the request body, supply a JSON representation of the [taskList](../resources/todotasklist.md) object.
+In the request body, supply a JSON representation of the [taskList](../resources/tasklist.md) object.
 
-The following table shows the properties that are required when you create the [taskList](../resources/todotasklist.md).
+The following table shows the properties that are required when you create the [taskList](../resources/tasklist.md).
 
 |Property|Type|Description|
 |:---|:---|:---|
-|displayName|String|Field indicating title of the task list.|
+|displayName|String|Field indicating updated title of the task list.|
+
+
 
 ## Response
 
-If successful, this method returns a `201 Created` response code and a [taskList](../resources/todotasklist.md) object in the response body.
+If successful, this method returns a `200 OK` response code and an updated [taskList](../resources/tasklist.md) object in the response body.
 
 ## Examples
 
@@ -58,28 +61,29 @@ If successful, this method returns a `201 Created` response code and a [taskList
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "name": "create_taskList_from_lists"
+  "sampleKeys": ["AAMkADIyAAAhrbPWAAA="],
+  "name": "update_taskList"
 }
 -->
 ``` http
-POST https://graph.microsoft.com/beta/me/todo/lists
+PATCH https://graph.microsoft.com/beta/me/todo/lists/AAMkADIyAAAhrbPWAAA=
 Content-Type: application/json
-Content-length: 60
+Content-length: 167
 
 {
-  "displayName": "Travel items",
+  "displayName": "Vacation Plan",
 }
 ```
 # [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/create-todotasklist-from-lists-javascript-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/javascript/update-tasklist-javascript-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [C#](#tab/csharp)
-[!INCLUDE [sample-code](../includes/snippets/csharp/create-todotasklist-from-lists-csharp-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/csharp/update-tasklist-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Objective-C](#tab/objc)
-[!INCLUDE [sample-code](../includes/snippets/objc/create-todotasklist-from-lists-objc-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/objc/update-tasklist-objc-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -95,17 +99,18 @@ Content-length: 60
 }
 -->
 ``` http
-HTTP/1.1 201 Created
+HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
   "@odata.type": "#microsoft.graph.todo.taskList",
   "id": "AAMkADIyAAAhrbPWAAA=",
-  "displayName": "Travel items",
+  "displayName": "Vacation Plan",
   "isOwner": true,
   "isShared": false,
   "wellknownListName": "none"
 }
 ```
+
 
 

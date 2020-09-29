@@ -25,7 +25,7 @@ Before starting with the To Do API, take a look at the resources and how they re
 
 ## Task list
 
-A [taskList](./todotasklist.md) represents a logical container of [task](./todotask.md) resources. You can currently create tasks only in a task list. To [get all your task lists](../api/todotasklist-get.md), make the following HTTP request:
+A [taskList](./tasklist.md) represents a logical container of [task](./task.md) resources. You can currently create tasks only in a task list. To [get all your task lists](../api/tasklist-get.md), make the following HTTP request:
 
 ``` http
 GET /me/todo/lists
@@ -33,7 +33,7 @@ GET /me/todo/lists
 
 ## Task
 
-A [task](./todotask.md) represents a task, i.e. a piece of work or personal item that can be tracked and completed. To get your tasks from a task list, make the following HTTP request:
+A [task](./task.md) represents a task, i.e. a piece of work or personal item that can be tracked and completed. To get your tasks from a task list, make the following HTTP request:
 ``` http
 GET /me/todo/lists/{taskListId}/tasks
 ```
@@ -50,8 +50,8 @@ GET /me/todo/lists/{taskListId}/tasks/{taskId}/linkedresources/{linkedResourceId
 For performance reasons, you may want to maintain a local cache of objects, and periodically synchronize the local cache with the server, using [delta query](/graph/delta-query-overview). 
 
 The following To Do API resources support delta query:
-* [task](./todotask.md) collection in a task list
-* [taskList](./todotasklist.md)
+* [task](./task.md) collection in a task list
+* [taskList](./tasklist.md)
 
 ## What's new
 Find out about the [latest new features and updates](/graph/whats-new-overview) for this API set.

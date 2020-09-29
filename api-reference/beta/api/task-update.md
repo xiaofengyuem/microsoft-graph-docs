@@ -11,7 +11,7 @@ doc_type: apiPageType
 Namespace: microsoft.graph.todo
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Update the properties of a [task](../resources/todotask.md) object.
+Update the properties of a [task](../resources/task.md) object.
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
@@ -40,9 +40,9 @@ PATCH /users/{id|userPrincipalName}/todo/lists/{taskListId}/tasks/{taskId}
 |Content-Type|application/json. Required.|
 
 ## Request body
-In the request body, supply a JSON representation of the [task](../resources/todotask.md) object.
+In the request body, supply a JSON representation of the [task](../resources/task.md) object.
 
-The following table shows the properties that are required when you create the [task](../resources/todotask.md).
+The following table shows the properties that are required when you create the [task](../resources/task.md).
 
 |Property|Type|Description|
 |:---|:---|:---|
@@ -64,7 +64,7 @@ The following table shows the properties that are required when you create the [
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and an updated [task](../resources/todotask.md) object in the response body.
+If successful, this method returns a `200 OK` response code and an updated [task](../resources/task.md) object in the response body.
 
 ## Examples
 
@@ -92,15 +92,15 @@ Content-length: 608
 }
 ```
 # [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/update-todotask-javascript-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/javascript/update-task-javascript-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [C#](#tab/csharp)
-[!INCLUDE [sample-code](../includes/snippets/csharp/update-todotask-csharp-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/csharp/update-task-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Objective-C](#tab/objc)
-[!INCLUDE [sample-code](../includes/snippets/objc/update-todotask-objc-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/objc/update-task-objc-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---

@@ -15,7 +15,7 @@ Namespace: microsoft.graph.todo
 
 A **task** represents a task, such as a piece of work or personal item, that can be tracked and completed. 
 
-A **task** is always contained in a [taskList](todotasklist.md). It includes a relationship to a collection of [linkedResource](./linkedResource.md) objects, tracking one or more sources of the task.
+A **task** is always contained in a [taskList](tasklist.md). It includes a relationship to a collection of [linkedResource](./linkedResource.md) objects, tracking one or more sources of the task.
 
 This resource supports the following:
 * Adding your data as custom properties in [open extensions](/graph/extensibility-overview).
@@ -24,13 +24,13 @@ This resource supports the following:
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List tasks](../api/todotasklist-list-tasks.md)|[task](todotask.md) collection|Get all the [task](todotask.md) resources in the specified list.|
-|[Create task](../api/todotasklist-post-tasks.md)|[task](todotask.md)| Create a [task](todotask.md) in the specified task list|
-|[Get task](../api/todotask-get.md)|[task](../resources/todotask.md)|Read the properties and relationships of a [task](../resources/todotask.md) object.|
-|[Update task](../api/todotask-update.md)|[task](../resources/todotask.md)|Update the properties of a [task](../resources/todotask.md) object.|
-|[Delete task](../api/todotask-delete.md)|None|Deletes a [task](../resources/todotask.md) object.|
-|[List linkedResources](../api/todotask-list-linkedresources.md)|[linkedResource](../resources/linkedresource.md) collection|Get the linkedResources from the linkedResources navigation property.|
-|[Create linkedResources](../api/todotask-post-linkedresources.md)|[linkedResource](../resources/linkedresource.md)|Create a new linkedResources object.|
+|[List tasks](../api/tasklist-list-tasks.md)|[task](task.md) collection|Get all the [task](task.md) resources in the specified list.|
+|[Create task](../api/tasklist-post-tasks.md)|[task](task.md)| Create a [task](task.md) in the specified task list|
+|[Get task](../api/task-get.md)|[task](../resources/task.md)|Read the properties and relationships of a [task](../resources/task.md) object.|
+|[Update task](../api/task-update.md)|[task](../resources/task.md)|Update the properties of a [task](../resources/task.md) object.|
+|[Delete task](../api/task-delete.md)|None|Deletes a [task](../resources/task.md) object.|
+|[List linkedResources](../api/task-list-linkedresources.md)|[linkedResource](../resources/linkedresource.md) collection|Get the linkedResources from the linkedResources navigation property.|
+|[Create linkedResources](../api/task-post-linkedresources.md)|[linkedResource](../resources/linkedresource.md)|Create a new linkedResources object.|
 
 ## Properties
 |Property|Type|Description|

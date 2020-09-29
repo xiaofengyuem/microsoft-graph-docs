@@ -1,25 +1,25 @@
 ---
-title: "Delete task"
-description: "Deletes a task object."
+title: "Delete taskList"
+description: "Deletes a taskList object."
 author: "avijityadav"
 localization_priority: Normal
 ms.prod: "outlook"
 doc_type: apiPageType
 ---
 
-# Delete task
+# Delete taskList
 Namespace: microsoft.graph.todo
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Deletes a [task](../resources/todotask.md) object.
+Deletes a [taskList](../resources/tasklist.md) object.
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
 
 |Permission type|Permissions (from most to least privileged)|
 |:---|:---|
-|Delegated (work or school account)|Tasks.ReadWrite|
-|Delegated (personal Microsoft account)|Tasks.ReadWrite|
+|Delegated (work or school account)|Tasks.Read|
+|Delegated (personal Microsoft account)|Tasks.Read|
 |Application|Not supported|
 
 ## HTTP request
@@ -29,8 +29,8 @@ One of the following permissions is required to call this API. To learn more, in
 }
 -->
 ``` http
-DELETE /me/todo/lists/{taskListId}/tasks/{taskId}
-DELETE /users/{id|userPrincipalName}/todo/lists/{taskListId}/tasks/{taskId}
+DELETE /me/todo/lists/{taskListId}
+DELETE /users/{id|userPrincipalName}/todo/lists/{taskListId}
 ```
 
 ## Request headers
@@ -52,23 +52,23 @@ If successful, this method returns a `204 No Content` response code.
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "sampleKeys": ["AAMkADA1MTHgwAAA=", "721a35e2-35e2-721a-e235-1a72e2351a72"],
-  "name": "delete_task"
+  "sampleKeys": ["AAMkADIyAAAhrbPXAAA="],
+  "name": "delete_todo.tasklist"
 }
 -->
 ``` http
-DELETE https://graph.microsoft.com/beta/me/todo/lists/AAMkADA1MTHgwAAA=/tasks/721a35e2-35e2-721a-e235-1a72e2351a72
+DELETE https://graph.microsoft.com/beta/me/todo/lists/AAMkADIyAAAhrbPXAAA=
 ```
 # [C#](#tab/csharp)
-[!INCLUDE [sample-code](../includes/snippets/csharp/delete-todotask-csharp-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/csharp/delete-tasklist-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/delete-todotask-javascript-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/javascript/delete-tasklist-javascript-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Objective-C](#tab/objc)
-[!INCLUDE [sample-code](../includes/snippets/objc/delete-todotask-objc-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/objc/delete-tasklist-objc-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -76,7 +76,7 @@ DELETE https://graph.microsoft.com/beta/me/todo/lists/AAMkADA1MTHgwAAA=/tasks/72
 
 
 ### Response
-**Note:** The response object shown here might be shortened for readability.
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": true
