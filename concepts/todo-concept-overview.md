@@ -29,10 +29,10 @@ Microsoft To Do provides a new entity called _linked resource_, which you can us
 |Operation|Request|
 |:--------|:--|
 | List all the task lists | GET https://graph.microsoft.com/beta/me/todo/lists |
-| List all tasks in a task list | GET https://graph.microsoft.com/me/todo/lists/{todoTaskListId}/tasks |
-| Create a new task | POST https://graph.microsoft.com/beta/me/todo/lists/{todoTaskListId}/tasks |
-| Update a task | PATCH https://graph.microsoft.com/beta/me/todo/lists/{todoTaskListId}/tasks/{todoTaskId} |
-| Delete a task | DELETE https://graph.microsoft.com/beta/me/todo/lists/{todoTaskListId}/tasks/{todoTaskId} |
+| List all tasks in a task list | GET https://graph.microsoft.com/me/todo/lists/{taskListId}/tasks |
+| Create a new task | POST https://graph.microsoft.com/beta/me/todo/lists/{taskListId}/tasks |
+| Update a task | PATCH https://graph.microsoft.com/beta/me/todo/lists/{taskListId}/tasks/{taskId} |
+| Delete a task | DELETE https://graph.microsoft.com/beta/me/todo/lists/{taskListId}/tasks/{taskId} |
 
 ## API reference
 Looking for the API reference for this service?
