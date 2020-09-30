@@ -69,7 +69,7 @@ If successful, this method returns a `201 Created` response code and a [task](..
 ## Examples
 
 ### Request
-The following example creates a **todoTask** in the specified task list, and includes a [linkedResource](../resources/linkedresource.md).
+The following example creates a **todoTask** in the specified task list, and includes a [linkedResource](../resources/todo-linkedresource.md).
 
 # [HTTP](#tab/http)
 <!-- {
