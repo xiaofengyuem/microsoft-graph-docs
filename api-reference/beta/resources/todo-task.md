@@ -13,7 +13,7 @@ Namespace: microsoft.graph.todo
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-A **task** represents a task, such as a piece of work or personal item, that can be tracked and completed. 
+Represents a task, such as a piece of work or personal item, that can be tracked and completed. 
 
 A **task** is always contained in a [taskList](todo-tasklist.md). It includes a relationship to a collection of [linkedResource](./todo-linkedResource.md) objects, tracking one or more sources of the task.
 
