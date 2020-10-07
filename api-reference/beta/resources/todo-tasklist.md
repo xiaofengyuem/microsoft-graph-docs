@@ -13,19 +13,19 @@ Namespace: microsoft.graph.todo
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-A list in Microsoft To Do that contains one or more [task](./todo-task.md) resources. 
+Represents list in Microsoft To Do that contains one or more [task](./todo-task.md) resources. 
 
-In To Do, there are built-in task lists such as **Flagged emails** and **Tasks** which cannot be renamed or deleted.  You can, however, create additional task lists.
+To Do includes built-in task lists such as **Flagged emails** and **Tasks** that cannot be renamed or deleted. You can, however, create additional task lists.
 
-This resource supports
-* Adding your data to custom properties as [open extensions](/graph/extensibility-overview)
+This resource supports:
+* Adding your data to custom properties as [open extensions](/graph/extensibility-overview).
 * Using [delta query](/graph/delta-query-overview) to track incremental additions, deletions and updates.
 
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
 |[List lists](../api/todo-todoApp-list-lists.md) | [microsoft.graph.todo.taskList](todo-tasklist.md) collection | Get all the [taskList](todo-tasklist.md) in the user's mailbox. |
-|[Create taskList](../api/todo-todoApp-post-lists.md) | [microsoft.graph.todo.taskList](todo-tasklist.md) | Create a [taskList](todo-tasklist.md) in the user's mailbox. |
+|[Create task list](../api/todo-todoApp-post-lists.md) | [microsoft.graph.todo.taskList](todo-tasklist.md) | Create a [taskList](todo-tasklist.md) in the user's mailbox. |
 |[Get task list](../api/todo-tasklist-get.md)|[microsoft.graph.todo.taskList](todo-tasklist.md)|Read the properties and relationships of the specified [taskList](todo-tasklist.md).|
 |[Update task list](../api/todo-tasklist-update.md)|[microsoft.graph.todo.taskList](todo-tasklist.md)| Update the writable properties of the specified [taskList](todo-tasklist.md).|
 |[Delete task list](../api/todo-tasklist-delete.md)|None| Delete the specified [taskList](todo-tasklist.md) .|
