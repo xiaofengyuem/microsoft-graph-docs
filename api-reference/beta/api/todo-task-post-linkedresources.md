@@ -14,7 +14,7 @@ Namespace: microsoft.graph.todo
 
 Create a new **linkedResource** object.
 
-You can also create a **linkedResource** object while [creating a todoTask](/graph/api/todotasklist-post-tasks?view=graph-rest-beta&preserve-view=true&tabs=http#examples).
+You can also create a **linkedResource** object while [creating a task](/graph/api/todo-tasklist-post-tasks?view=graph-rest-beta&preserve-view=true&tabs=http#examples).
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
