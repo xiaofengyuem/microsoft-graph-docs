@@ -71,7 +71,6 @@ If successful, this method returns a `201 Created` response code and a [task](..
 ### Request
 The following example creates a **todoTask** in the specified task list, and includes a [linkedResource](../resources/todo-linkedresource.md).
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "sampleKeys": ["AQMkADAwATM0MDAAMS0yMDkyLWVjMzYtM"],
