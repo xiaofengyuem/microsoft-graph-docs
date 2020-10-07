@@ -53,7 +53,7 @@ This resource supports
 |Relationship|Type|Description|
 |:---|:---|:---|
 |extensions|[extension](extension.md) collection| The collection of open extensions defined for the task list. Nullable.|
-|tasks|[task](todo-task.md) collection|The tasks in this task list. Read-only. Nullable.|
+|tasks|[microsoft.graph.todo.task](todo-task.md) collection|The tasks in this task list. Read-only. Nullable.|
 
 ## JSON representation
 The following is a JSON representation of the resource.

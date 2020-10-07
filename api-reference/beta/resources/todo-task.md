@@ -53,7 +53,7 @@ This resource supports the following:
 |Relationship|Type|Description|
 |:---|:---|:---|
 |extensions|[extension](extension.md) collection| The collection of open extensions defined for the task. Nullable.|
-|linkedResources|[linkedResource](../resources/todo-linkedresource.md) collection|A collection of resources linked to the task.|
+|linkedResources|[microsoft.graph.todo.linkedResource](../resources/todo-linkedresource.md) collection|A collection of resources linked to the task.|
 
 
 ## JSON representation

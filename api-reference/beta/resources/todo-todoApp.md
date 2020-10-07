@@ -27,7 +27,7 @@ None
 ## Relationships
 |Relationship|Type|Description|
 |:---|:---|:---|
-|lists|[taskList](../resources/todo-tasklist.md) collection| The task lists in the users mailbox. |
+|lists|[microsoft.graph.todo.taskList](../resources/todo-tasklist.md) collection| The task lists in the users mailbox. |
 
 ## JSON representation
 The following is a JSON representation of the resource.
