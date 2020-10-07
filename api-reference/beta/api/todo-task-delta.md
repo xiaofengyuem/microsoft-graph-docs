@@ -51,14 +51,14 @@ includes the encoded, desired parameters.
 ### OData query parameters
 
 - You can use a `$select` query parameter as in any GET request to specify only the properties your need for best performance. The 
-_id_ property is always returned. 
-- Delta query support `$select`, `$top`, and `$expand` for task. 
+**id** property is always returned. 
+- Delta query supports `$select`, `$top`, and `$expand` for **task**. 
 - There is limited support for `$filter` and `$orderby`:
   * The only supported `$filter` expressions are `$filter=receivedDateTime+ge+{value}` 
   or `$filter=receivedDateTime+gt+{value}`.
   * The only supported `$orderby` expression is `$orderby=receivedDateTime+desc`. If you do not include
   an `$orderby` expression, the return order is not guaranteed. 
-- There is no support for `$search`.
+- The `$search` query parameter is not supported.
 
 ## Request headers
 | Name       | Type | Description |
@@ -94,9 +94,9 @@ If the request is successful, the response would include a state token, which is
 Respectively, they indicate whether you should continue with the round or you have completed 
 getting all the changes for that round.
 
-The response below shows a _skipToken_ in an _@odata.nextLink_ response header.
+The following response shows a _skipToken_ in an _@odata.nextLink_ response header.
 
-Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
+>**Note:** The response object shown here might be shortened for readability.
 
 ```http
 HTTP/1.1 200 OK
