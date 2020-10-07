@@ -10,7 +10,7 @@ doc_type: apiPageType
 # Create taskList
 Namespace: microsoft.graph.todo
 
-Create a new lists object.
+Create a new [taskList](../resources/todo-tasklist.md) object.
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
@@ -55,7 +55,6 @@ If successful, this method returns a `201 Created` response code and a [taskList
 
 ### Request
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "create_taskList_from_lists"
