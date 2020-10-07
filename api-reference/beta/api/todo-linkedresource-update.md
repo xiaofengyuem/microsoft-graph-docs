@@ -46,7 +46,7 @@ The following table shows the properties that are required when you update the [
 
 |Property|Type|Description|
 |:---|:---|:---|
-|id|String|Server generated Id for the linked entity Inherited from [entity](../resources/entity.md)|
+|id|String|Server-generated ID for the linked entity. Inherited from [entity](../resources/entity.md).|
 
 ## Response
 
@@ -56,7 +56,6 @@ If successful, this method returns a `200 OK` response code and an updated [link
 
 ### Request
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "sampleKeys": ["dfsdc-f9dfdfs-dcsda9", "e2dc-f9cce2-dce29", "f9cddce2-dce2-f9cd-e2dc-cdf9e2dccdf9"],
