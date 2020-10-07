@@ -24,10 +24,10 @@ Some **linkedResource** objects are not associated with any web URLs, in which c
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List linkedResources](../api/todo-task-list-linkedresources.md)|[linkedResource](../resources/todo-linkedresource.md) collection|Get the linkedResources from the linkedResources navigation property.|
-|[Create linkedResource](../api/todo-task-post-linkedresources.md)|[linkedResource](../resources/todo-linkedresource.md)|Create a new linkedResources object.|
-|[Get linkedResource](../api/todo-linkedresource-get.md)|[linkedResource](../resources/todo-linkedresource.md)|Read the properties and relationships of a [linkedResource](../resources/todo-linkedresource.md) object.|
-|[Update linkedResource](../api/todo-linkedresource-update.md)|[linkedResource](../resources/todo-linkedresource.md)|Update the properties of a [linkedResource](../resources/todo-linkedresource.md) object.|
+|[List linkedResources](../api/todo-task-list-linkedresources.md)|[microsoft.graph.todo.linkedResource](../resources/todo-linkedresource.md) collection|Get the linkedResources from the linkedResources navigation property.|
+|[Create linkedResource](../api/todo-task-post-linkedresources.md)|[microsoft.graph.todo.linkedResource](../resources/todo-linkedresource.md)|Create a new linkedResources object.|
+|[Get linkedResource](../api/todo-linkedresource-get.md)|[microsoft.graph.todo.linkedResource](../resources/todo-linkedresource.md)|Read the properties and relationships of a [linkedResource](../resources/todo-linkedresource.md) object.|
+|[Update linkedResource](../api/todo-linkedresource-update.md)|[microsoft.graph.todo.linkedResource](../resources/todo-linkedresource.md)|Update the properties of a [linkedResource](../resources/todo-linkedresource.md) object.|
 |[Delete linkedResource](../api/todo-linkedresource-delete.md)|None|Deletes a [linkedResource](../resources/todo-linkedresource.md) object.|
 
 ## Properties

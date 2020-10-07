@@ -18,8 +18,8 @@ Inherits from [entity](../resources/entity.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List lists](../api/todo-todoApp-list-lists.md) | [taskList](todo-tasklist.md) collection | Get all the task lists in the user's mailbox. |
-|[Create taskList](../api/todo-todoApp-post-lists.md) | [taskList](todo-tasklist.md) | Create a To Do task list in the user's mailbox. |
+|[List lists](../api/todo-todoApp-list-lists.md) | [microsoft.graph.todo.taskList](todo-tasklist.md) collection | Get all the task lists in the user's mailbox. |
+|[Create taskList](../api/todo-todoApp-post-lists.md) | [microsoft.graph.todo.taskList](todo-tasklist.md) | Create a To Do task list in the user's mailbox. |
 
 ## Properties
 None

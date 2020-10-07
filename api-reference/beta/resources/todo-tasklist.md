@@ -24,13 +24,13 @@ This resource supports
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List lists](../api/todo-todoApp-list-lists.md) | [taskList](todo-tasklist.md) collection | Get all the [taskList](todo-tasklist.md) in the user's mailbox. |
-|[Create taskList](../api/todo-todoApp-post-lists.md) | [taskList](todo-tasklist.md) | Create a [taskList](todo-tasklist.md) in the user's mailbox. |
-|[Get task list](../api/todo-tasklist-get.md)|[taskList](todo-tasklist.md)|Read the properties and relationships of the specified [taskList](todo-tasklist.md).|
-|[Update task list](../api/todo-tasklist-update.md)|[taskList](todo-tasklist.md)| Update the writable properties of the specified [taskList](todo-tasklist.md).|
+|[List lists](../api/todo-todoApp-list-lists.md) | [microsoft.graph.todo.taskList](todo-tasklist.md) collection | Get all the [taskList](todo-tasklist.md) in the user's mailbox. |
+|[Create taskList](../api/todo-todoApp-post-lists.md) | [microsoft.graph.todo.taskList](todo-tasklist.md) | Create a [taskList](todo-tasklist.md) in the user's mailbox. |
+|[Get task list](../api/todo-tasklist-get.md)|[microsoft.graph.todo.taskList](todo-tasklist.md)|Read the properties and relationships of the specified [taskList](todo-tasklist.md).|
+|[Update task list](../api/todo-tasklist-update.md)|[microsoft.graph.todo.taskList](todo-tasklist.md)| Update the writable properties of the specified [taskList](todo-tasklist.md).|
 |[Delete task list](../api/todo-tasklist-delete.md)|None| Delete the specified [taskList](todo-tasklist.md) .|
-|[List tasks](../api/todo-tasklist-list-tasks.md)|[task](todo-task.md) collection|Get all the [task](todo-task.md) resources in the specified list.|
-|[Create task](../api/todo-tasklist-post-tasks.md)|[task](todo-task.md)| Create a [task](todo-task.md) in the specified task list.|
+|[List tasks](../api/todo-tasklist-list-tasks.md)|[microsoft.graph.todo.task](todo-task.md) collection|Get all the [task](todo-task.md) resources in the specified list.|
+|[Create task](../api/todo-tasklist-post-tasks.md)|[microsoft.graph.todo.task](todo-task.md)| Create a [task](todo-task.md) in the specified task list.|
 
 ## Properties
 |Property|Type|Description|
