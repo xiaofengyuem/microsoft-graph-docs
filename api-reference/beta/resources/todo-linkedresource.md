@@ -13,7 +13,7 @@ Namespace: microsoft.graph.todo
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents an item in a partner application related to a [task](./todo-task.md). An example is an email that created the task. A **linkedResource** object stores information about that source application, and lets you link back to the related item.You can see the **linkedResource** in the task details view, as shown.
+Represents an item in a partner application related to a [task](./todo-task.md). An example is an email that created the task. A **linkedResource** object stores information about that source application, and lets you link back to the related item. You can see the **linkedResource** in the task details view, as shown.
 
 ![Linked resource in task details pane](/graph/images/todo-linkedresource-taskdetail.png)
 
@@ -35,7 +35,7 @@ Some **linkedResource** objects are not associated with any web URLs, in which c
 |:---|:---|:---|
 |applicationName|String|Field indicating the app name of the source that is sending the **linkedResource**.|
 |displayName|String|Field indicating the title of the **linkedResource**.|
-|externalId|String|Id of the object that is associated with this task on the third-party/partner system.|
+|externalId|String|ID of the object that is associated with this task on the third-party/partner system.|
 |id|String|Server generated ID for the **linkedResource**. Inherited from [entity](../resources/entity.md).|
 |webUrl|String|Deep link to the **linkedResource**.|
 
