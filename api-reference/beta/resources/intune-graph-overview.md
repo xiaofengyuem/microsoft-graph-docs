@@ -16,7 +16,7 @@ The Microsoft Graph API for Intune enables programmatic access to Intune informa
 
 For mobile device management (MDM) scenarios, the Microsoft Graph API for Intune supports standalone deployments; Intune [hybrid deployments](/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management) are not supported. 
 
-All Beta Microsoft Graph APIs for Intune complete full testing and validation by the Intune team before being deployed in Microsoft Graph.  Changes may occur to the Beta API's.  Review the [changelog](https://docs.microsoft.com/en-us/graph/changelog) for the latest API changes. 
+All Beta Microsoft Graph APIs for Intune complete full testing and validation by the Intune team before being deployed in Microsoft Graph.  Changes may occur to the Beta API's.  Review the [changelog](https://docs.microsoft.com/graph/changelog) for the latest API changes. 
 
 ## Using the Microsoft Graph API for Intune
 
