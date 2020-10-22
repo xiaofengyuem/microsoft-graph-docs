@@ -61,6 +61,8 @@ This resource supports using [delta query](/graph/delta-query-overview) to track
 | appRoles | [appRole](approle.md) collection | The collection of roles the application declares. With [app role assignments](approleassignment.md), these roles can be assigned to users, groups, or other applications' service principals. Not nullable. |
 | createdDateTime | DateTimeOffset | The date and time the application was registered. Read-only. |
 | deletedDateTime | DateTimeOffset | The date and time the application was deleted. Read-only. |
+| disabledByMicrosoftStatus | Bitflag enum |Specifies if the registered application object has been disabled by Microsoft and the reason why. These reasons may include suspicious/abusive activity, malicious activity, and/or a violation of the Microsoft Services Agreement|
+|displayName|String|The display name for the service principal.|
 | displayName | String | The display name for the application. |
 | groupMembershipClaims | String | Configures the `groups` claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values:<ul><li>`None`</li><li>`SecurityGroup`: For security groups and Azure AD roles</li><li>`All`: This will get all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of</li></ul> |
 | id | String | The unique identifier for the application. Inherited from [directoryObject](directoryobject.md). Key. Not nullable. Read-only. |
