@@ -8,14 +8,14 @@ ms.prod: "microsoft-identity-platform"
 
 # Tutorial: Identify and remediate risks using Microsoft Graph APIs
 
-Risk detections in Azure AD Identity Protection include any identified suspicious actions related to user accounts in the directory. Identity Protection provides organizations access to powerful resources to see and respond quickly to suspicious actions. For more information, see [What is risk?](/azure/active-directory/identity-protection/concept-identity-protection-risks)
+Risk detections in Azure Active Directory Identity Protection include any identified suspicious actions related to user accounts in the directory. Identity Protection provides organizations access to powerful resources to see and respond quickly to suspicious actions. For more information, see [What is risk?](/azure/active-directory/identity-protection/concept-identity-protection-risks)
 
 In this tutorial, you accomplish these tasks:
 - Create a user account to test risk detection
 - Trigger a risk event by signing in anonymously
 - List risk events
-- Create a conditional access policy that is used to remidiate risks
-- Remidiate risk by dismissing the risky user
+- Create a conditional access policy that is used to prevent risks
+- Dismissing the risky user
 
 >**Note:** The response objects shown in this tutorial might be shortened for readability. 
 
@@ -30,23 +30,23 @@ To successfully complete this tutorial, make sure that you have the required pre
     2. Select **Sign-In with Microsoft** and sign in using an Azure AD global administrator account. After you successfully sign in, you can see the user account details in the left-hand pane.
     3. Select the settings icon to the right of the user account details, and then select **Select permissions**.
 
-        ![Select the Microsoft Graph permissions](./images/tutorial-riskdetection-api/set-permissions.png)
+        ![Set permissions](./images/tutorial-riskdetection-api/set-permissions.png)
         
     4. Scroll through the list of permissions to these permissions:
-        - **IdentityRiskEvents (2)**, and then select `IdentityRiskEvent.Read.All`
-        - **IdentityRiskyUser (2)**, and then select `IdentityRiskyUser.ReadWrite.All`
-        - **Policy (13)**, and then select `Policy.Read.All` and `Policy.ReadWrite.ConditionalAccess`
-        - **User (8)**, and then select `User.ReadWrite.All`
+        - **IdentityRiskEvents (2)**, expand and then select `IdentityRiskEvent.Read.All`
+        - **IdentityRiskyUser (2)**, expand and then select `IdentityRiskyUser.ReadWrite.All`
+        - **Policy (13)**, expand and then select `Policy.Read.All` and `Policy.ReadWrite.ConditionalAccess`
+        - **User (8)**, expand and then select `User.ReadWrite.All`
         
-        ![Search for the user and identity permissions](./images/tutorial-riskdetection-api/permissions-consent.png)
+        ![Search for permissions](./images/tutorial-riskdetection-api/permissions-consent.png)
     
     5. Select **Consent**, and then select **Accept** to accept the consent of the permissions. You do not need to consent on behalf of your organization for these permissions.
 
-        ![Accept identity permissions](./images/tutorial-riskdetection-api/accept-permissions.png)
+        ![Accept permissions](./images/tutorial-riskdetection-api/accept-permissions.png)
 
 ## Step 1: Create a user account
 
-For this tutorial, you create a user account that is used to test risk events. In the request body, change `contoso.onmicrosoft.com` to the domain name of your tenant. You can find tenant information on the Azure Active Directory overview page.
+For this tutorial, you create a user account that is used to test risk detections. In the request body, change `contoso.onmicrosoft.com` to the domain name of your tenant. You can find tenant information on the Azure Active Directory overview page.
 
 ### Request
 
@@ -85,9 +85,9 @@ Content-type: application/json
 }
 ```
 
-## Step 2: Trigger an event and list risk detections
+## Step 2: Trigger a risk detection
 
-### Trigger an event
+### Trigger a risk detection
 
 One way to trigger a risk detection on a user account is to sign in to the Azure portal anonymously. In this tutorial, the Tor browser is used to sign in anonymously. 
 
@@ -96,7 +96,7 @@ One way to trigger a risk detection on a user account is to sign in to the Azure
 
 ### List risk detections
 
-When you signed in to the Azure portal using the anonymous browser, an `anonymizedIPAddress` risk event was detected.
+When you signed in to the Azure portal using the anonymous browser, an `anonymizedIPAddress` risk event was detected. You can use the `$filter` query parameter to get only the risk detections that are associated with the **MyTestUser1** user account.
 
 #### Request
 
@@ -129,7 +129,7 @@ GET https://graph.microsoft.com/beta/identityProtection/riskDetections?$filter=u
       "lastUpdatedDateTime": "2020-11-03T20:53:12.1984203Z",
       "userId": "4628e7df-dff3-407c-a08f-75f08c0806dc",
       "userDisplayName": "MyTestUser1",
-      "userPrincipalName": "MyTestUser1@M365x853908.onmicrosoft.com",
+      "userPrincipalName": "MyTestUser1@contoso.onmicrosoft.com",
       "additionalInfo": "[{\"Key\":\"userAgent\",\"Value\":\"Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0\"}]",
       "location": {
         "city": "Chisinau",
@@ -151,7 +151,7 @@ GET https://graph.microsoft.com/beta/identityProtection/riskDetections?$filter=u
 
 Most users have a normal behavior that can be tracked, when they fall outside of this norm it could be risky to allow them to just sign in. You may want to block that user or maybe just ask them to perform multi-factor authentication to prove that they are really who they say they are. 
 
-The conditional access policy resource in Microsoft Graph provides the ability to set the conditions of the policy to identify sign-in risk levels. Risk levels can be `low`, `medium`, `high`, `none`. In the response that was returned from listing the risk detections for **MyTestUser1**, we can see that the risk level is `medium`.
+The conditional access policy resource in Microsoft Graph provides the ability to set the conditions of the policy to identify sign-in risk levels. Risk levels can be `low`, `medium`, `high`, `none`. In the response that was returned from listing the risk detections for **MyTestUser1**, we can see that the risk level is `medium`. This example shows how to block access to **MyTestUser1** who was identified as a risky user.
 
 ### Request
 
@@ -241,8 +241,32 @@ With this conditional access policy in place, the **MyTestUser1** account is now
 
 ## Step 4: Dismiss risky users
 
+After you decide that a user is no longer a risk, you can dismiss the risky user assignment on the account.
+
+### Dismiss the risky user
+
+#### Request
+
+```http
+POST https://graph.microsoft.com/v1.0/identityProtection/riskyUsers/dismiss
+Content-Type: application/json
+
+{
+  "userIds": [
+    "4628e7df-dff3-407c-a08f-75f08c0806dc"
+  ]
+}
+```
+
+#### Response
+
+```http
+HTTP/1.1 204 No Content
+```
+
 ### List risky users
 
+After dismissing the risk user, you can see in the response when listing risky users that the **MyTestUser1** user account now has a risk level of `none` and a riskState of `dismissed`.
 #### Request
 
 ```http
@@ -268,27 +292,6 @@ GET https://graph.microsoft.com/beta/riskyUsers?$filter=userDisplayName eq 'MyTe
     }
   ]
 }
-```
-
-### Dismiss the risky user
-
-#### Request
-
-```http
-POST https://graph.microsoft.com/v1.0/identityProtection/riskyUsers/dismiss
-Content-Type: application/json
-
-{
-  "userIds": [
-    "4628e7df-dff3-407c-a08f-75f08c0806dc"
-  ]
-}
-```
-
-#### Response
-
-```http
-HTTP/1.1 204 No Content
 ```
 
 ## Step 5: Clean up resources
