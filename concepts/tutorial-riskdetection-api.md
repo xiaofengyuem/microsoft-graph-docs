@@ -10,12 +10,7 @@ ms.prod: "microsoft-identity-platform"
 
 Risk detections in Azure Active Directory Identity Protection include any identified suspicious actions related to user accounts in the directory. Identity Protection provides organizations access to powerful resources to see and respond quickly to suspicious actions. For more information, see [What is risk?](/azure/active-directory/identity-protection/concept-identity-protection-risks)
 
-In this tutorial, you accomplish these tasks:
-- Create a user account to test risk detection
-- Trigger a risk event by signing in anonymously
-- List risk events
-- Create a conditional access policy that is used to prevent risks
-- Dismissing the risky user
+In this tutorial, you learn how to set up a risky user, block the risky user from signing in using a conditional access policy, and dismissing the user as being risky. An advanced section of this tutorial shows you how to remidiate the risky status of a user with multi-factor authentication.
 
 >**Note:** The response objects shown in this tutorial might be shortened for readability. 
 
@@ -294,7 +289,142 @@ GET https://graph.microsoft.com/beta/riskyUsers?$filter=userDisplayName eq 'MyTe
 }
 ```
 
-## Step 5: Clean up resources
+# Step 5 (Optional) Remidiate access using multi-factor authentication
+
+## Set up multi-factor authentication for the user
+
+https://aka.ms/MFASetup
+
+## Configure the conditional access policy 
+
+### Get the identifier of the conditional access policy
+
+#### Request
+
+```http
+GET https://graph.microsoft.com/beta/identity/conditionalAccess/policies?$filter=displayName eq 'Policy for risky sign-in'
+```
+
+#### Response
+
+```http
+{
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#identity/conditionalAccess/policies",
+  "value": [
+    {
+      "id": "2e88016b-edfe-4bc1-a782-1b4b1ceb5897",
+      "displayName": "Policy for risky sign-in",
+      "createdDateTime": "2020-11-12T22:24:03.920155Z",
+      "modifiedDateTime": null,
+      "state": "enabled",
+      "sessionControls": null,
+      "conditions": {
+        "userRiskLevels": [],
+        "signInRiskLevels": [
+          "high",
+          "medium"
+        ],
+        "clientAppTypes": [
+          "all"
+        ],
+        "platforms": null,
+        "locations": null,
+        "deviceStates": null,
+        "devices": null,
+        "clientApplications": null,
+        "applications": {
+          "includeApplications": [
+            "All"
+          ],
+          "excludeApplications": [],
+          "includeUserActions": []
+        },
+        "users": {
+          "includeUsers": [
+            "6569767b-746d-4730-a787-b34888f0bae0"
+          ],
+          "excludeUsers": [],
+          "includeGroups": [],
+          "excludeGroups": [],
+          "includeRoles": [],
+          "excludeRoles": []
+        }
+      },
+      "grantControls": {
+        "operator": "OR",
+        "builtInControls": [
+          "block"
+        ],
+        "customAuthenticationFactors": [],
+        "termsOfUse": []
+      }
+    }
+  ]
+}
+```
+
+### Update the conditional access policy
+
+#### Request
+
+```http
+PATCH https://graph.microsoft.com/beta/identity/conditionalAccess/policies/2e88016b-edfe-4bc1-a782-1b4b1ceb5897
+Content-Type: application/json
+
+{
+  "grantControls": {
+    "builtInControls": [
+      "mfa"
+    ]
+  }
+}
+```
+
+#### Response
+
+```http
+HTTP/1.1 204 No Content
+```
+
+
+
+        {
+            "id": "ba9d45f16d8f87f6ae974efda7336b2120962a398cb362dfd9e5bdc8e9d149d0",
+            "requestId": "156c01fb-31cf-4a10-b9a9-beee93e6a400",
+            "correlationId": "a8aaac45-fe22-46df-babf-10a8dba85d62",
+            "riskType": "anonymizedIPAddress",
+            "riskEventType": "anonymizedIPAddress",
+            "riskState": "remediated",
+            "riskLevel": "medium",
+            "riskDetail": "userPassedMFADrivenByRiskBasedPolicy",
+            "source": "IdentityProtection",
+            "detectionTimingType": "realtime",
+            "activity": "signin",
+            "tokenIssuerType": "AzureAD",
+            "ipAddress": "185.220.101.213",
+            "activityDateTime": "2020-11-12T23:45:22.4092789Z",
+            "detectedDateTime": "2020-11-12T23:45:22.4092789Z",
+            "lastUpdatedDateTime": "2020-11-12T23:47:57.7831423Z",
+            "userId": "4b608561-9258-44ba-8cdb-3286dcbf0e3b",
+            "userDisplayName": "MyTestUser1",
+            "userPrincipalName": "MyTestUser1@M365x786979.onmicrosoft.com",
+            "additionalInfo": "[{\"Key\":\"userAgent\",\"Value\":\"Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0\"}]",
+            "location": {
+                "city": "Schoenwalde-Glien",
+                "state": "Brandenburg",
+                "countryOrRegion": "DE",
+                "geoCoordinates": {
+                    "latitude": 52.61983,
+                    "longitude": 13.12743
+                }
+            }
+        }
+
+
+
+        
+
+## Step 6: Clean up resources
 
 In this step, you remove the resources that you created.
 
