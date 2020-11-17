@@ -234,7 +234,173 @@ With this conditional access policy in place, the **MyTestUser1** account is now
 
 ![Blocked sign-in](./images/tutorial-riskdetection-api/conditionalaccess-policy.png)
 
-## Step 4: Dismiss risky users
+## Step 4 (Optional) Remediate access using multi-factor authentication
+
+In this step, you create a new conditional access policy that forces the user to sign in using multi-factor authentication (MFA) if a medium or higher risk detection occurs.
+
+### Set up multi-factor authentication
+
+When setting up an account for MFA, you can choose from several methods for authenticating the user. Choose the best method for your situation to complete this tutorial. 
+
+1. Sign in the to the [keep your account secure](https://aka.ms/MFASetup) site using the **MyTestUser1** account.
+2. Complete the MFA setup procedure using the appropriate method for your situation, such as having a text message sent to your phone.
+
+### Create the conditional access policy
+
+In this step, you create a new conditional access policy that is very similar to the previous policy that you created with the exception of the **builtInControls** which is set to `mfa`.
+
+Delete the conditional access policy that you created.
+
+#### Request
+
+```http
+DELETE https://graph.microsoft.com/v1.0/groups/9ad78153-b1f8-4714-adc1-1445727678a8
+```
+
+#### Response
+
+```http
+No Content - 204
+```
+
+Create a new MFA conditional access policy.
+
+#### Request
+
+```http
+POST https://graph.microsoft.com/v1.0/identity/conditionalAccess/policies
+Content-type: application/json
+
+{
+  "displayName": "MFA policy for risky sign-in",
+  "state": "enabled",
+  "conditions": {
+    "signInRiskLevels": [
+      "high",
+      "medium"
+    ],
+    "applications": {
+      "includeApplications": ["All"]
+    },
+    "users": {
+      "includeUsers": [
+        "4628e7df-dff3-407c-a08f-75f08c0806dc"
+      ]
+    }
+  },
+  "grantControls": {
+    "operator": "OR",
+    "builtInControls": [
+      "mfa"
+    ]
+  }
+}
+```
+
+#### Response
+
+```http
+{
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#identity/conditionalAccess/policies/$entity",
+  "id": "9ad78153-b1f8-4714-adc1-1445727678a8",
+  "displayName": "MFA policy for risky sign-in",
+  "createdDateTime": "2020-11-03T20:56:38.6210843Z",
+  "modifiedDateTime": null,
+  "state": "enabled",
+  "sessionControls": null,
+  "conditions": {
+    "signInRiskLevels": [
+      "high",
+      "medium"
+    ],
+    "clientAppTypes": [ 
+      "all" 
+    ],
+    "platforms": null,
+    "locations": null,
+    "applications": {
+      "includeApplications": [
+        "All"
+      ],
+      "excludeApplications": [],
+      "includeUserActions": []
+    },
+    "users": {
+      "includeUsers": [
+        "4628e7df-dff3-407c-a08f-75f08c0806dc"
+      ],
+      "excludeUsers": [],
+      "includeGroups": [],
+      "excludeGroups": [],
+      "includeRoles": [],
+      "excludeRoles": []
+    }
+  },
+  "grantControls": {
+    "operator": "OR",
+    "builtInControls": [
+      "mfa"
+    ],
+    "customAuthenticationFactors": [],
+    "termsOfUse": []
+  }
+}
+```
+
+### Sign in and complete multi-factor authentication
+
+By signing in to the anonymous browser, a risk is detected, but it is remediated by completing MFA. 
+
+1. Open the browser and enter `portal.azure.com` for the site address.
+2. Sign in to the portal using the credentials for the **MyTestUser1** account that you previously created and complete the MFA process.
+
+### List risk detections
+
+When you signed in to the Azure portal using the anonymous browser, an `anonymizedIPAddress` risk event was detected. You can use the `$filter` query parameter to get only the risk detections that are associated with the **MyTestUser1** user account. Because MFA was completed, the **riskState** shows the event as `remediated`.
+
+#### Request
+
+``` http
+GET https://graph.microsoft.com/beta/identityProtection/riskDetections?$filter=userDisplayName eq 'MyTestUser1'
+```
+
+#### Response
+
+```http
+{
+  "id": "ba9d45f16d8f87f6ae974efda7336b2120962a398cb362dfd9e5bdc8e9d149d0",
+  "requestId": "156c01fb-31cf-4a10-b9a9-beee93e6a400",
+  "correlationId": "a8aaac45-fe22-46df-babf-10a8dba85d62",
+  "riskType": "anonymizedIPAddress",
+  "riskEventType": "anonymizedIPAddress",
+  "riskState": "remediated",
+  "riskLevel": "medium",
+  "riskDetail": "userPassedMFADrivenByRiskBasedPolicy",
+  "source": "IdentityProtection",
+  "detectionTimingType": "realtime",
+  "activity": "signin",
+  "tokenIssuerType": "AzureAD",
+  "ipAddress": "185.220.101.213",
+  "activityDateTime": "2020-11-12T23:45:22.4092789Z",
+  "detectedDateTime": "2020-11-12T23:45:22.4092789Z",
+  "lastUpdatedDateTime": "2020-11-12T23:47:57.7831423Z",
+  "userId": "4b608561-9258-44ba-8cdb-3286dcbf0e3b",
+  "userDisplayName": "MyTestUser1",
+  "userPrincipalName": "MyTestUser1@contoso.onmicrosoft.com",
+    "additionalInfo": "[{\"Key\":\"userAgent\",\"Value\":\"Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0\"}]",
+  "location": {
+    "city": "Schoenwalde-Glien",
+    "state": "Brandenburg",
+    "countryOrRegion": "DE",
+    "geoCoordinates": {
+      "latitude": 52.61983,
+      "longitude": 13.12743
+    }
+  }
+}
+```
+
+## Step 5: Dismiss risky users
 
 After you decide that a user is no longer a risk, you can dismiss the risky user assignment on the account.
 
@@ -257,11 +423,12 @@ Content-Type: application/json
 
 ```http
 HTTP/1.1 204 No Content
-```
+```        
 
 ### List risky users
 
 After dismissing the risk user, you can see in the response when listing risky users that the **MyTestUser1** user account now has a risk level of `none` and a riskState of `dismissed`.
+
 #### Request
 
 ```http
@@ -288,141 +455,6 @@ GET https://graph.microsoft.com/beta/riskyUsers?$filter=userDisplayName eq 'MyTe
   ]
 }
 ```
-
-# Step 5 (Optional) Remidiate access using multi-factor authentication
-
-## Set up multi-factor authentication for the user
-
-https://aka.ms/MFASetup
-
-## Configure the conditional access policy 
-
-### Get the identifier of the conditional access policy
-
-#### Request
-
-```http
-GET https://graph.microsoft.com/beta/identity/conditionalAccess/policies?$filter=displayName eq 'Policy for risky sign-in'
-```
-
-#### Response
-
-```http
-{
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#identity/conditionalAccess/policies",
-  "value": [
-    {
-      "id": "2e88016b-edfe-4bc1-a782-1b4b1ceb5897",
-      "displayName": "Policy for risky sign-in",
-      "createdDateTime": "2020-11-12T22:24:03.920155Z",
-      "modifiedDateTime": null,
-      "state": "enabled",
-      "sessionControls": null,
-      "conditions": {
-        "userRiskLevels": [],
-        "signInRiskLevels": [
-          "high",
-          "medium"
-        ],
-        "clientAppTypes": [
-          "all"
-        ],
-        "platforms": null,
-        "locations": null,
-        "deviceStates": null,
-        "devices": null,
-        "clientApplications": null,
-        "applications": {
-          "includeApplications": [
-            "All"
-          ],
-          "excludeApplications": [],
-          "includeUserActions": []
-        },
-        "users": {
-          "includeUsers": [
-            "6569767b-746d-4730-a787-b34888f0bae0"
-          ],
-          "excludeUsers": [],
-          "includeGroups": [],
-          "excludeGroups": [],
-          "includeRoles": [],
-          "excludeRoles": []
-        }
-      },
-      "grantControls": {
-        "operator": "OR",
-        "builtInControls": [
-          "block"
-        ],
-        "customAuthenticationFactors": [],
-        "termsOfUse": []
-      }
-    }
-  ]
-}
-```
-
-### Update the conditional access policy
-
-#### Request
-
-```http
-PATCH https://graph.microsoft.com/beta/identity/conditionalAccess/policies/2e88016b-edfe-4bc1-a782-1b4b1ceb5897
-Content-Type: application/json
-
-{
-  "grantControls": {
-    "builtInControls": [
-      "mfa"
-    ]
-  }
-}
-```
-
-#### Response
-
-```http
-HTTP/1.1 204 No Content
-```
-
-
-
-        {
-            "id": "ba9d45f16d8f87f6ae974efda7336b2120962a398cb362dfd9e5bdc8e9d149d0",
-            "requestId": "156c01fb-31cf-4a10-b9a9-beee93e6a400",
-            "correlationId": "a8aaac45-fe22-46df-babf-10a8dba85d62",
-            "riskType": "anonymizedIPAddress",
-            "riskEventType": "anonymizedIPAddress",
-            "riskState": "remediated",
-            "riskLevel": "medium",
-            "riskDetail": "userPassedMFADrivenByRiskBasedPolicy",
-            "source": "IdentityProtection",
-            "detectionTimingType": "realtime",
-            "activity": "signin",
-            "tokenIssuerType": "AzureAD",
-            "ipAddress": "185.220.101.213",
-            "activityDateTime": "2020-11-12T23:45:22.4092789Z",
-            "detectedDateTime": "2020-11-12T23:45:22.4092789Z",
-            "lastUpdatedDateTime": "2020-11-12T23:47:57.7831423Z",
-            "userId": "4b608561-9258-44ba-8cdb-3286dcbf0e3b",
-            "userDisplayName": "MyTestUser1",
-            "userPrincipalName": "MyTestUser1@M365x786979.onmicrosoft.com",
-            "additionalInfo": "[{\"Key\":\"userAgent\",\"Value\":\"Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0\"}]",
-            "location": {
-                "city": "Schoenwalde-Glien",
-                "state": "Brandenburg",
-                "countryOrRegion": "DE",
-                "geoCoordinates": {
-                    "latitude": 52.61983,
-                    "longitude": 13.12743
-                }
-            }
-        }
-
-
-
-        
 
 ## Step 6: Clean up resources
 
@@ -466,6 +498,7 @@ In this tutorial, you used many APIs to accomplish tasks. Explore the API refere
 
 - [What is Identity Protection?](/azure/active-directory/identity-protection/overview-identity-protection)
 - [What is Conditional Access?](/azure/active-directory/conditional-access/overview)
+- [How it works: Azure Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks)
 - [conditionalAccessPolicy](/graph/api/resources/conditionalaccesspolicy?view=graph-rest-1.0)
 - [riskDetection](/graph/api/resources/riskdetection?view=graph-rest-1.0)
 - [riskyUser](/graph/api/resources/riskyuser?view=graph-rest-1.0)
