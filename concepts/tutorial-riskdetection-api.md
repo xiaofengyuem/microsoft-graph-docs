@@ -8,9 +8,9 @@ ms.prod: "microsoft-identity-platform"
 
 # Tutorial: Identify and remediate risks using Microsoft Graph APIs
 
-Risk detections in Azure AD Identity Protection include any identified suspicious actions related to user accounts. Identity Protection provides organizations insight into identity based risk and different ways to investigate risk and auto-remediate risk. For more information, see [What is risk?](/azure/active-directory/identity-protection/concept-identity-protection-risks)
+Azure AD Identity Protection provides organizations insight into identity-based risk and different ways to investigate and auto-remediate risk. Several Identity Protection APIs can help you identify risk and configure a workflow to confirm compromise or enable remediation. For more information, see [What is risk?](/azure/active-directory/identity-protection/concept-identity-protection-risks)
 
-In this tutorial, you learn how to generate a risky user and remediate the risky status of a user with multi-factor authentication (MFA). An optional section shows you how to block the risky user from signing in using a conditional access policy, and dismissing the user risk.
+In this tutorial, you'll learn how to generate a risky user and remediate the risky status of a user with multi-factor authentication (MFA). An optional section shows you how to block the risky user from signing in using a conditional access policy, and dismissing the user risk.
 
 >**Note:** The response objects shown in this tutorial might be shortened for readability. 
 
@@ -146,7 +146,7 @@ GET https://graph.microsoft.com/beta/identityProtection/riskDetections?$filter=u
 
 You can leverage Conditional Access policies in your organization to allow users to self-remediate when risk is detected. This enables your users to self-remediate and unblock them to access their resources securely after completing the policy prompt, or you may block the user’s access altogether.
 
-In this step, you create a new conditional access policy that requires the user to sign in using MFA if a medium or higher risk detection occurs. 
+In this step, you create a new conditional access policy that requires the user to sign in using MFA if a medium or high risk detection occurs. 
 
 ### Set up multi-factor authentication
 
@@ -248,7 +248,7 @@ Content-type: application/json
 } 
 ```
 
-With this conditional access policy in place, the **MyTestUser1** account is now required to use MFA when signing in because the sign-in risk level is medium or higher. 
+With this conditional access policy in place, the **MyTestUser1** account is now required to use MFA when signing in because the sign-in risk level is medium or high. 
 
 ### Sign in and complete multi-factor authentication 
 
