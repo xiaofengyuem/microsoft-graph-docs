@@ -8,9 +8,9 @@ ms.prod: "microsoft-identity-platform"
 
 # Tutorial: Identify and remediate risks using Microsoft Graph APIs
 
-Azure AD Identity Protection provides organizations insight into identity based risk and different ways to investigate risk and auto-remediate risk. Several Identity Protection APIs can help you identify risk and configure a workflow to confirm compromise or enable remediation, with /riskDetections and /riskyUsers. For more information, see [What is risk?](/azure/active-directory/identity-protection/concept-identity-protection-risks)
+Azure AD Identity Protection provides organizations insight into identity-based risk and different ways to investigate and auto-remediate risk. Several Identity Protection APIs can help you identify risk and configure a workflow to confirm compromise or enable remediation. For more information, see [What is risk?](/azure/active-directory/identity-protection/concept-identity-protection-risks)
 
-In this tutorial, you learn how to generate a risky user and remediate the risky status of a user with multi-factor authentication (MFA). An optional section shows you how to block the risky user from signing in using a conditional access policy, and dismissing the user risk.
+In this tutorial, you'll learn how to generate a risky user and remediate the risky status of a user with multi-factor authentication (MFA). An optional section shows you how to block the risky user from signing in using a conditional access policy, and dismissing the user risk.
 
 >**Note:** The response objects shown in this tutorial might be shortened for readability. 
 
