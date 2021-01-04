@@ -27,7 +27,7 @@ One of the following permissions is required to call this API. To learn more, in
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /me/drive/root/workbook/worksheets/{id}/range/rowsAbove(count=n)
+GET /me/drive/root/workbook/worksheets/{id}/range/rowsAbove(count=n)
 
 ```
 
@@ -51,8 +51,8 @@ Do not supply a request body for this method.
 If successful, this method returns `200 OK` response code and [workbookRange](../resources/workbookrange.md) object in the response body.
 
 ## Example
-Here is an example of how to call this API.
-##### Request
+
+### Request
 Here is an example of the request.
 
 # [HTTP](#tab/http)
@@ -61,7 +61,7 @@ Here is an example of the request.
   "name": "workbookrange_rowsAbove"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/drive/root/workbook/worksheets/{id}/range/rowsAbove(count=2)
+GET https://graph.microsoft.com/beta/drive/root/workbook/worksheets/{id}/range/rowsAbove(count=2)
 ```
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/workbookrange-rowsabove-csharp-snippets.md)]
@@ -82,8 +82,10 @@ POST https://graph.microsoft.com/beta/drive/root/workbook/worksheets/{id}/range/
 ---
 
 
-##### Response
-Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
+### Response
+Here is an example of the response. 
+
+>**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
   "truncated": true,
