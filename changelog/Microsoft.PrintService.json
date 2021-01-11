@@ -95,7 +95,7 @@
           "ApiChange": "Property",
           "ChangedApiName": "printerStatus",
           "ChangeType": "Change",
-          "Description": "Updated the **printerProcessingStateDetail** enum type in the [printerStatus](https://docs.microsoft.com/en-us/graph/api/resources/printerstatus?view=graph-rest-beta&preserve-view=true#printerprocessingstatedetail-values) resource.",
+          "Description": "Updated the **printerProcessingStateDetail** enum type in the [printerStatus](https://docs.microsoft.com/en-us/graph/api/resources/printerstatus?view=graph-rest-beta&preserve-view=true#printerprocessingstatedetail-values) resource. Added values: [none, movingToPaused, shutdown, connectingToDevice, timedOut, stopping, stoppedPartially, tonerLow, tonerEmpty, spoolAreaFull, doorOpen, opticalPhotoConductorNearEndOfLife, opticalPhotoConductorLifeOver, developerLow, developerEmpty, interpreterResourceUnavailable]. Removed values: [disconnected, queueFull]. Modified value: [outputAlmostFull -> outputAreaAlmostFull]",
           "Target": "printerStatus"
         }
       ],
