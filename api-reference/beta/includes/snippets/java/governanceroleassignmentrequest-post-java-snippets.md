@@ -15,8 +15,8 @@ governanceRoleAssignmentRequest.type = "AdminExtend";
 governanceRoleAssignmentRequest.reason = "extend role assignment";
 GovernanceSchedule schedule = new GovernanceSchedule();
 schedule.type = "Once";
-schedule.startDateTime = CalendarSerializer.deserialize("2018-05-12T23:53:55.327Z");
-schedule.endDateTime = CalendarSerializer.deserialize("2018-08-10T23:53:55.327Z");
+schedule.startDateTime = OffsetDateTimeSerializer.deserialize("2018-05-12T23:53:55.327Z");
+schedule.endDateTime = OffsetDateTimeSerializer.deserialize("2018-08-10T23:53:55.327Z");
 governanceRoleAssignmentRequest.schedule = schedule;
 
 graphClient.privilegedAccess("azureResources").roleAssignmentRequests()

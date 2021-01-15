@@ -9,7 +9,7 @@ IGraphServiceClient graphClient = GraphServiceClient.builder().authenticationPro
 LinkedList<Alert> valueList = new LinkedList<Alert>();
 Alert value = new Alert();
 value.assignedTo = "String";
-value.closedDateTime = CalendarSerializer.deserialize("String (timestamp)");
+value.closedDateTime = OffsetDateTimeSerializer.deserialize("String (timestamp)");
 LinkedList<String> commentsList = new LinkedList<String>();
 commentsList.add("String");
 value.comments = commentsList;

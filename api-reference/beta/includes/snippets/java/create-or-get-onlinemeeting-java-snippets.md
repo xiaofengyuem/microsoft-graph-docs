@@ -9,9 +9,9 @@ IGraphServiceClient graphClient = GraphServiceClient.builder().authenticationPro
 ChatInfo chatInfo = new ChatInfo();
 chatInfo.threadId = "19:7ebda77322dd4505ac4dedb5b67df076@thread.tacv2";
 
-Calendar startDateTime = CalendarSerializer.deserialize("02/06/2020 01:49:21");
+OffsetDateTime startDateTime = OffsetDateTimeSerializer.deserialize("02/06/2020 01:49:21");
 
-Calendar endDateTime = CalendarSerializer.deserialize("02/06/2020 02:19:21");
+OffsetDateTime endDateTime = OffsetDateTimeSerializer.deserialize("02/06/2020 02:19:21");
 
 String externalId = "7eb8263f-d0e0-4149-bb1c-1f0476083c56";
 

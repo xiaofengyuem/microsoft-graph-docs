@@ -15,7 +15,7 @@ alternativeSecurityIds.identityProvider = "identityProvider-value";
 alternativeSecurityIds.key = Base64.getDecoder().decode("base64Y3YxN2E1MWFlYw==");
 alternativeSecurityIdsList.add(alternativeSecurityIds);
 device.alternativeSecurityIds = alternativeSecurityIdsList;
-device.approximateLastSignInDateTime = CalendarSerializer.deserialize("2016-10-19T10:37:00Z");
+device.approximateLastSignInDateTime = OffsetDateTimeSerializer.deserialize("2016-10-19T10:37:00Z");
 device.deviceId = "deviceId-value";
 device.deviceMetadata = "deviceMetadata-value";
 device.deviceVersion = 99;

@@ -8,9 +8,9 @@ IGraphServiceClient graphClient = GraphServiceClient.builder().authenticationPro
 
 Boolean notifyTeam = true;
 
-Calendar startDateTime = CalendarSerializer.deserialize("10/08/2018 00:00:00");
+OffsetDateTime startDateTime = OffsetDateTimeSerializer.deserialize("10/08/2018 00:00:00");
 
-Calendar endDateTime = CalendarSerializer.deserialize("10/15/2018 00:00:00");
+OffsetDateTime endDateTime = OffsetDateTimeSerializer.deserialize("10/15/2018 00:00:00");
 
 graphClient.teams("{teamId}").schedule()
 	.share(ScheduleShareParameterSet

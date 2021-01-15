@@ -11,7 +11,7 @@ requestOptions.add(new HeaderOption("Prefer", "return=representation"));
 
 Alert alert = new Alert();
 alert.assignedTo = "String";
-alert.closedDateTime = CalendarSerializer.deserialize("String (timestamp)");
+alert.closedDateTime = OffsetDateTimeSerializer.deserialize("String (timestamp)");
 LinkedList<String> commentsList = new LinkedList<String>();
 commentsList.add("String");
 alert.comments = commentsList;
