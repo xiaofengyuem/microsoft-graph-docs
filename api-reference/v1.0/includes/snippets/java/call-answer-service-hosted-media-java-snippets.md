@@ -24,7 +24,12 @@ preFetchMediaList.add(preFetchMedia1);
 mediaConfig.preFetchMedia = preFetchMediaList;
 
 graphClient.communications().calls("57DAB8B1894C409AB240BD8BEAE78896")
-	.answer(callbackUri,mediaConfig,acceptedModalitiesList)
+	.answer(CallAnswerParameterSet
+		.newBuilder()
+		.withCallbackUri(callbackUri)
+		.withMediaConfig(mediaConfig)
+		.withAcceptedModalities(acceptedModalitiesList)
+		.build())
 	.buildRequest()
 	.post();
 

@@ -6,8 +6,11 @@ description: "Automatically generated file. DO NOT MODIFY"
 
 IGraphServiceClient graphClient = GraphServiceClient.builder().authenticationProvider( authProvider ).buildClient();
 
-IDriveSearchCollectionPage search = graphClient.me().drive()
-	.search("Contoso Project")
+DriveSearchCollectionPage search = graphClient.me().drive()
+	.search(DriveSearchParameterSet
+		.newBuilder()
+		.withQ("Contoso Project")
+		.build())
 	.buildRequest()
 	.get();
 

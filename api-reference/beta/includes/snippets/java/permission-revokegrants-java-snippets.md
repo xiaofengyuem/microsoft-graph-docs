@@ -13,7 +13,10 @@ grantees.email = "ryan@contoso.com";
 granteesList.add(grantees);
 
 graphClient.me().drive().items("{item-id}").permissions("{perm-id}")
-	.revokeGrants(granteesList)
+	.revokeGrants(PermissionRevokeGrantsParameterSet
+		.newBuilder()
+		.withGrantees(granteesList)
+		.build())
 	.buildRequest()
 	.post();
 

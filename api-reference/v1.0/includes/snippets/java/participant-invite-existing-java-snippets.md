@@ -21,7 +21,11 @@ participantsList.add(participants);
 String clientContext = "f2fa86af-3c51-4bc2-8fc0-475452d9764f";
 
 graphClient.communications().calls("ab6233a5-20b7-4c5e-bea2-ce56c9776429").participants()
-	.invite(participantsList,clientContext)
+	.invite(ParticipantInviteParameterSet
+		.newBuilder()
+		.withParticipants(participantsList)
+		.withClientContext(clientContext)
+		.build())
 	.buildRequest()
 	.post();
 

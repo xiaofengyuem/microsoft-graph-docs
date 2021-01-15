@@ -13,7 +13,11 @@ parentReference.id = "DCD0D3AD-8989-4F23-A5A2-2C086050513F";
 String name = "contoso plan (copy).txt";
 
 graphClient.me().drive().items("{item-id}")
-	.copy(name,parentReference)
+	.copy(DriveItemCopyParameterSet
+		.newBuilder()
+		.withName(name)
+		.withParentReference(parentReference)
+		.build())
 	.buildRequest()
 	.post();
 

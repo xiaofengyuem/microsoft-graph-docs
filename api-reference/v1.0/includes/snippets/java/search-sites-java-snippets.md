@@ -9,7 +9,7 @@ IGraphServiceClient graphClient = GraphServiceClient.builder().authenticationPro
 LinkedList<Option> requestOptions = new LinkedList<Option>();
 requestOptions.add(new QueryOption("search", "{query}"));
 
-ISiteCollectionPage sites = graphClient.sites()
+SiteCollectionPage sites = graphClient.sites()
 	.buildRequest( requestOptions )
 	.get();
 

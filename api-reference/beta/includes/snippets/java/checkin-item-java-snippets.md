@@ -9,7 +9,11 @@ IGraphServiceClient graphClient = GraphServiceClient.builder().authenticationPro
 String comment = "Updating the latest guidelines";
 
 graphClient.drives("{drive-id}").items("{item-id}")
-	.checkin(null,comment)
+	.checkin(DriveItemCheckinParameterSet
+		.newBuilder()
+		.withCheckInAs(null)
+		.withComment(comment)
+		.build())
 	.buildRequest()
 	.post();
 

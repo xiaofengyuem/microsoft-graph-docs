@@ -9,7 +9,7 @@ IGraphServiceClient graphClient = GraphServiceClient.builder().authenticationPro
 LinkedList<Option> requestOptions = new LinkedList<Option>();
 requestOptions.add(new QueryOption("token", "latest"));
 
-IDriveItemDeltaCollectionPage delta = graphClient.me().drive().root()
+DriveItemDeltaCollectionPage delta = graphClient.me().drive().root()
 	.delta()
 	.buildRequest( requestOptions )
 	.get();

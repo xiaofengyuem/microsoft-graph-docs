@@ -9,7 +9,14 @@ IGraphServiceClient graphClient = GraphServiceClient.builder().authenticationPro
 String type = "embed";
 
 graphClient.me().drive().items("{item-id}")
-	.createLink(type,null,null,null,null)
+	.createLink(DriveItemCreateLinkParameterSet
+		.newBuilder()
+		.withType(type)
+		.withScope(null)
+		.withExpirationDateTime(null)
+		.withPassword(null)
+		.withMessage(null)
+		.build())
 	.buildRequest()
 	.post();
 

@@ -15,7 +15,13 @@ AppHostedMediaConfig mediaConfig = new AppHostedMediaConfig();
 mediaConfig.blob = "<Media Session Configuration Blob>";
 
 graphClient.communications().calls("57DAB8B1894C409AB240BD8BEAE78896")
-	.answer(callbackUri,mediaConfig,acceptedModalitiesList,null)
+	.answer(CallAnswerParameterSet
+		.newBuilder()
+		.withCallbackUri(callbackUri)
+		.withMediaConfig(mediaConfig)
+		.withAcceptedModalities(acceptedModalitiesList)
+		.withParticipantCapacity(null)
+		.build())
 	.buildRequest()
 	.post();
 

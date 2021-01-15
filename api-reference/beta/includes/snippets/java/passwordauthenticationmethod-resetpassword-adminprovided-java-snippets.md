@@ -9,7 +9,11 @@ IGraphServiceClient graphClient = GraphServiceClient.builder().authenticationPro
 String newPassword = "newPassword-value";
 
 graphClient.users("{id | userPrincipalName}").authentication().passwordMethods("{id}")
-	.resetPassword(newPassword,null)
+	.resetPassword(AuthenticationMethodResetPasswordParameterSet
+		.newBuilder()
+		.withNewPassword(newPassword)
+		.withRequireChangeOnNextSignIn(null)
+		.build())
 	.buildRequest()
 	.post();
 

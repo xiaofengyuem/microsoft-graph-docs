@@ -6,7 +6,7 @@ description: "Automatically generated file. DO NOT MODIFY"
 
 IGraphServiceClient graphClient = GraphServiceClient.builder().authenticationProvider( authProvider ).buildClient();
 
-IPermissionCollectionPage permissions = graphClient.me().drive().items("{item-id}").permissions()
+PermissionCollectionPage permissions = graphClient.me().drive().items("{item-id}").permissions()
 	.buildRequest()
 	.get();
 

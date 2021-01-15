@@ -7,7 +7,10 @@ description: "Automatically generated file. DO NOT MODIFY"
 IGraphServiceClient graphClient = GraphServiceClient.builder().authenticationProvider( authProvider ).buildClient();
 
 WorkbookRange workbookRange = graphClient.me().drive().items("{id}").workbook().worksheets("{id|name}")
-	.usedRange(true)
+	.usedRange(WorkbookWorksheetUsedRangeParameterSet
+		.newBuilder()
+		.withValuesOnly(true)
+		.build())
 	.buildRequest()
 	.get();
 

@@ -14,7 +14,11 @@ LinkedList<String> typesList = new LinkedList<String>();
 typesList.add("user");
 
 graphClient.directoryObjects()
-	.getByIds(idsList,typesList)
+	.getByIds(DirectoryObjectGetByIdsParameterSet
+		.newBuilder()
+		.withIds(idsList)
+		.withTypes(typesList)
+		.build())
 	.buildRequest()
 	.post();
 

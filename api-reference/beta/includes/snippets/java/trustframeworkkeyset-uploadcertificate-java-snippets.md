@@ -9,7 +9,10 @@ IGraphServiceClient graphClient = GraphServiceClient.builder().authenticationPro
 String key = "key-value";
 
 graphClient.trustFramework().keySets("{id}")
-	.uploadCertificate(key)
+	.uploadCertificate(TrustFrameworkKeySetUploadCertificateParameterSet
+		.newBuilder()
+		.withKey(key)
+		.build())
 	.buildRequest()
 	.post();
 

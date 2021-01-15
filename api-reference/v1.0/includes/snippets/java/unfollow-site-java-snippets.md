@@ -20,7 +20,10 @@ siteCollectionResponse.value = valueList;
 SiteCollectionPage siteCollectionPage = new SiteCollectionPage(siteCollectionResponse, null);
 
 graphClient.users("{user-id}").followedSites()
-	.remove(valueList)
+	.remove(SiteRemoveParameterSet
+		.newBuilder()
+		.withValue(valueList)
+		.build())
 	.buildRequest()
 	.post();
 

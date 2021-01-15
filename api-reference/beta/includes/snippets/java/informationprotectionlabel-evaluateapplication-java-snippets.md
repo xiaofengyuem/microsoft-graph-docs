@@ -58,7 +58,11 @@ LinkedList<KeyValuePair> extendedPropertiesList = new LinkedList<KeyValuePair>()
 labelingOptions.extendedProperties = extendedPropertiesList;
 
 graphClient.informationProtection().policy().labels()
-	.evaluateApplication(contentInfo,labelingOptions)
+	.evaluateApplication(InformationProtectionLabelEvaluateApplicationParameterSet
+		.newBuilder()
+		.withContentInfo(contentInfo)
+		.withLabelingOptions(labelingOptions)
+		.build())
 	.buildRequest( requestOptions )
 	.post();
 

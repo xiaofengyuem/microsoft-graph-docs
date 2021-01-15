@@ -17,7 +17,15 @@ EnumSet<ClonableTeamParts> partsToClone = EnumSet.of(ClonableTeamParts.APPS,Clon
 TeamVisibilityType visibility = TeamVisibilityType.PUBLIC;
 
 graphClient.teams("{id}")
-	.clone(displayName,description,mailNickname,null,visibility,partsToClone)
+	.clone(TeamCloneParameterSet
+		.newBuilder()
+		.withDisplayName(displayName)
+		.withDescription(description)
+		.withMailNickname(mailNickname)
+		.withClassification(null)
+		.withVisibility(visibility)
+		.withPartsToClone(partsToClone)
+		.build())
 	.buildRequest()
 	.post();
 

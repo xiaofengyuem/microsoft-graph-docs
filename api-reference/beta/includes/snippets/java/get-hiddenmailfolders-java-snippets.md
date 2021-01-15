@@ -9,7 +9,7 @@ IGraphServiceClient graphClient = GraphServiceClient.builder().authenticationPro
 LinkedList<Option> requestOptions = new LinkedList<Option>();
 requestOptions.add(new QueryOption("includeHiddenFolders", "true"));
 
-IMailFolderCollectionPage mailFolders = graphClient.me().mailFolders()
+MailFolderCollectionPage mailFolders = graphClient.me().mailFolders()
 	.buildRequest( requestOptions )
 	.get();
 
