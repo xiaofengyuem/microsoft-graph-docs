@@ -4,7 +4,7 @@ description: "Automatically generated file. DO NOT MODIFY"
 
 ```java
 
-IGraphServiceClient graphClient = GraphServiceClient.builder().authenticationProvider( authProvider ).buildClient();
+GraphServiceClient graphClient = GraphServiceClient.builder().authenticationProvider( authProvider ).buildClient();
 
 OnlineMeeting onlineMeeting = new OnlineMeeting();
 onlineMeeting.startDateTime = OffsetDateTimeSerializer.deserialize("2020-09-09T21:33:30.8546353+00:00");

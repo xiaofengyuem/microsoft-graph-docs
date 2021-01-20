@@ -4,7 +4,7 @@ description: "Automatically generated file. DO NOT MODIFY"
 
 ```java
 
-IGraphServiceClient graphClient = GraphServiceClient.builder().authenticationProvider( authProvider ).buildClient();
+GraphServiceClient graphClient = GraphServiceClient.builder().authenticationProvider( authProvider ).buildClient();
 
 ChatInfo chatInfo = new ChatInfo();
 chatInfo.threadId = "19:7ebda77322dd4505ac4dedb5b67df076@thread.tacv2";
