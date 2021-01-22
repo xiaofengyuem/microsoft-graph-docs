@@ -76,7 +76,7 @@ Represents an instance of an application in a directory. Inherits from [director
 |appRoleAssignmentRequired|Boolean|Specifies whether users or other service principals need to be granted an app role assignment for this service principal before users can sign in or apps can get tokens. The default value is **false**. Not nullable. |
 |appRoles|[appRole](approle.md) collection|The roles exposed by the application which this service principal represents. For more information see the **appRoles** property definition on the [application](application.md) entity. Not nullable. |
 | deletedDateTime | DateTimeOffset | The date and time the service principal was deleted. Read-only. |
-|disabledByMicrosoftStatus | Bitflag enum |Specifies if the registered application object has been disabled by Microsoft and the reason why. These reasons may include suspicious/abusive activity, malicious activity, and/or a violation of the Microsoft Services Agreement.|
+|disabledByMicrosoftStatus | Enum |Specifies if the registered application object has been disabled by Microsoft and the reason why. These reasons may include suspicious/abusive activity, malicious activity, and/or a violation of the Microsoft Services Agreement Possible values are: <ul> <li> 0 - notDisabled</li><li> 1 - disabledDueToViolationOfServicesAgreemen </li></ul>|
 |displayName|String|The display name for the service principal.|
 |homepage|String|Home page or landing page of the application.|
 |id|String|The unique identifier for the service principal. Inherited from [directoryObject](directoryobject.md). Key. Not nullable. Read-only.|
@@ -141,6 +141,7 @@ Here is a JSON representation of the resource
   "appOwnerOrganizationId": "guid",
   "appRoleAssignmentRequired": true,
   "appRoles": [{"@odata.type": "microsoft.graph.appRole"}],
+  "disabledByMicrosoftStatus": 0,
   "displayName": "string",
   "homepage": "string",
   "id": "string (identifier)",
