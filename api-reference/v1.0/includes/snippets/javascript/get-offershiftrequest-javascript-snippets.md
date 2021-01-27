@@ -10,7 +10,7 @@ const options = {
 
 const client = Client.init(options);
 
-let res = await client.api('/teams/{teamId}/schedule/offerShiftRequests')
+let res = await client.api('/teams/{teamId}/schedule/offerShiftRequests/{offerShiftRequestId}')
 	.get();
 
 ```
