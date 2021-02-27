@@ -19,11 +19,11 @@ This resource supports subscribing to [change notifications](/graph/webhooks).
 
 ## Methods
 
-| Method                                                            | Return Type                                       | Description                                  |
-|:------------------------------------------------------------------|:--------------------------------------------------|:---------------------------------------------|
-| [Get presence](../api/presence-get.md)     | [presence](../resources/presence.md)     | Get a user's presence information.
-| [Get presence of multiple users](../api/cloudcommunications-getpresencesbyuserid.md)    |  [presence](../resources/presence.md) collection     |  Get the presence information for multiple users.      |
-
+| Method                                                                               | Return Type                                     | Description                                              |
+| :----------------------------------------------------------------------------------- | :---------------------------------------------- | :------------------------------------------------------- |
+| [Get presence](../api/presence-get.md)                                               | [presence](../resources/presence.md)            | Get a user's presence information.                       |
+| [Set presence](../api/presence-set.md)                                               | [presence](../resources/presence.md)            | Set the presence information for a user's app session. |
+| [Get presence of multiple users](../api/cloudcommunications-getpresencesbyuserid.md) | [presence](../resources/presence.md) collection | Get the presence information for multiple users.         |
 
 ## Properties
 
