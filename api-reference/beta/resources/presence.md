@@ -22,7 +22,7 @@ This resource supports subscribing to [change notifications](/graph/webhooks).
 | Method                                                                               | Return Type                                     | Description                                            |
 | :----------------------------------------------------------------------------------- | :---------------------------------------------- | :----------------------------------------------------- |
 | [Get presence](../api/presence-get.md)                                               | [presence](../resources/presence.md)            | Get a user's presence information.                     |
-| [Set presence](../api/presence-set.md)                                               | [presence](../resources/presence.md)            | Set the presence information for a user's app session. |
+| [Update presence](../api/presence-update.md)                                               | [presence](../resources/presence.md)            | Set the presence information for a user's app session. |
 | [Get presence of multiple users](../api/cloudcommunications-getpresencesbyuserid.md) | [presence](../resources/presence.md) collection | Get the presence information for multiple users.       |
 
 ## Properties
@@ -33,7 +33,7 @@ This resource supports subscribing to [change notifications](/graph/webhooks).
 | availability        | string                                           | The base presence information for a user. Possible values are `Available`, `AvailableIdle`,  `Away`, `BeRightBack`, `Busy`, `BusyIdle`, `DoNotDisturb`, `Offline`, `PresenceUnknown`                                                                                                           |
 | activity            | string                                           | The supplemental information to a user's availability. Possible values are `Available`, `Away`, `BeRightBack`, `Busy`, `DoNotDisturb`, `InACall`, `InAConferenceCall`, `Inactive`,`InAMeeting`, `Offline`, `OffWork`,`OutOfOffice`, `PresenceUnknown`,`Presenting`, `UrgentInterruptionsOnly`. |
 | outOfOfficeSettings | [outOfOfficeSettings](outOfOfficeSettings.md)    | The out of office settings for a user.                                                                                                                                                                                                                                                         |
-| sessions            | [presenceSession](presencesession.md) collection | The sessions of the user's presence. Used for [Set Presence](../api/presence-set.md)                                                                                                                                                                                                           |
+| sessions            | [presenceSession](presencesession.md) collection | The sessions of the user's presence. Used for [Update Presence](../api/presence-update.md)                                                                                                                                                                                                           |
 
 >**Note:** To learn more about the different presence states, see [User presence in Teams](/microsoftteams/presence-admins). 
 
