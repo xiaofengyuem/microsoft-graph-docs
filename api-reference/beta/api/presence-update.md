@@ -23,7 +23,7 @@ A presence session has a timeout of 5 minutes, so the application needs to call 
 
 If times out, the presence status would fade way in stages. For example an application has updated `Available/Available` but never makes a call to keep alive, the presence session would change to `Available/AvailableInactive` with the first timeout, then `Away/Away` with the second timeout, and finally `Offline/Offline` with the third timeout.
 
-### Delete the application's presence session
+### Delete the presence session
 The application can delete its presence session. If a user's only presence session (all sessions from Teams clients and applications adding together) gets deleted, the user's presence will change to `Offline/Offline`.
 
 ## Permissions
