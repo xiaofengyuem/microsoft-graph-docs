@@ -164,17 +164,17 @@ items:
       - name: Customer booking (preview)
         href: booking-concept-overview.md
         displayName: Bookings, Microsoft Bookings
-      - name: Data inflow (preview)
-        displayName: connectors
-        items:
-          - name: Connectors overview
-            href: data-inflow-connectors-overview.md
-          - name: Manage connections
-            href: data-inflow-manage-connections.md
-          - name: Manage schema
-            href: data-inflow-manage-schema.md            
-          - name: Manage items
-            href: data-inflow-manage-items.md        
+      - name: Data inflow (preview)
+        displayName: connectors
+        items:
+          - name: Connectors overview
+            href: data-inflow-connectors-overview.md
+          - name: Manage connections
+            href: data-inflow-manage-connections.md
+          - name: Manage schema
+            href: data-inflow-manage-schema.md            
+          - name: Manage items
+            href: data-inflow-manage-items.md       
       - name: Data access
         displayName: Microsoft Graph data connect
         items:
