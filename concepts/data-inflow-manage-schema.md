@@ -36,10 +36,10 @@ The following table represents an example of a possible schema for a work ticket
 
 ### Searchable
 
-If a property is searchable, its value is added to the full text index. When a user performs a search, we return results if there is a search hit in one of the searchable fields or its [content](search-index-manage-items.md#content).
+If a property is searchable, its value is added to the full text index. When a user performs a search, we return results if there is a search hit in one of the searchable fields or its [content](data-inflow-manage-items.md#content).
 
 <!-- markdownlint-disable MD036 -->
-![A search for "design" displaying results for hits against properties and content](./images/search-index-manage-items-schema-1.svg)
+![A search for "design" displaying results for hits against properties and content](./images/connectors-images/data-inflow-manage-items-schema-1.svg)
 
 *A search for "design" displaying results for hits against properties (`title`, `tags`) and content*
 
@@ -50,11 +50,11 @@ If a property is queryable, you can query against it using knowledge query langu
 > [!NOTE]
 > Suffix matching is not supported.
 
-![A search for "search ba*" displaying results that match this prefix](./images/search-index-manage-items-schema-2.svg)
+![A search for "search ba*" displaying results that match this prefix](./images/connectors-images/data-inflow-manage-items-schema-2.svg)
 
 *A search for "search ba*" displaying results that match this prefix*
 
-![A search for "tags:design" scoping down results to items with "design" in the tags property](./images/search-index-manage-items-schema-3.svg)
+![A search for "tags:design" scoping down results to items with "design" in the tags property](./images/connectors-images/data-inflow-manage-items-schema-3.svg)
 
 *A search for "tags:design" scoping down results to items with "design" in the tags property*
 
@@ -62,7 +62,7 @@ If a property is queryable, you can query against it using knowledge query langu
 
 If a property is retrievable, its value can be returned in search results. Any property that you want to add in the display template or be returned from the query and be relevant in search results must be retrievable. Marking large properties, such as `editHistory`, or too many properties as retrievable will increase search latency. Be selective and choose relevant properties.
 
-![A set of retrievable properties rendered as a result](./images/search-index-manage-schema-4.svg)
+![A set of retrievable properties rendered as a result](./images/connectors-images/data-inflow-manage-schema-4.svg)
 
 *A set of retrievable properties (`title`, `lastEditedBy` etc.) rendered as a result*
 
@@ -70,7 +70,7 @@ If a property is retrievable, its value can be returned in search results. Any p
 
 If a property is refinable, an admin can configure it as a custom filter in the Microsoft Search results page.
 
-![Refine results by tags, a refinable property](./images/search-index-manage-schema-5.svg)
+![Refine results by tags, a refinable property](./images/connectors-images/data-inflow-manage-schema-5.svg)
 
 *Refine results by `tags`, a refinable property*
 
@@ -118,7 +118,7 @@ For discovery, i.e. search scenarios, please note:
 
 Labels also affect how default result types are generated. Adding the title and content labels at a minimum will ensure that a result type is created for your connection.
 
-![A default result type with title and a result snippet](./images/search-index-manage-schema-6.svg)
+![A default result type with title and a result snippet](./images/connectors-images/data-inflow-manage-schema-6.svg)
 
 *A default result type with `title` and a result snippet*
 

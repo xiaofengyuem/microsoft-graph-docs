@@ -22,7 +22,7 @@ The following diagram provides a high-level overview of Microsoft Graph connecto
 
 <!---Insert image reference here --->
 <!---       ![Select the Microsoft Graph permissions](./images/application-saml-sso-configure-api/set-permissions.png) --->
-![Overview](./images/connectors-images/overview.png)
+![Microsoft Graph connectors high-level overview](./images/connectors-images/overview.png)
 
 ### Build your own custom connector 
 <!---Title added as h3 to avoid listing it in an "In this article" section --->
@@ -30,8 +30,9 @@ We have 100+ connectors built by Microsoft and partners that enable you to conne
 
 While these connectors help connect to popular services, you may want to integrate with services that aren't available in the existing [connectors gallery](https://docs.microsoft.com/microsoftsearch/connectors-gallery). In such situations, you can build a custom connector using the Microsoft Graph Connector APIs to bring the external data you need into Microsoft 365 experiences such as Microsoft Search (and many more coming soon) in your organization.
 
+<!---Coming soon
 Get started with custom Graph connectors:
 * [Graph Connector API overview](data-inflow-connectors-api-overview.md)
 * [Try Graph Connector APIs using Postman](data-inflow-connectors-api-postman.md)
 * [Build your first custom connector with Microsoft Graph]()
-
+ --->

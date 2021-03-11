@@ -19,7 +19,7 @@ Once you have created a connection, you can add your content. Each item from you
 
 The access control list is used to specify whether the given roles are granted or denied access to view items in Microsoft experiences. It is an array of access control entries, each representing an Azure Active Directory user or group. There is a third access control entry type `Everyone` that represents all the users in the tenant.
 
-![An example access control list](./images/search-index-manage-items-acl.png)
+![An example access control list](./images/connectors-images/data-inflow-manage-items-acl.png)
 
 The accessType value `deny` takes precedence over `grant`. For example, in the item shown above, while `Everyone` is granted access and a specific user is denied access, the effective permission for this user is `deny`.
 
@@ -29,21 +29,21 @@ External groups can consist of another external group, Azure Active Directory us
 
 ## Properties
 
-The properties component is used to add item metadata that is useful in Microsoft Graph experiences. You must [register the schema](./search-index-manage-schema.md) for the connection before adding items into it and convert datatypes into [supported datatypes](/graph/api/resources/property?view=graph-rest-beta&preserve-view=true).
+The properties component is used to add item metadata that is useful in Microsoft Graph experiences. You must [register the schema](./data-inflow-manage-schema.md) for the connection before adding items into it and convert datatypes into [supported datatypes](/graph/api/resources/property?view=graph-rest-beta&preserve-view=true).
 
-![An example property component](./images/search-index-manage-items-1.png)
+![An example property component](./images/connectors-images/data-inflow-manage-items-1.png)
 
 ## Content
 
 The content component is used to add the bulk of the item that needs to be full text indexed. Examples include ticket description, parsed text from a file body, or a wiki page body.
 
-Content is one of the key fields influencing [relevance](./search-index-manage-schema.md#relevance) across Microsoft experiences. We support content of the type `text` and `HTML`. If your data source has binary files, you can parse them to text before adding them to Microsoft Graph.
+Content is one of the key fields influencing [relevance](./data-inflow-manage-schema.md#relevance) across Microsoft experiences. We support content of the type `text` and `HTML`. If your data source has binary files, you can parse them to text before adding them to Microsoft Graph.
 
-![An example content component](./images/search-index-manage-items-2.png)
+![An example content component](./images/connectors-images/data-inflow-manage-items-2.png)
 
 Content cannot be directly added into a search result template, but you can use a generated result snippet which is a dynamically generated preview of the relevant sections within content.
 
-![A screenshot of a search result template](./images/search-index-manage-items-3.svg)
+![A screenshot of a search result template](./images/connectors-images/data-inflow-manage-items-3.svg)
 
 When content in your data source changes, you must sync it with your connection items. You can either update the entire item or update one or more of its components. Once your content has been added to Microsoft Graph, you can search for it through the Microsoft Search experience after setting up [verticals and result types](/MicrosoftSearch/customize-search-page) or using the [Microsoft Graph Search API](/graph/api/resources/search-api-overview?view=graph-rest-beta&preserve-view=true).
 
