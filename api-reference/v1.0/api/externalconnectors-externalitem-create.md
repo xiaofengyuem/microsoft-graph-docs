@@ -51,8 +51,29 @@ The following table shows the properties that are required when you create the [
 |content|[externalItemContent](../resources/externalconnectors-externalitemcontent.md)|N|The external item content|
 |acl|[acl](../resources/externalconnectors-acl.md) collection|Y|The access control list|
 
+Properties on an `externalItem` should use type specifiers in the payload in the following scenarios:
 
-## Response
+- For `String` type properties, if the value contains non-ASCII characters.
+
+    ```json
+    "description@odata.type": "String",
+    "description": "Kandierte Äpfel"
+    ```
+
+- For all collection types.
+
+    ```json
+    "categories@odata.type": "Collection(String)"
+    "categories": [
+      "red",
+      "blue"
+    ]
+    ```
+
+    > [!IMPORTANT]
+    > When including a property of type `Collection(DateTime)`, you must use the type specifier `Collection(DateTimeOffset)`.
+
+## Response 
 
 If successful, this method returns `200 OK` response code.
 
