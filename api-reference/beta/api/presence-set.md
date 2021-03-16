@@ -39,7 +39,7 @@ POST /users/{userId}/presence/setPresence
 ## Request headers
 | Name          | Description                 |
 | :------------ | :-------------------------- |
-| Authorization | Bearer \{token\}. Required. |
+| Authorization | Bearer {token}. Required. |
 | Content-Type  | application/json. Required. |
 
 ## Request body
@@ -76,12 +76,13 @@ Below example shows the application with ID `22553876-f5ab-4529-bffb-cfe50aa89f8
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "name": "get-your-presence"
+  "name": "set-presence"
 }-->
 
 ```msgraph-interactive
 POST https://graph.microsoft.com/beta/users/fa8bf3dc-eca7-46b7-bad1-db199b62afc3/presence/setPresence
 Content-Type: application/json
+
 {
   "sessionId": "22553876-f5ab-4529-bffb-cfe50aa89f87",
   "availability": "Available",
@@ -93,9 +94,7 @@ Content-Type: application/json
 
 <!-- {
   "blockType": "response",
-  "name": "get-your-presence",
-  "@odata.type": "microsoft.graph.presence",
-  "truncated":"true"
+  "truncated": true
 } -->
 ```http
 HTTP/1.1 200 OK
