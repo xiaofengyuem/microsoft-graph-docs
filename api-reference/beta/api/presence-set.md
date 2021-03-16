@@ -56,6 +56,7 @@ In the request body, provide a JSON object with the following parameters.
 > * When calling this API, the ID of the application should be supplied as the `sessionId`.
 
 Supported combinations of `availability` and `activity` are:
+
 | availability | activity          | Description                                              |
 | :----------- | :---------------- | :------------------------------------------------------- |
 | Available    | Available         | Updates the presence session as Available.               |
