@@ -39,7 +39,7 @@ POST /users/{userId}/presence/setPresence
 ## Request headers
 | Name          | Description                 |
 | :------------ | :-------------------------- |
-| Authorization | Bearer {token}. Required.   |
+| Authorization | Bearer \{token\}. Required. |
 | Content-Type  | application/json. Required. |
 
 ## Request body

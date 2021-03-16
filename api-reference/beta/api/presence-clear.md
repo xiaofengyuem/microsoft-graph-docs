@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 > [!IMPORTANT]
-> Please refer to [Set presence - concept: presence sessions](presence-set#concept-presence-sessions) for the concept of presence sessions.
+> Please refer to [Set presence - concept: presence sessions](presence-set.md#concept-presence-sessions) for the concept of presence sessions.
 
 The application can clear its presence session. If a user's only presence session (all sessions from Teams clients and applications adding together) gets cleared, the user's presence will change to `Offline/Offline`.
 
@@ -35,16 +35,16 @@ POST /users/{userId}/presence/clearPresence
 ## Request headers
 | Name          | Description                 |
 | :------------ | :-------------------------- |
-| Authorization | Bearer {token}. Required.   |
+| Authorization | Bearer \{token\}. Required. |
 | Content-Type  | application/json. Required. |
 
 ## Request body
 
 In the request body, provide a JSON object with the following parameters.
 
-| Parameter    | Type   | Description                                   |
-| :----------- | :----- | :-------------------------------------------- |
-| sessionId    | string | The ID of the application's presence session. |
+| Parameter | Type   | Description                                   |
+| :-------- | :----- | :-------------------------------------------- |
+| sessionId | string | The ID of the application's presence session. |
 
 
 > [!IMPORTANT]
