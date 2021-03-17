@@ -64,9 +64,18 @@ Represents an individual chat message within a [channel](channel.md) or [chat](c
 |attachments|[chatMessageAttachment](chatmessageattachment.md) collection |Attached files. Attachments are currently read-only – sending attachments is not supported. |
 |mentions|[chatMessageMention](chatmessagemention.md) collection| List of entities mentioned in the chat message. Currently supports user, bot, team, channel.|
 |importance|string | The importance of the chat message. The possible values are: `normal`, `high`, `urgent`.|
-|reactions| [chatMessageReaction](./chatmessagereaction.md) collection | Reactions for this chat message (for example, Like).|
-|locale|string|Locale of the chat message set by the client.|
-| policyViolation | [chatMessagePolicyViolation](../resources/chatmessagepolicyviolation.md) |Defines the properties of a policy violation set by a data loss prevention (DLP) application.|
+|reactions| [chatMessageReaction](chatmessagereaction.md) collection | Reactions for this chat message (for example, Like).|
+|locale|string|Locale of the chat message set by the client. Always set to `en-us`|
+|policyViolation | [chatMessagePolicyViolation](chatmessagepolicyviolation.md) |Defines the properties of a policy violation set by a data loss prevention (DLP) application.|
+|chatId|string|If the message was sent in a chat, represents the Id of the chat|
+|channelIdentity|[channelIdentity](channelidentity.md)|If the message was sent in a channel, represents identity of the channel.|
+
+## Relationships
+
+| Relationship   | Type    | Description |
+|:---------------|:--------|:----------|
+|replies|[chatMessage](chatmessage.md)| Replies for a specified message. |
+|hostedContents|[chatMessageHostedContent](chatmessagehostedcontent.md)| Content in a message hosted by Microsoft Teams e.g. images, code snippets etc. |
 
 ## JSON representation
 

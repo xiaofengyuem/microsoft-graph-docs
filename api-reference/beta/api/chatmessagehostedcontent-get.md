@@ -2,7 +2,7 @@
 title: "Get chatMessageHostedContent"
 description: "Retrieve the properties and relationships of chatMessageHostedContent object."
 localization_priority: Normal
-author: "clearab"
+author: "RamjotSingh"
 ms.prod: "microsoft-teams"
 doc_type: "apiPageType"
 ---
@@ -11,19 +11,27 @@ doc_type: "apiPageType"
 
 Namespace: microsoft.graph
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
-
 Retrieve the properties and relationships of [chatMessageHostedContent](../resources/chatmessagehostedcontent.md) object.
 
 ## Permissions
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
 
+### Permissions for channel
+
 | Permission type                        | Permissions (from least to most privileged) |
 |:---------------------------------------|:--------------------------------------------|
-|Delegated (work or school account)| For **user** or **chat** resource: Chat.Read, Chat.ReadWrite<br/><br/>For **channel** resource: ChannelMessage.Read.All, Group.Read.All, Group.Read.WriteAll |
+|Delegated (work or school account)| ChannelMessage.Read.All, Group.Read.All, Group.Read.WriteAll |
 |Delegated (personal Microsoft account)|Not supported.|
-|Application| For **user** or **chat** resource: Chat.Read.All, Chat.ReadWrite.All<br/><br/>For **channel** resource: ChannelMessage.Read.Group*, ChannelMessage.Read.All, Group.Read.All, Group.ReadWrite.All |
+|Application| ChannelMessage.Read.Group*, ChannelMessage.Read.All, Group.Read.All, Group.ReadWrite.All |
+
+### Permissions for chat
+
+| Permission type                        | Permissions (from least to most privileged) |
+|:---------------------------------------|:--------------------------------------------|
+|Delegated (work or school account)| Chat.Read, Chat.ReadWrite|
+|Delegated (personal Microsoft account)|Not supported.|
+|Application| Chat.Read.All, Chat.ReadWrite.All|
 
 > **Note**: Permissions marked with * use [resource-specific consent]( https://aka.ms/teams-rsc).
 
@@ -32,12 +40,16 @@ One of the following permissions is required to call this API. To learn more, in
 
 ## HTTP request
 
+### Get hosted contents for a message in a channel
 <!-- { "blockType": "ignored" } -->
-
 ```http
-GET /chats/{id}/messages/{id}/hostedContents/{id}
-GET /users/{id}/chats/{id}/messages/{id}/hostedContents/{id}
-GET /teams/{id}/channels/{id}/messages/{id}/hostedContents/{id}
+GET /teams/{team-id}/channels/{channel-id}/messages/{message-id}/hostedContents/{hosted-content-id}
+```
+
+### Get hosted contents for a message in a chat
+```http
+GET /users/{user-id}/chats/{chat-id}/messages/{message-id}/hostedContents/{hosted-content-id}
+GET /chats/{chat-id}/messages/{message-id}/hostedContents/{hosted-content-id}
 ```
 
 ## Optional query parameters
@@ -73,7 +85,7 @@ The following is an example of the request.
 }-->
 
 ```msgraph-interactive
-GET https://graph.microsoft.com/beta/chats/{id}/messages/{id}/hostedContents/{id}
+GET https://graph.microsoft.com/v1.0/chats/{id}/messages/{id}/hostedContents/{id}
 ```
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-chatmessagehostedcontent-csharp-snippets.md)]
@@ -126,7 +138,7 @@ Content-type: application/json
   "name": "get_chatmessagehostedcontent"
 }-->
 ```msgraph-interactive
-GET https://graph.microsoft.com/beta/chats/{id}/messages/{id}/hostedContents/{id}/$value
+GET https://graph.microsoft.com/v1.0/chats/{id}/messages/{id}/hostedContents/{id}/$value
 ```
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-chatmessagehostedcontent-csharp-snippets.md)]
