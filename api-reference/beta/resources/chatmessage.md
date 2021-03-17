@@ -22,11 +22,11 @@ Represents an individual chat message within a [channel](channel.md) or [chat](c
 | Method       | Return Type  |Description|
 |:---------------|:--------|:----------|
 |**Channel messages**| | |
-|[List channel chatMessage](../api/channel-list-messages.md) | [chatMessage](chatmessage.md) collection | List of all root chat messages in a channel.|
+|[List channel chatMessage](../api/chatmessage-list.md) | [chatMessage](chatmessage.md) collection | List of all root chat messages in a channel.|
+|[Get channel chatMessage](../api/chatmessage-get.md) | [chatMessage](chatmessage.md) | Get a single root chat message from a channel.|
 |[Get chatMessages in a channel delta](../api/chatmessage-delta.md)  | [chatMessage](../resources/chatmessage.md) | Get incremental chat messages in a channel. |
 |[Create subscription for new channel messages](../api/subscription-post-subscriptions.md) | [subscription](subscription.md) | Listen for new and edited channel messages, and reactions to them. |
-|[Get channel chatMessage](../api/channel-get-message.md) | [chatMessage](chatmessage.md) | Get a single root chat message from a channel.|
-|[Create chatMessage in a channel or chat](../api/chatmessage-post.md) | [chatMessage](chatmessage.md)| Create a new top-level chat message in a channel.|
+|[Send chatMessage in a channel or chat](../api/chatmessage-post.md) | [chatMessage](chatmessage.md)| Create a new top-level chat message in a channel.|
 |[Update chatMessage](../api/chatmessage-update.md)|[chatMessage](chatmessage.md)| Update the **policyViolation** property of a chat message.|
 |**Channel message replies**| | |
 |[List replies to a chatMessage](../api/channel-list-messagereplies.md) | [chatMessage](chatmessage.md) collection| List of all replies to a chat message in channel.|
@@ -34,11 +34,11 @@ Represents an individual chat message within a [channel](channel.md) or [chat](c
 |[Reply to a chatMessage in a channel](../api/channel-post-messagereply.md) | [chatMessage](chatmessage.md)| Reply to an existing chat message in a channel.|
 |[Update chatMessage](../api/chatmessage-update.md)|[chatMessage](chatmessage.md)| Update the **policyViolation** property of a chat message.|
 |**1:1 and group chat messages**| | |
-|[Get chatMessage in chat](../api/chat-get-message.md)  | [chatMessage](../resources/chatmessage.md) | Get a single chat message in a chat. |
-|[List chatMessages in a chat](../api/chat-list-message.md)  | [chatMessage](../resources/chatmessage.md) | List chat messages in a 1:1 or group chat. |
+|[List chatMessages in a chat](../api/chatmessage-list.md)  | [chatMessage](../resources/chatmessage.md) | List chat messages in a 1:1 or group chat. |
+|[Get chatMessage in chat](../api/chatmessage-get.md)  | [chatMessage](../resources/chatmessage.md) | Get a single chat message in a chat. |
 |[Get all chat messages for user](../api/chats-getallmessages.md)| [chat](chat.md) collection| Get messages from all chats that a user is a participant in, including 1:1 chats, group chats, and meeting chats. |
 |[Create subscription for new chat messages](../api/subscription-post-subscriptions.md) | [subscription](subscription.md) | Listen for new and edited chat messages, and reactions to them. |
-|[Create chatMessage in a chat](../api/chat-post-message.md) | [chatMessage](chatmessage.md)| Send a chat message in an existing 1:1 or group chat conversation.|
+|[Send chatMessage in a chat](../api/chatmessage-post..md) | [chatMessage](chatmessage.md)| Send a chat message in an existing 1:1 or group chat conversation.|
 |[Update chatMessage](../api/chatmessage-update.md)|[chatMessage](chatmessage.md)| Update the **policyViolation** property of a chat message.|
 |**Hosted content**| | |
 |[List all hosted content](../api/chatmessage-list-chatmessagehostedcontents.md) | [chatMessageHostedContent](../resources/chatmessagehostedcontent.md) collection| Get all hosted content in a chat message.|

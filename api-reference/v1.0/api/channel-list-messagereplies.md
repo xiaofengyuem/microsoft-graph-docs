@@ -13,7 +13,7 @@ Namespace: microsoft.graph
 
 List all the replies of a [message](../resources/chatmessage.md) in a [channel](../resources/channel.md) of a team.
 
-This method lists only the replies of the specified message, if any. To get the message itself, simply call [get channel message](channel-get-message.md).
+This method lists only the replies of the specified message, if any. To get the message itself, simply call [get channel message](chatmessage-get.md).
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
