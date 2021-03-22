@@ -59,14 +59,18 @@ If successful, this method returns a `200 OK` response code and an [educationUse
 
 <!-- {
   "blockType": "request",
-  "name": "get_educationuser"
+  "name": "get_educationuser_2"
 }
 -->
 
 ```http
 GET https://graph.microsoft.com/v1.0/education/me
 ```
+[!INCLUDE [sample-code](../includes/snippets/csharp/get-educationuser-csharp-snippets.md)]
 
+[!INCLUDE [sample-code](../includes/snippets/javascript/get-educationuser-javascript-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/objc/get-educationuser-objc-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/java/get-educationuser-java-snippets.md)]
 ### Response
 
 **Note:** The response object shown here might be shortened for readability.
